@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://brcmcxe2124uv"]
+
+[ext_resource type="Script" uid="uid://bc2cka0xrngdb" path="res://SCRIPTS/title_screen.gd" id="1_7luok"]
+[ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="1_8ukxt"]
+
+[node name="TitleScreen" type="Node"]
+script = ExtResource("1_7luok")
+
+[node name="title" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -23.0
+offset_top = 8.0
+offset_right = 55.0
+offset_bottom = 80.0
+grow_horizontal = 2
+scale = Vector2(0.6, 0.6)
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_8ukxt")
+theme_override_font_sizes/font_size = 0
+text = "Sustainable 
+Dash 
+Goals"
+horizontal_alignment = 1
+
+[node name="playButton" type="Button" parent="."]
+offset_left = 36.0
+offset_top = 59.0
+offset_right = 77.0
+offset_bottom = 90.0
+scale = Vector2(0.6, 0.6)
+theme_override_fonts/font = ExtResource("1_8ukxt")
+text = "Play"
+
+[node name="settingsButton" type="Button" parent="."]
+offset_left = 63.0
+offset_top = 59.0
+offset_right = 122.0
+offset_bottom = 90.0
+scale = Vector2(0.6, 0.6)
+theme_override_fonts/font = ExtResource("1_8ukxt")
+text = "Settings"
+
+[node name="quitButton" type="Button" parent="."]
+offset_left = 101.0
+offset_top = 59.0
+offset_right = 142.0
+offset_bottom = 90.0
+scale = Vector2(0.6, 0.6)
+theme_override_fonts/font = ExtResource("1_8ukxt")
+text = "Quit"
+
+[connection signal="pressed" from="playButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="settingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="quitButton" to="." method="_on_quit_button_pressed"]
