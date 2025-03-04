@@ -9,6 +9,6 @@ offset_right = 160.0
 offset_bottom = 90.0
 
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(80, 44)
+position = Vector2(101, 44)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("1_h741j")
