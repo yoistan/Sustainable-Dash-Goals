@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgagigbngr6d8"]
+
+[ext_resource type="Texture2D" uid="uid://cpepodmlxqkl3" path="res://icon.svg" id="1_h741j"]
+
+[node name="Main" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 160.0
+offset_bottom = 90.0
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(80, 44)
+scale = Vector2(0.4375, 0.4375)
+texture = ExtResource("1_h741j")
