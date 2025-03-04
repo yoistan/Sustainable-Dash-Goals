@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://drmpfqi10hj1l"]
+
+[ext_resource type="Texture2D" uid="uid://cpepodmlxqkl3" path="res://icon.svg" id="1_6jucp"]
+[ext_resource type="Script" uid="uid://bvcl7w01armac" path="res://SCRIPTS/CHARACTERS/player_movement.gd" id="1_82tok"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_82tok"]
+radius = 21.0
+height = 78.0
+
+[node name="Dash" type="CharacterBody2D"]
+script = ExtResource("1_82tok")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.328125, 0.609375)
+texture = ExtResource("1_6jucp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_82tok")
