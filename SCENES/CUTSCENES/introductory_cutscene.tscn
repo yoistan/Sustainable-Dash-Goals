@@ -1,20 +1,67 @@
-[gd_scene load_steps=4 format=3 uid="uid://b3metr0saq6y5"]
+[gd_scene load_steps=8 format=3 uid="uid://b3metr0saq6y5"]
 
 [ext_resource type="PackedScene" uid="uid://c1lbtikfidyi8" path="res://SCENES/BACKGROUNDS/area_1_bg_Outside_Rizal.tscn" id="1_5dxpk"]
 [ext_resource type="PackedScene" uid="uid://drmpfqi10hj1l" path="res://SCENES/CHARACTERS/dash.tscn" id="2_kw1sa"]
 [ext_resource type="PackedScene" uid="uid://dmuduumyiu88m" path="res://SCENES/CHARACTERS/whizzy.tscn" id="3_jlr3y"]
+[ext_resource type="PackedScene" uid="uid://e6bltu3ywpbl" path="res://SCENES/dialogue_box.tscn" id="4_kw1sa"]
+
+[sub_resource type="Animation" id="Animation_tohkq"]
+resource_name = "introductory_cutscene"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Characters/Dash:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-20, 55), Vector2(55, 55)]
+}
+
+[sub_resource type="Animation" id="Animation_kpsns"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Characters/Dash:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-20, 55)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_534bo"]
+_data = {
+&"RESET": SubResource("Animation_kpsns"),
+&"introductory_cutscene": SubResource("Animation_tohkq")
+}
 
 [node name="IntroductoryCutscene" type="Node2D"]
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_534bo")
+}
+
 [node name="Area1BgOutsideRizal" parent="." instance=ExtResource("1_5dxpk")]
 
-[node name="Dash" parent="." instance=ExtResource("2_kw1sa")]
-position = Vector2(39, 55)
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="Dash" parent="Characters" instance=ExtResource("2_kw1sa")]
+position = Vector2(-20, 55)
 scale = Vector2(0.5, 0.5)
 
-[node name="Whizzy" parent="." instance=ExtResource("3_jlr3y")]
-position = Vector2(70, 55)
+[node name="Whizzy" parent="Characters" instance=ExtResource("3_jlr3y")]
+position = Vector2(85, 55)
 scale = Vector2(0.5, 0.5)
 
-[connection signal="tree_entered" from="." to="Dash" method="_on_introductory_cutscene_tree_entered"]
-[connection signal="tree_exited" from="." to="Dash" method="_on_introductory_cutscene_tree_exited"]
+[node name="DialogueBox" parent="." instance=ExtResource("4_kw1sa")]
+
+[connection signal="tree_entered" from="." to="Characters/Dash" method="_on_introductory_cutscene_tree_entered"]
+[connection signal="tree_exited" from="." to="Characters/Dash" method="_on_introductory_cutscene_tree_exited"]

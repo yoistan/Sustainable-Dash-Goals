@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cpgxmotex3pwn"]
+
+[ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="1_8r0h8"]
+
+[resource]
+default_font = ExtResource("1_8r0h8")
+default_font_size = 5
