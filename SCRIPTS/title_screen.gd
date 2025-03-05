@@ -1,7 +1,7 @@
 extends Node
 
 func _on_play_button_pressed():
-	pass # play first scene
+	get_tree().change_scene_to_file("res://SCENES/CUTSCENES/introductory_cutscene.tscn")
 
 func _on_settings_button_pressed():
 	pass # insert here settings screen scene

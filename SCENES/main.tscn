@@ -1,36 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cgagigbngr6d8"]
+[gd_scene load_steps=2 format=3 uid="uid://cgagigbngr6d8"]
 
-[ext_resource type="Texture2D" uid="uid://cpepodmlxqkl3" path="res://icon.svg" id="1_h741j"]
-[ext_resource type="PackedScene" uid="uid://gtu3ewkewaj3" path="res://SCENES/touch_controls.tscn" id="1_i3vxn"]
-[ext_resource type="PackedScene" uid="uid://drmpfqi10hj1l" path="res://SCENES/CHARACTERS/dash.tscn" id="1_xh1h4"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ac0l5"]
-size = Vector2(177, 20)
+[ext_resource type="PackedScene" uid="uid://brcmcxe2124uv" path="res://SCENES/title_screen.tscn" id="1_xh1h4"]
 
 [node name="Main" type="Node2D"]
 
-[node name="TouchControls" parent="." instance=ExtResource("1_i3vxn")]
-
-[node name="background" type="ColorRect" parent="."]
-offset_right = 160.0
-offset_bottom = 90.0
-
-[node name="Dash" parent="." instance=ExtResource("1_xh1h4")]
-position = Vector2(36, 39)
-scale = Vector2(0.5, 0.5)
-
-[node name="Camera2D" type="Camera2D" parent="Dash"]
-position = Vector2(0, -7)
-limit_smoothed = true
-position_smoothing_enabled = true
-
-[node name="temporary_platform" type="StaticBody2D" parent="."]
-
-[node name="Sprite2D" type="Sprite2D" parent="temporary_platform"]
-position = Vector2(83, 99)
-scale = Vector2(1.66016, 0.28125)
-texture = ExtResource("1_h741j")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="temporary_platform"]
-position = Vector2(78, 92)
-shape = SubResource("RectangleShape2D_ac0l5")
+[node name="TitleScreen" parent="." instance=ExtResource("1_xh1h4")]

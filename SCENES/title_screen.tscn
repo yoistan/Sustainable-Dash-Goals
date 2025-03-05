@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://brcmcxe2124uv"]
+[gd_scene load_steps=4 format=3 uid="uid://brcmcxe2124uv"]
 
 [ext_resource type="Script" uid="uid://bc2cka0xrngdb" path="res://SCRIPTS/title_screen.gd" id="1_7luok"]
 [ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="1_8ukxt"]
+[ext_resource type="PackedScene" uid="uid://b36htfr55psld" path="res://SCENES/BGM/TITLE SCREEN BGM.tscn" id="3_wtx41"]
 
 [node name="TitleScreen" type="Node"]
 script = ExtResource("1_7luok")
@@ -51,6 +52,8 @@ offset_bottom = 90.0
 scale = Vector2(0.6, 0.6)
 theme_override_fonts/font = ExtResource("1_8ukxt")
 text = "Quit"
+
+[node name="AudioStreamPlayer2D" parent="." instance=ExtResource("3_wtx41")]
 
 [connection signal="pressed" from="playButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="settingsButton" to="." method="_on_settings_button_pressed"]
