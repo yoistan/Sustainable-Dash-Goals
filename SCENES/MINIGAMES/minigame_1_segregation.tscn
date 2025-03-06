@@ -1,3 +1,19 @@
-[gd_scene format=3 uid="uid://dfwqi8ldv6mpf"]
+[gd_scene load_steps=4 format=3 uid="uid://dfwqi8ldv6mpf"]
+
+[ext_resource type="PackedScene" uid="uid://u53fyrnunff2" path="res://SCENES/MINIGAMES/MiniGame1/bins.tscn" id="1_xsg15"]
+[ext_resource type="PackedScene" uid="uid://crha708f33d6y" path="res://SCENES/MINIGAMES/MiniGame1/area.tscn" id="2_wnusr"]
+[ext_resource type="PackedScene" uid="uid://ddl1a2a01vnhr" path="res://SCENES/MINIGAMES/MiniGame1/TrashPiece.tscn" id="3_6co4y"]
 
 [node name="Minigame1Segregation" type="Node2D"]
+
+[node name="Area" parent="." instance=ExtResource("2_wnusr")]
+position = Vector2(79, 20)
+
+[node name="Bins" parent="." instance=ExtResource("1_xsg15")]
+position = Vector2(113, 72)
+
+[node name="Bins2" parent="." instance=ExtResource("1_xsg15")]
+position = Vector2(45, 70)
+
+[node name="Node2D" parent="." instance=ExtResource("3_6co4y")]
+position = Vector2(61, 11)

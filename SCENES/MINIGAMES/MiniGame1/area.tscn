@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://crha708f33d6y"]
+
+[ext_resource type="Script" path="res://SCENES/MINIGAMES/MiniGame1/area.gd" id="1_evyop"]
+
+[node name="Area" type="Marker2D" groups=["zone"]]
+script = ExtResource("1_evyop")
