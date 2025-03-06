@@ -2,6 +2,8 @@ extends CanvasLayer
 
 const CHAR_READ_RATE = 0.3
 
+signal dialogue_queue_finished
+
 # initiate variables
 @onready var textbox_container = $TextBoxContainer
 @onready var speaker_name = $TextBoxContainer/MarginContainer2/SpeakerName
@@ -12,6 +14,7 @@ var tween
 
 # list of states
 enum State {
+	WAITING,
 	START,
 	READY,
 	READING,
@@ -21,7 +24,7 @@ enum State {
 }
 
 # default state
-var current_state = State.START
+var current_state = State.WAITING
 
 # queue of dialogue
 var text_queue = []
@@ -38,6 +41,8 @@ func _ready():
 
 func _process(delta):
 	match current_state:
+		State.WAITING:
+			pass
 		State.START: # if it's the first dialogue, play textbox animation and switch to display the text
 			show_textbox()
 			change_state(State.READY)
@@ -56,6 +61,7 @@ func _process(delta):
 				change_state(State.READY)
 		State.END: # play the dialogue end animation then switch to the final state
 			hide_textbox()
+			dialogue_queue_finished.emit()
 			change_state(State.STOP)
 		State.STOP:
 			pass
@@ -111,3 +117,7 @@ func _on_hide_text_box_timer_timeout():
 	# when there is still dialogue AND it is the start, show the textbox
 	elif !text_queue.is_empty() and current_state == State.START:
 		textbox_container.show()
+
+
+func _on_visibility_changed():
+	change_state(State.START)

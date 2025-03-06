@@ -1,3 +1,30 @@
-[gd_scene format=3 uid="uid://br81y231rkul"]
+[gd_scene load_steps=7 format=3 uid="uid://br81y231rkul"]
+
+[ext_resource type="PackedScene" uid="uid://c1lbtikfidyi8" path="res://SCENES/BACKGROUNDS/area_1_bg_Outside_Rizal.tscn" id="1_2ox3u"]
+[ext_resource type="AudioStream" uid="uid://df0wbtj3nrg73" path="res://ASSETS/MUSIC/Swing.wav" id="1_6wwgx"]
+[ext_resource type="Script" uid="uid://ca6ovjfutik3x" path="res://SCENES/AREAS/area_1_outside_rizal.gd" id="1_y1pt7"]
+[ext_resource type="PackedScene" uid="uid://drmpfqi10hj1l" path="res://SCENES/CHARACTERS/dash.tscn" id="2_beq6n"]
+[ext_resource type="PackedScene" uid="uid://gtu3ewkewaj3" path="res://SCENES/touch_controls.tscn" id="3_6wwgx"]
+[ext_resource type="PackedScene" uid="uid://b3metr0saq6y5" path="res://SCENES/CUTSCENES/introductory_cutscene.tscn" id="5_y1pt7"]
 
 [node name="Area1OutsideRizal" type="Node2D"]
+script = ExtResource("1_y1pt7")
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_6wwgx")
+autoplay = true
+
+[node name="InGame" type="Node2D" parent="."]
+
+[node name="TouchControls" parent="InGame" instance=ExtResource("3_6wwgx")]
+
+[node name="Area1BgOutsideRizal" parent="InGame" instance=ExtResource("1_2ox3u")]
+
+[node name="Dash" parent="InGame" instance=ExtResource("2_beq6n")]
+position = Vector2(61, 55)
+scale = Vector2(0.5, 0.5)
+
+[node name="IntroductoryCutscene" parent="." instance=ExtResource("5_y1pt7")]
+
+[connection signal="cutscene_ended" from="IntroductoryCutscene" to="." method="_on_introductory_cutscene_cutscene_ended"]
+[connection signal="cutscene_playing" from="IntroductoryCutscene" to="." method="_on_introductory_cutscene_cutscene_playing"]

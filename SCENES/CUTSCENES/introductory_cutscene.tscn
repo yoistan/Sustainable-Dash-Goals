@@ -1,13 +1,41 @@
-[gd_scene load_steps=8 format=3 uid="uid://b3metr0saq6y5"]
+[gd_scene load_steps=10 format=3 uid="uid://b3metr0saq6y5"]
 
 [ext_resource type="PackedScene" uid="uid://c1lbtikfidyi8" path="res://SCENES/BACKGROUNDS/area_1_bg_Outside_Rizal.tscn" id="1_5dxpk"]
+[ext_resource type="Script" uid="uid://cso708d8siu4b" path="res://SCRIPTS/CUTSCENES/introductory_cutscene.gd" id="1_n1ugq"]
 [ext_resource type="PackedScene" uid="uid://drmpfqi10hj1l" path="res://SCENES/CHARACTERS/dash.tscn" id="2_kw1sa"]
 [ext_resource type="PackedScene" uid="uid://dmuduumyiu88m" path="res://SCENES/CHARACTERS/whizzy.tscn" id="3_jlr3y"]
 [ext_resource type="PackedScene" uid="uid://e6bltu3ywpbl" path="res://SCENES/dialogue_box.tscn" id="4_kw1sa"]
 
+[sub_resource type="Animation" id="Animation_kpsns"]
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DialogueBox:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fade:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_tohkq"]
 resource_name = "introductory_cutscene"
-length = 30.0
+length = 3.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -20,29 +48,55 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(-20, 55), Vector2(55, 55)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DialogueBox:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fade:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 0.5),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
 
-[sub_resource type="Animation" id="Animation_kpsns"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_0apk4"]
+resource_name = "fade_out"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Characters/Dash:position")
+tracks/0/path = NodePath("fade:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.5, 0.5),
 "update": 0,
-"values": [Vector2(-20, 55)]
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_534bo"]
 _data = {
 &"RESET": SubResource("Animation_kpsns"),
+&"fade_out": SubResource("Animation_0apk4"),
 &"introductory_cutscene": SubResource("Animation_tohkq")
 }
 
 [node name="IntroductoryCutscene" type="Node2D"]
+script = ExtResource("1_n1ugq")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -63,5 +117,16 @@ scale = Vector2(0.5, 0.5)
 
 [node name="DialogueBox" parent="." instance=ExtResource("4_kw1sa")]
 
+[node name="fade" type="ColorRect" parent="."]
+offset_left = -7.0
+offset_top = -7.0
+offset_right = 167.0
+offset_bottom = 97.0
+color = Color(0, 0, 0, 1)
+
+[connection signal="cutscene_ended" from="." to="." method="_on_cutscene_ended"]
 [connection signal="tree_entered" from="." to="Characters/Dash" method="_on_introductory_cutscene_tree_entered"]
 [connection signal="tree_exited" from="." to="Characters/Dash" method="_on_introductory_cutscene_tree_exited"]
+[connection signal="dialogue_queue_finished" from="DialogueBox" to="." method="_on_dialogue_box_dialogue_queue_finished"]
+[connection signal="visibility_changed" from="DialogueBox" to="." method="_on_dialogue_box_visibility_changed"]
+[connection signal="visibility_changed" from="DialogueBox" to="DialogueBox" method="_on_visibility_changed"]

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bg50lbycn2xim"]
+
+[node name="Camera2D" type="Camera2D"]
+offset = Vector2(0, -9)
+limit_smoothed = true
+position_smoothing_enabled = true
