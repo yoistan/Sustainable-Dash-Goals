@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://e6bltu3ywpbl"]
+[gd_scene load_steps=8 format=3 uid="uid://8co0rhrw8eex"]
 
-[ext_resource type="Script" path="res://dialogue_box.gd" id="1_lpvjf"]
-[ext_resource type="StyleBox" uid="uid://crrk65moaup13" path="res://THEMES/dialogue box.tres" id="2_h6h6k"]
-[ext_resource type="Theme" uid="uid://cpgxmotex3pwn" path="res://THEMES/dialogue text theme.tres" id="3_i5fyq"]
+[ext_resource type="Script" path="res://game_1_dialogue.gd" id="1_r6u7k"]
+[ext_resource type="StyleBox" uid="uid://crrk65moaup13" path="res://THEMES/dialogue box.tres" id="2_cw5il"]
+[ext_resource type="Theme" uid="uid://cpgxmotex3pwn" path="res://THEMES/dialogue text theme.tres" id="3_s3tds"]
 
 [sub_resource type="Animation" id="Animation_h6h6k"]
 length = 0.001
@@ -56,8 +56,8 @@ _data = {
 "dialogue_box_exit": SubResource("Animation_i5fyq")
 }
 
-[node name="DialogueBox" type="CanvasLayer"]
-script = ExtResource("1_lpvjf")
+[node name="Game1Dialogue" type="CanvasLayer"]
+script = ExtResource("1_r6u7k")
 
 [node name="DialogueBoxAnimation" type="AnimationPlayer" parent="."]
 libraries = {
@@ -78,7 +78,7 @@ theme_override_constants/margin_bottom = 2
 
 [node name="Panel" type="Panel" parent="TextBoxContainer"]
 layout_mode = 2
-theme_override_styles/panel = ExtResource("2_h6h6k")
+theme_override_styles/panel = ExtResource("2_cw5il")
 
 [node name="MarginContainer2" type="MarginContainer" parent="TextBoxContainer"]
 layout_mode = 2
@@ -89,7 +89,7 @@ theme_override_constants/margin_bottom = 29
 
 [node name="SpeakerName" type="Label" parent="TextBoxContainer/MarginContainer2"]
 layout_mode = 2
-theme = ExtResource("3_i5fyq")
+theme = ExtResource("3_s3tds")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -103,11 +103,9 @@ theme_override_constants/margin_bottom = 7
 
 [node name="RichTextLabel" type="RichTextLabel" parent="TextBoxContainer/MarginContainer"]
 layout_mode = 2
-theme = ExtResource("3_i5fyq")
+theme = ExtResource("3_s3tds")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 scroll_active = false
 
 [node name="TextBoxTimer" type="Timer" parent="."]
 one_shot = true
-
-[connection signal="timeout" from="TextBoxTimer" to="." method="_on_hide_text_box_timer_timeout"]
