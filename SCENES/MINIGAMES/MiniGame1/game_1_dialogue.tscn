@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://8co0rhrw8eex"]
 
-[ext_resource type="Script" path="res://game_1_dialogue.gd" id="1_r6u7k"]
+[ext_resource type="Script" uid="uid://cm87sxkca8tgh" path="res://game_1_dialogue.gd" id="1_r6u7k"]
 [ext_resource type="StyleBox" uid="uid://crrk65moaup13" path="res://THEMES/dialogue box.tres" id="2_cw5il"]
 [ext_resource type="Theme" uid="uid://cpgxmotex3pwn" path="res://THEMES/dialogue text theme.tres" id="3_s3tds"]
 
@@ -51,9 +51,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_been6"]
 _data = {
-"RESET": SubResource("Animation_h6h6k"),
-"dialogue_box_enter": SubResource("Animation_lpvjf"),
-"dialogue_box_exit": SubResource("Animation_i5fyq")
+&"RESET": SubResource("Animation_h6h6k"),
+&"dialogue_box_enter": SubResource("Animation_lpvjf"),
+&"dialogue_box_exit": SubResource("Animation_i5fyq")
 }
 
 [node name="Game1Dialogue" type="CanvasLayer"]

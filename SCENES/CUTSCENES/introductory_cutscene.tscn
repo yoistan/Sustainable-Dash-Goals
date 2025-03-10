@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://b3metr0saq6y5"]
 
 [ext_resource type="PackedScene" uid="uid://c1lbtikfidyi8" path="res://SCENES/BACKGROUNDS/area_1_bg_Outside_Rizal.tscn" id="1_5dxpk"]
-[ext_resource type="Script" path="res://SCRIPTS/CUTSCENES/introductory_cutscene.gd" id="1_n1ugq"]
+[ext_resource type="Script" uid="uid://cso708d8siu4b" path="res://SCRIPTS/CUTSCENES/introductory_cutscene.gd" id="1_n1ugq"]
 [ext_resource type="PackedScene" uid="uid://drmpfqi10hj1l" path="res://SCENES/CHARACTERS/dash.tscn" id="2_kw1sa"]
 [ext_resource type="PackedScene" uid="uid://dmuduumyiu88m" path="res://SCENES/CHARACTERS/whizzy.tscn" id="3_jlr3y"]
 [ext_resource type="PackedScene" uid="uid://e6bltu3ywpbl" path="res://SCENES/dialogue_box.tscn" id="4_kw1sa"]
@@ -78,9 +78,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_534bo"]
 _data = {
-"RESET": SubResource("Animation_kpsns"),
-"fade_out": SubResource("Animation_0apk4"),
-"introductory_cutscene": SubResource("Animation_tohkq")
+&"RESET": SubResource("Animation_kpsns"),
+&"fade_out": SubResource("Animation_0apk4"),
+&"introductory_cutscene": SubResource("Animation_tohkq")
 }
 
 [node name="IntroductoryCutscene" type="Node2D"]
