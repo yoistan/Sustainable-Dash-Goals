@@ -128,4 +128,4 @@ shape = SubResource("CapsuleShape2D_82tok")
 position = Vector2(7, 4)
 scale = Vector2(0.266226, 0.266226)
 sprite_frames = SubResource("SpriteFrames_88ax2")
-animation = &"idle"
+animation = &"running"

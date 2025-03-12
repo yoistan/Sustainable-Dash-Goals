@@ -6,6 +6,7 @@ signal cutscene_ended
 
 func _ready():
 	cutscene_playing.emit()
+	$Characters/Dash.play()
 	animation.play("introductory_cutscene")
 
 func _on_dialogue_box_dialogue_queue_finished():

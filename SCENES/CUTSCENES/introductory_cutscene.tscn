@@ -1,9 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://b3metr0saq6y5"]
+[gd_scene load_steps=23 format=3 uid="uid://b3metr0saq6y5"]
 
 [ext_resource type="PackedScene" uid="uid://c1lbtikfidyi8" path="res://SCENES/BACKGROUNDS/area_1_bg_Outside_Rizal.tscn" id="1_5dxpk"]
 [ext_resource type="Script" uid="uid://cso708d8siu4b" path="res://SCRIPTS/CUTSCENES/introductory_cutscene.gd" id="1_n1ugq"]
-[ext_resource type="PackedScene" uid="uid://drmpfqi10hj1l" path="res://SCENES/CHARACTERS/dash.tscn" id="2_kw1sa"]
 [ext_resource type="PackedScene" uid="uid://dmuduumyiu88m" path="res://SCENES/CHARACTERS/whizzy.tscn" id="3_jlr3y"]
+[ext_resource type="Texture2D" uid="uid://ceu5x3nctlkv2" path="res://ASSETS/CHARACTERS/run_animation_spritesheet_transparent.png" id="4_jlr3y"]
 [ext_resource type="PackedScene" uid="uid://e6bltu3ywpbl" path="res://SCENES/dialogue_box.tscn" id="4_kw1sa"]
 
 [sub_resource type="Animation" id="Animation_kpsns"]
@@ -31,6 +31,30 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(0, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Characters/Dash:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-11, 56)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Characters/Dash:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"running"]
 }
 
 [sub_resource type="Animation" id="Animation_0apk4"]
@@ -75,6 +99,30 @@ tracks/1/keys = {
 "update": 0,
 "values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Characters/Dash:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-11, 56), Vector2(59.38, 56)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Characters/Dash:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.01),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"running", &"idle"]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_534bo"]
 _data = {
@@ -83,25 +131,131 @@ _data = {
 &"introductory_cutscene": SubResource("Animation_tohkq")
 }
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_82tok"]
+atlas = ExtResource("4_jlr3y")
+region = Rect2(2220, 0, 740, 416)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwfgl"]
+atlas = ExtResource("4_jlr3y")
+region = Rect2(0, 0, 740, 416)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yn03p"]
+atlas = ExtResource("4_jlr3y")
+region = Rect2(740, 0, 740, 416)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmh5o"]
+atlas = ExtResource("4_jlr3y")
+region = Rect2(1480, 0, 740, 416)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w2jnv"]
+atlas = ExtResource("4_jlr3y")
+region = Rect2(2220, 0, 740, 416)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h62g2"]
+atlas = ExtResource("4_jlr3y")
+region = Rect2(0, 416, 740, 416)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exvlu"]
+atlas = ExtResource("4_jlr3y")
+region = Rect2(740, 416, 740, 416)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlrkt"]
+atlas = ExtResource("4_jlr3y")
+region = Rect2(1480, 416, 740, 416)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tslg5"]
+atlas = ExtResource("4_jlr3y")
+region = Rect2(2220, 416, 740, 416)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hgeg4"]
+atlas = ExtResource("4_jlr3y")
+region = Rect2(0, 832, 740, 416)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rf3pu"]
+atlas = ExtResource("4_jlr3y")
+region = Rect2(740, 832, 740, 416)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p62qv"]
+atlas = ExtResource("4_jlr3y")
+region = Rect2(1480, 832, 740, 416)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n1ugq"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82tok")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hwfgl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yn03p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vmh5o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w2jnv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h62g2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exvlu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlrkt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tslg5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hgeg4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rf3pu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p62qv")
+}],
+"loop": true,
+"name": &"running",
+"speed": 12.0
+}]
+
 [node name="IntroductoryCutscene" type="Node2D"]
 script = ExtResource("1_n1ugq")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_534bo")
+&"": SubResource("AnimationLibrary_534bo")
 }
 
 [node name="Area1BgOutsideRizal" parent="." instance=ExtResource("1_5dxpk")]
 
 [node name="Characters" type="Node2D" parent="."]
 
-[node name="Dash" parent="Characters" instance=ExtResource("2_kw1sa")]
-position = Vector2(-20, 55)
-scale = Vector2(0.5, 0.5)
-
 [node name="Whizzy" parent="Characters" instance=ExtResource("3_jlr3y")]
 position = Vector2(85, 55)
 scale = Vector2(0.5, 0.5)
+
+[node name="Dash" type="AnimatedSprite2D" parent="Characters"]
+position = Vector2(-11, 56)
+scale = Vector2(0.129808, 0.129808)
+sprite_frames = SubResource("SpriteFrames_n1ugq")
+animation = &"running"
+frame = 3
+frame_progress = 0.753823
 
 [node name="DialogueBox" parent="." instance=ExtResource("4_kw1sa")]
 visible = false
@@ -115,8 +269,6 @@ offset_bottom = 97.0
 color = Color(0, 0, 0, 1)
 
 [connection signal="cutscene_ended" from="." to="." method="_on_cutscene_ended"]
-[connection signal="tree_entered" from="." to="Characters/Dash" method="_on_introductory_cutscene_tree_entered"]
-[connection signal="tree_exited" from="." to="Characters/Dash" method="_on_introductory_cutscene_tree_exited"]
 [connection signal="dialogue_queue_finished" from="DialogueBox" to="." method="_on_dialogue_box_dialogue_queue_finished"]
 [connection signal="visibility_changed" from="DialogueBox" to="." method="_on_dialogue_box_visibility_changed"]
 [connection signal="visibility_changed" from="DialogueBox" to="DialogueBox" method="_on_visibility_changed"]
