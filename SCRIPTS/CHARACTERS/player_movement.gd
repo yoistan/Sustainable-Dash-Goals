@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@onready var dash = $AnimatedSprite2D
+
 var isPlayerInCutscene : bool = false
 
 const SPEED = 130.0
@@ -20,9 +22,14 @@ func _physics_process(delta):
 		
 		# Apply movement
 		if direction:
+			dash.play("running")
 			velocity.x = direction * SPEED
 		else:
+			dash.play("idle")
 			velocity.x = move_toward(velocity.x, 0, SPEED)
+		
+		if direction != 0:
+			dash.flip_h = (direction == -1)
 
 		move_and_slide()
 

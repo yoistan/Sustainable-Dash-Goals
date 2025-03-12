@@ -92,7 +92,7 @@ script = ExtResource("1_4nlcm")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_534bo")
+&"": SubResource("AnimationLibrary_534bo")
 }
 
 [node name="Area1BgOutsideRizal" parent="." instance=ExtResource("1_11beg")]
@@ -110,6 +110,7 @@ scale = Vector2(0.5, 0.5)
 script = SubResource("GDScript_jbr2l")
 
 [node name="fade" type="ColorRect" parent="."]
+visible = false
 offset_left = -7.0
 offset_top = -7.0
 offset_right = 167.0
