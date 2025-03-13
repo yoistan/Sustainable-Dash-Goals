@@ -61,7 +61,7 @@ script = ExtResource("1_r6u7k")
 
 [node name="DialogueBoxAnimation" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_been6")
+&"": SubResource("AnimationLibrary_been6")
 }
 
 [node name="TextBoxContainer" type="MarginContainer" parent="."]

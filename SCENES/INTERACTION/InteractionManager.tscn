@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0arcdqbwtq72"]
+
+[ext_resource type="Script" uid="uid://yxvb5fvc27cp" path="res://SCRIPTS/INTERACTION/interaction_manager.gd" id="1_1p4ol"]
+[ext_resource type="Theme" uid="uid://cpgxmotex3pwn" path="res://THEMES/dialogue text theme.tres" id="2_l4qe4"]
+
+[node name="InteractionManager" type="Node2D"]
+script = ExtResource("1_1p4ol")
+
+[node name="Label" type="Label" parent="."]
+z_index = 20
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -30.5
+offset_right = 30.5
+offset_bottom = 23.0
+grow_horizontal = 2
+theme = ExtResource("2_l4qe4")
+text = "interact"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -15,6 +15,11 @@ run/main_scene="res://SCENES/main.tscn"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+InteractionManager="*res://SCENES/INTERACTION/InteractionManager.tscn"
+DialogManager="*res://SCRIPTS/SINGLETONS/DialogManager.gd"
+
 [display]
 
 window/size/viewport_width=160
@@ -31,6 +36,10 @@ folder_colors={
 "res://SCRIPTS/": "yellow",
 "res://THEMES/": "green"
 }
+
+[global_group]
+
+player=""
 
 [input]
 

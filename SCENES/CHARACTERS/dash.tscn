@@ -109,7 +109,7 @@ animations = [{
 "speed": 12.0
 }]
 
-[node name="Dash" type="CharacterBody2D"]
+[node name="Dash" type="CharacterBody2D" groups=["player"]]
 collision_layer = 2
 script = ExtResource("1_82tok")
 

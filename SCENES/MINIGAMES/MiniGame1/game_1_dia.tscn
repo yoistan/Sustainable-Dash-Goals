@@ -1,10 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://hb33rvgc2lov"]
+[gd_scene load_steps=10 format=3 uid="uid://hb33rvgc2lov"]
 
 [ext_resource type="Script" uid="uid://bfyqf1bjc85yw" path="res://SCENES/MINIGAMES/MiniGame1/game_1_dia.gd" id="1_4nlcm"]
 [ext_resource type="PackedScene" uid="uid://c1lbtikfidyi8" path="res://SCENES/BACKGROUNDS/area_1_bg_Outside_Rizal.tscn" id="1_11beg"]
 [ext_resource type="PackedScene" uid="uid://drmpfqi10hj1l" path="res://SCENES/CHARACTERS/dash.tscn" id="2_yndo6"]
-[ext_resource type="PackedScene" uid="uid://bh3t55otv546" path="res://SCENES/CHARACTERS/laura.tscn" id="3_4ix2f"]
 [ext_resource type="PackedScene" uid="uid://8co0rhrw8eex" path="res://SCENES/MINIGAMES/MiniGame1/game_1_dialogue.tscn" id="4_3g06l"]
+[ext_resource type="Texture2D" uid="uid://cpepodmlxqkl3" path="res://icon.svg" id="4_wg6dg"]
 
 [sub_resource type="Animation" id="Animation_kpsns"]
 length = 30.0
@@ -83,10 +83,6 @@ _data = {
 &"introductory_cutscene": SubResource("Animation_tohkq")
 }
 
-[sub_resource type="GDScript" id="GDScript_jbr2l"]
-script/source = "extends CharacterBody2D
-"
-
 [node name="Game1dia" type="Node2D"]
 script = ExtResource("1_4nlcm")
 
@@ -104,13 +100,23 @@ position = Vector2(-189, -6)
 position = Vector2(75, 54)
 scale = Vector2(0.5, 0.5)
 
-[node name="Laura" parent="Characters" instance=ExtResource("3_4ix2f")]
-position = Vector2(50.5, 54.105)
+[node name="Laura" type="Node2D" parent="Characters"]
 scale = Vector2(0.5, 0.5)
-script = SubResource("GDScript_jbr2l")
+
+[node name="Label" type="Label" parent="Characters/Laura"]
+offset_left = 86.0
+offset_top = 46.0
+offset_right = 131.0
+offset_bottom = 69.0
+scale = Vector2(0.5, 0.5)
+text = "Laura"
+
+[node name="Sprite2D" type="Sprite2D" parent="Characters/Laura"]
+position = Vector2(95, 98)
+scale = Vector2(0.328125, 0.609375)
+texture = ExtResource("4_wg6dg")
 
 [node name="fade" type="ColorRect" parent="."]
-visible = false
 offset_left = -7.0
 offset_top = -7.0
 offset_right = 167.0
