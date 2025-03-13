@@ -1,7 +1,7 @@
 [gd_scene load_steps=23 format=3 uid="uid://b3metr0saq6y5"]
 
 [ext_resource type="PackedScene" uid="uid://c1lbtikfidyi8" path="res://SCENES/BACKGROUNDS/area_1_bg_Outside_Rizal.tscn" id="1_5dxpk"]
-[ext_resource type="Script" uid="uid://cso708d8siu4b" path="res://SCRIPTS/CUTSCENES/introductory_cutscene.gd" id="1_n1ugq"]
+[ext_resource type="Script" path="res://SCRIPTS/CUTSCENES/introductory_cutscene.gd" id="1_n1ugq"]
 [ext_resource type="PackedScene" uid="uid://dmuduumyiu88m" path="res://SCENES/CHARACTERS/whizzy.tscn" id="3_jlr3y"]
 [ext_resource type="Texture2D" uid="uid://ceu5x3nctlkv2" path="res://ASSETS/CHARACTERS/run_animation_spritesheet_transparent.png" id="4_jlr3y"]
 [ext_resource type="PackedScene" uid="uid://e6bltu3ywpbl" path="res://SCENES/dialogue_box.tscn" id="4_kw1sa"]
@@ -126,9 +126,9 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_534bo"]
 _data = {
-&"RESET": SubResource("Animation_kpsns"),
-&"fade_out": SubResource("Animation_0apk4"),
-&"introductory_cutscene": SubResource("Animation_tohkq")
+"RESET": SubResource("Animation_kpsns"),
+"fade_out": SubResource("Animation_0apk4"),
+"introductory_cutscene": SubResource("Animation_tohkq")
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_82tok"]
@@ -238,7 +238,7 @@ script = ExtResource("1_n1ugq")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-&"": SubResource("AnimationLibrary_534bo")
+"": SubResource("AnimationLibrary_534bo")
 }
 
 [node name="Area1BgOutsideRizal" parent="." instance=ExtResource("1_5dxpk")]

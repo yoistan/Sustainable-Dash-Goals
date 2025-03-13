@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cni0810xyrd0k"]
 
-[ext_resource type="Script" uid="uid://de0bqav3jfg7h" path="res://SCRIPTS/settings.gd" id="1_vtnoc"]
+[ext_resource type="Script" path="res://SCRIPTS/settings.gd" id="1_vtnoc"]
 [ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="2_o155n"]
 [ext_resource type="PackedScene" uid="uid://b36htfr55psld" path="res://SCENES/BGM/TITLE SCREEN BGM.tscn" id="3_w6dp3"]
 

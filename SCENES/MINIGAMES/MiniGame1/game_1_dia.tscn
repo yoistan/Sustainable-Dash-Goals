@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://hb33rvgc2lov"]
 
-[ext_resource type="Script" uid="uid://bfyqf1bjc85yw" path="res://SCENES/MINIGAMES/MiniGame1/game_1_dia.gd" id="1_4nlcm"]
+[ext_resource type="Script" path="res://SCENES/MINIGAMES/MiniGame1/game_1_dia.gd" id="1_4nlcm"]
 [ext_resource type="PackedScene" uid="uid://c1lbtikfidyi8" path="res://SCENES/BACKGROUNDS/area_1_bg_Outside_Rizal.tscn" id="1_11beg"]
 [ext_resource type="PackedScene" uid="uid://drmpfqi10hj1l" path="res://SCENES/CHARACTERS/dash.tscn" id="2_yndo6"]
 [ext_resource type="PackedScene" uid="uid://8co0rhrw8eex" path="res://SCENES/MINIGAMES/MiniGame1/game_1_dialogue.tscn" id="4_3g06l"]
@@ -78,9 +78,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_534bo"]
 _data = {
-&"RESET": SubResource("Animation_kpsns"),
-&"fade_out": SubResource("Animation_0apk4"),
-&"introductory_cutscene": SubResource("Animation_tohkq")
+"RESET": SubResource("Animation_kpsns"),
+"fade_out": SubResource("Animation_0apk4"),
+"introductory_cutscene": SubResource("Animation_tohkq")
 }
 
 [node name="Game1dia" type="Node2D"]
@@ -88,7 +88,7 @@ script = ExtResource("1_4nlcm")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-&"": SubResource("AnimationLibrary_534bo")
+"": SubResource("AnimationLibrary_534bo")
 }
 
 [node name="Area1BgOutsideRizal" parent="." instance=ExtResource("1_11beg")]
