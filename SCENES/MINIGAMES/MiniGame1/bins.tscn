@@ -10,3 +10,11 @@ script = ExtResource("1_7bosr")
 [node name="Icon" type="Sprite2D" parent="."]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_4x2lf")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -10.0
+offset_top = -18.0
+offset_right = 102.0
+offset_bottom = 5.0
+scale = Vector2(0.2, 0.2)
+text = "Biodegradable"

@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dfwqi8ldv6mpf"]
+[gd_scene load_steps=7 format=3 uid="uid://dfwqi8ldv6mpf"]
 
 [ext_resource type="PackedScene" uid="uid://u53fyrnunff2" path="res://SCENES/MINIGAMES/MiniGame1/bins.tscn" id="1_xsg15"]
 [ext_resource type="PackedScene" uid="uid://crha708f33d6y" path="res://SCENES/MINIGAMES/MiniGame1/area.tscn" id="2_wnusr"]
 [ext_resource type="PackedScene" uid="uid://ddl1a2a01vnhr" path="res://SCENES/MINIGAMES/MiniGame1/TrashPiece.tscn" id="3_6co4y"]
+[ext_resource type="PackedScene" uid="uid://crf3tcjr0ah2n" path="res://SCENES/MINIGAMES/MiniGame1/Bin2.tscn" id="3_wlfmg"]
+[ext_resource type="PackedScene" uid="uid://dqkrh62vkdvuy" path="res://SCENES/MINIGAMES/MiniGame1/label.tscn" id="5_i6cdq"]
 
 [sub_resource type="GDScript" id="GDScript_f57qm"]
 
@@ -13,10 +15,18 @@ script = SubResource("GDScript_f57qm")
 position = Vector2(79, 20)
 
 [node name="Bins" parent="." instance=ExtResource("1_xsg15")]
-position = Vector2(113, 72)
+position = Vector2(39, 71)
 
-[node name="Bins2" parent="." instance=ExtResource("1_xsg15")]
-position = Vector2(45, 70)
+[node name="Bin2" parent="." instance=ExtResource("3_wlfmg")]
+position = Vector2(113, 70)
 
-[node name="Node2D" parent="." instance=ExtResource("3_6co4y")]
+[node name="TrashPiece" parent="." node_paths=PackedStringArray("correct_bin") instance=ExtResource("3_6co4y")]
 position = Vector2(61, 11)
+correct_bin = NodePath("../Bins")
+
+[node name="Score" parent="." instance=ExtResource("5_i6cdq")]
+offset_left = 20.0
+offset_top = 15.0
+offset_right = 60.0
+offset_bottom = 38.0
+scale = Vector2(0.4, 0.4)

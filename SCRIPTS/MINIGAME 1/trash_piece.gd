@@ -2,12 +2,12 @@ extends Node2D
 
 var selected = false
 var rest_point: Vector2
-var rest_nodes = []
+var rest_nodes = []  
+@export var correct_bin: Node2D  
 
 func _ready():
 	rest_nodes = get_tree().get_nodes_in_group("zone")
-	
-	# Ensure there is at least one valid zone
+
 	if rest_nodes.size() > 0:
 		rest_point = rest_nodes[0].global_position  # Set default rest point
 	else:
@@ -18,25 +18,35 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int):
 		selected = true  # Start dragging
 
 func _physics_process(delta):
-	if rest_point:  # Ensure rest_point is valid
-		if selected:
-			global_position = lerp(global_position, get_global_mouse_position(), 25 * delta)
-			look_at(get_global_mouse_position())
-		else:
-			global_position = lerp(global_position, rest_point, 15 * delta)
-			rotation = lerp_angle(rotation,0, 10 * delta)
+	if selected:
+		global_position = lerp(global_position, get_global_mouse_position(), 25 * delta)
+		look_at(get_global_mouse_position())
+	else:
+		global_position = lerp(global_position, rest_point, 15 * delta)
+		rotation = lerp_angle(rotation, 0, 10 * delta)
 
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and not event.pressed and selected:
 		selected = false  # Stop dragging
 		var shortest_dist = 75
-		var closest_zone = null
+		var closest_bin = null
 
-		for child in rest_nodes:
-			var distance = global_position.distance_to(child.global_position)
+		for bin in rest_nodes:
+			var distance = global_position.distance_to(bin.global_position)
 			if distance < shortest_dist:
 				shortest_dist = distance
-				closest_zone = child
+				closest_bin = bin
 
-		if closest_zone:
-			rest_point = closest_zone.global_position  # Snap to closest zone
+		if closest_bin:
+			rest_point = closest_bin.global_position
+			check_correctness(closest_bin)
+
+func check_correctness(bin):
+	if bin == correct_bin:
+		GlobalScore.add_score()  # Increase score
+
+	disappear()  # Remove object even if incorrect
+
+func disappear():
+	await get_tree().create_timer(0.5).timeout  # Delay for effect
+	queue_free()  # Removes the item
