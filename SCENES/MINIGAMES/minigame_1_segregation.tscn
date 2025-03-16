@@ -21,7 +21,7 @@ position = Vector2(39, 71)
 position = Vector2(113, 70)
 
 [node name="TrashPiece" parent="." node_paths=PackedStringArray("correct_bin") instance=ExtResource("3_6co4y")]
-position = Vector2(61, 11)
+position = Vector2(50, 11)
 correct_bin = NodePath("../Bins")
 
 [node name="Score" parent="." instance=ExtResource("5_i6cdq")]
