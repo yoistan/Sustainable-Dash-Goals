@@ -1,10 +1,15 @@
 [gd_scene load_steps=23 format=3 uid="uid://b3metr0saq6y5"]
 
 [ext_resource type="PackedScene" uid="uid://c1lbtikfidyi8" path="res://SCENES/BACKGROUNDS/area_1_bg_Outside_Rizal.tscn" id="1_5dxpk"]
-[ext_resource type="Script" uid="uid://cso708d8siu4b" path="res://SCRIPTS/CUTSCENES/introductory_cutscene.gd" id="1_n1ugq"]
 [ext_resource type="PackedScene" uid="uid://dmuduumyiu88m" path="res://SCENES/CHARACTERS/whizzy.tscn" id="3_jlr3y"]
 [ext_resource type="Texture2D" uid="uid://ceu5x3nctlkv2" path="res://ASSETS/CHARACTERS/run_animation_spritesheet_transparent.png" id="4_jlr3y"]
 [ext_resource type="PackedScene" uid="uid://e6bltu3ywpbl" path="res://SCENES/dialogue_box.tscn" id="4_kw1sa"]
+
+[sub_resource type="GDScript" id="GDScript_kw1sa"]
+script/source = "extends Node2D
+
+@onready var animation = $AnimationPlayer
+"
 
 [sub_resource type="Animation" id="Animation_kpsns"]
 length = 30.0
@@ -234,7 +239,7 @@ animations = [{
 }]
 
 [node name="IntroductoryCutscene" type="Node2D"]
-script = ExtResource("1_n1ugq")
+script = SubResource("GDScript_kw1sa")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -268,7 +273,5 @@ offset_right = 167.0
 offset_bottom = 97.0
 color = Color(0, 0, 0, 1)
 
-[connection signal="cutscene_ended" from="." to="." method="_on_cutscene_ended"]
-[connection signal="dialogue_queue_finished" from="DialogueBox" to="." method="_on_dialogue_box_dialogue_queue_finished"]
 [connection signal="visibility_changed" from="DialogueBox" to="." method="_on_dialogue_box_visibility_changed"]
 [connection signal="visibility_changed" from="DialogueBox" to="DialogueBox" method="_on_visibility_changed"]

@@ -7,6 +7,7 @@ class_name InteractionArea
 var temporary_scene_fix = preload("res://SCENES/MINIGAMES/MiniGame1/game_1_dia.tscn").instantiate()
 
 var interact: Callable = func():
+	print("interacted")
 	get_tree().change_scene_to_file("res://SCENES/MINIGAMES/MiniGame1/game_1_dia.tscn")
 
 func _on_body_entered(body: Node2D) -> void:

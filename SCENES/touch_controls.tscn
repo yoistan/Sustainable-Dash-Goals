@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://gtu3ewkewaj3"]
+[gd_scene load_steps=5 format=3 uid="uid://gtu3ewkewaj3"]
 
 [ext_resource type="Texture2D" uid="uid://dah2wwc05yc5l" path="res://ASSETS/TOUCH CONTROLS BUTTONS/left.png" id="1_agtmr"]
+[ext_resource type="Script" uid="uid://d4d8xmm2pqbqf" path="res://SCRIPTS/toggle_touch_controls.gd" id="1_r7ftb"]
 [ext_resource type="Texture2D" uid="uid://cl4cmmo8cga3d" path="res://ASSETS/TOUCH CONTROLS BUTTONS/right.png" id="2_r7ftb"]
 [ext_resource type="Texture2D" uid="uid://ch4cqy0wbitc2" path="res://ASSETS/TOUCH CONTROLS BUTTONS/interact.png" id="3_evpys"]
 
 [node name="TouchControls" type="CanvasLayer"]
+script = ExtResource("1_r7ftb")
 
 [node name="left" type="TouchScreenButton" parent="."]
 position = Vector2(9, 66)

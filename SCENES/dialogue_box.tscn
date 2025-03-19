@@ -1,6 +1,5 @@
-[gd_scene load_steps=8 format=3 uid="uid://e6bltu3ywpbl"]
+[gd_scene load_steps=7 format=3 uid="uid://e6bltu3ywpbl"]
 
-[ext_resource type="Script" uid="uid://d074hvflo6gmb" path="res://dialogue_box.gd" id="1_lpvjf"]
 [ext_resource type="StyleBox" uid="uid://crrk65moaup13" path="res://THEMES/dialogue box.tres" id="2_h6h6k"]
 [ext_resource type="Theme" uid="uid://cpgxmotex3pwn" path="res://THEMES/dialogue text theme.tres" id="3_i5fyq"]
 
@@ -57,7 +56,6 @@ _data = {
 }
 
 [node name="DialogueBox" type="CanvasLayer"]
-script = ExtResource("1_lpvjf")
 
 [node name="DialogueBoxAnimation" type="AnimationPlayer" parent="."]
 libraries = {

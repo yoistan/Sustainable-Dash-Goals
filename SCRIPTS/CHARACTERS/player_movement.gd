@@ -1,8 +1,11 @@
+### player_movement.gd
+
 extends CharacterBody2D
 
 @onready var dash = $AnimatedSprite2D
+@onready var ray_cast_2d = $RayCast2D
 
-var isPlayerInCutscene : bool = false
+var can_move : bool = true
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
@@ -10,9 +13,12 @@ const JUMP_VELOCITY = -300.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+func _ready():
+	Global.player = self
+
 func _physics_process(delta):
 	# if player is not in a cutscene, let the player move.
-	if !isPlayerInCutscene:
+	if can_move:
 		# Add the gravity.
 		if not is_on_floor():
 			velocity.y += gravity * delta
@@ -30,12 +36,19 @@ func _physics_process(delta):
 		
 		if direction != 0:
 			dash.flip_h = (direction == -1)
+			
+		if velocity != Vector2.ZERO:
+			ray_cast_2d.target_position = velocity.normalized() * 50
 
 		move_and_slide()
 
-
-func _on_introductory_cutscene_tree_entered():
-	isPlayerInCutscene = true
-
-func _on_introductory_cutscene_tree_exited():
-	isPlayerInCutscene = false
+func _input(event):
+	# when the player interacts with an NPC
+	if can_move:
+		if event.is_action_pressed("interact"):
+			var target = ray_cast_2d.get_collider()
+			if target != null:
+				if target.is_in_group("npc"):
+					print("im talking to an npc")
+					can_move = false
+					target.start_dialogue()

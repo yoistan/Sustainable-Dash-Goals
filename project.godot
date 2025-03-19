@@ -17,9 +17,9 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-InteractionManager="*res://SCENES/INTERACTION/InteractionManager.tscn"
 DialogManager="*res://SCRIPTS/SINGLETONS/DialogManager.gd"
 GlobalScore="*res://GlobalScore.gd"
+Global="*res://SCRIPTS/SINGLETONS/Global.gd"
 
 [display]
 
@@ -33,6 +33,7 @@ window/stretch/mode="canvas_items"
 
 folder_colors={
 "res://ASSETS/": "orange",
+"res://RESOURCES/": "teal",
 "res://SCENES/": "blue",
 "res://SCRIPTS/": "yellow",
 "res://THEMES/": "green"
@@ -41,6 +42,7 @@ folder_colors={
 [global_group]
 
 player=""
+npc=""
 
 [input]
 

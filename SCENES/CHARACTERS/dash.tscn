@@ -120,6 +120,7 @@ offset_right = 29.0
 offset_bottom = -29.0
 scale = Vector2(0.5, 0.5)
 text = "dash"
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_82tok")
@@ -129,3 +130,8 @@ position = Vector2(7, 4)
 scale = Vector2(0.266226, 0.266226)
 sprite_frames = SubResource("SpriteFrames_88ax2")
 animation = &"running"
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(57, 0)
+collision_mask = 5
+collide_with_areas = true

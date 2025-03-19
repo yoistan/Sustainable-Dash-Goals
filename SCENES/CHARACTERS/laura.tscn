@@ -1,19 +1,23 @@
-[gd_scene load_steps=6 format=3 uid="uid://bh3t55otv546"]
+[gd_scene load_steps=7 format=3 uid="uid://bh3t55otv546"]
 
 [ext_resource type="Texture2D" uid="uid://cpepodmlxqkl3" path="res://icon.svg" id="1_2mmiu"]
-[ext_resource type="Script" uid="uid://bc72gqeyusmk1" path="res://SCRIPTS/interact.gd" id="1_kb328"]
-[ext_resource type="PackedScene" uid="uid://hsmi1ktdutfg" path="res://SCENES/INTERACTION/interaction_area.tscn" id="3_40ni5"]
+[ext_resource type="Script" uid="uid://0l0y04j4ku55" path="res://SCENES/CHARACTERS/laura.gd" id="1_40ni5"]
+[ext_resource type="Script" uid="uid://ddjpebo5figom" path="res://RESOURCES/DIALOGUE/Dialogue.gd" id="2_w71r1"]
+[ext_resource type="PackedScene" uid="uid://c0k4crxwnd6xv" path="res://SCENES/DIALOGUE/DialogueManager.tscn" id="3_w71r1"]
+
+[sub_resource type="Resource" id="Resource_qlrkn"]
+script = ExtResource("2_w71r1")
+dialogues = {}
+metadata/_custom_type_script = "uid://ddjpebo5figom"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_766bg"]
 radius = 21.0
 height = 78.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_40ni5"]
-size = Vector2(100, 78)
-
-[node name="Laura" type="CharacterBody2D"]
+[node name="Laura" type="CharacterBody2D" groups=["npc"]]
 collision_layer = 4
-script = ExtResource("1_kb328")
+script = ExtResource("1_40ni5")
+dialogue_resource = SubResource("Resource_qlrkn")
 
 [node name="Label" type="Label" parent="."]
 offset_left = -9.0
@@ -30,7 +34,4 @@ texture = ExtResource("1_2mmiu")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_766bg")
 
-[node name="InteractionArea" parent="." instance=ExtResource("3_40ni5")]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
-shape = SubResource("RectangleShape2D_40ni5")
+[node name="DialogueManager" parent="." instance=ExtResource("3_w71r1")]

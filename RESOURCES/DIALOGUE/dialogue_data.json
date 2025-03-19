@@ -1,0 +1,52 @@
+{
+	"NPC_Laura": {
+		"trees": [
+			{
+				"branch_id": "NPC_Laura_1",
+				"dialogues": [
+					{
+						"state": "start",
+						"text": "Hmm, what should I do with all this?",
+						"options": {
+							"Hi Laura!": "in_progress",
+							"What are those?": "in_progress"
+						}
+					},
+					{
+						"state": "in_progress",
+						"text": "Oh, hi Dash! Yes, these are some leftover props from the stage play but no one claimed them. I’m thinking of organizing them based on whether the prop item can be segregated, recycled, or has to be thrown away.",
+						"options": {
+							"Why not just throw everything away?": "start_quest"
+						}
+					},
+					{
+						"state": "start_quest",
+						"text": "That’ll only end up harming our environment if you don’t properly dispose of your waste items. Besides, doing this helps you practice SDG 13 as well as reducing the impact of climate change!",
+						"options": {
+							"That makes sense. Let's segregate them!": "instructions"
+						}
+					},
+					{
+						"state": "instructions",
+						"text": "All right! I'll segegrate them, but if I put it in the wrong bin I'd like you to tell me.",
+						"options": {
+							"Let's go!": "end"
+						}
+					}
+				]
+			},
+			{
+				"branch_id": "NPC_Laura_default",
+				"dialogues": [
+					{
+						"state": "start",
+						"text": "Hi again! Thanks for helping me. I got the hang of it now!",
+						"options": {
+							"No problem!": "exit"
+						}
+					}
+				]
+			},
+		],
+	},
+}

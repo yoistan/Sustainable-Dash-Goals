@@ -6,7 +6,7 @@
 radius = 21.0
 height = 78.0
 
-[node name="Whizzy" type="CharacterBody2D"]
+[node name="Whizzy" type="CharacterBody2D" groups=["npc"]]
 collision_layer = 4
 
 [node name="Label" type="Label" parent="."]

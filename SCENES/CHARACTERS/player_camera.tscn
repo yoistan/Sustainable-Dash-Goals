@@ -1,6 +1,22 @@
-[gd_scene format=3 uid="uid://bg50lbycn2xim"]
+[gd_scene load_steps=4 format=3 uid="uid://bg50lbycn2xim"]
+
+[ext_resource type="Shader" uid="uid://codkg4dua6ba" path="res://SHADERS/blur.gdshader" id="1_g5pks"]
+[ext_resource type="Script" uid="uid://cq1dubll5arxg" path="res://SCRIPTS/blur_effect.gd" id="1_tw3sm"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tw3sm"]
+shader = ExtResource("1_g5pks")
+shader_parameter/lod = 2.0
 
 [node name="Camera2D" type="Camera2D"]
 offset = Vector2(0, -9)
 limit_smoothed = true
 position_smoothing_enabled = true
+script = ExtResource("1_tw3sm")
+
+[node name="blur" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_tw3sm")
+offset_left = -279.0
+offset_top = -166.0
+offset_right = 257.0
+offset_bottom = 160.0
+color = Color(0, 0, 0, 1)
