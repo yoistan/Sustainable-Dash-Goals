@@ -30,7 +30,7 @@
 						"state": "instructions",
 						"text": "All right! I'll segegrate them, but if I put it in the wrong bin I'd like you to tell me.",
 						"options": {
-							"Let's go!": "end"
+							"Let's go!": "START_MINIGAME_1"
 						}
 					}
 				]
