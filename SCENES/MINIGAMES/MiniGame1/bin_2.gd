@@ -12,3 +12,4 @@ func select():
 	
 func deselect():
 	modulate = Color.WHITE
+	

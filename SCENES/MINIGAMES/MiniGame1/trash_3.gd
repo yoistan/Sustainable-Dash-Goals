@@ -15,7 +15,7 @@ func _ready():
 
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-		selected = true  # Start dragging
+		selected = true 
 
 func _physics_process(delta):
 	if selected:

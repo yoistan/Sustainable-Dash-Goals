@@ -1,15 +1,23 @@
-[gd_scene load_steps=7 format=3 uid="uid://dfwqi8ldv6mpf"]
+[gd_scene load_steps=13 format=3 uid="uid://dfwqi8ldv6mpf"]
 
+[ext_resource type="PackedScene" uid="uid://dphxa4y4rd1rv" path="res://SCENES/MINIGAMES/MiniGame1/menu.tscn" id="1_v6plw"]
 [ext_resource type="PackedScene" uid="uid://u53fyrnunff2" path="res://SCENES/MINIGAMES/MiniGame1/bins.tscn" id="1_xsg15"]
 [ext_resource type="PackedScene" uid="uid://crha708f33d6y" path="res://SCENES/MINIGAMES/MiniGame1/area.tscn" id="2_wnusr"]
 [ext_resource type="PackedScene" uid="uid://ddl1a2a01vnhr" path="res://SCENES/MINIGAMES/MiniGame1/TrashPiece.tscn" id="3_6co4y"]
 [ext_resource type="PackedScene" uid="uid://crf3tcjr0ah2n" path="res://SCENES/MINIGAMES/MiniGame1/Bin2.tscn" id="3_wlfmg"]
+[ext_resource type="Script" uid="uid://cinmc5tqwd8l0" path="res://SCENES/MINIGAMES/game_manager.gd" id="4_colne"]
 [ext_resource type="PackedScene" uid="uid://dqkrh62vkdvuy" path="res://SCENES/MINIGAMES/MiniGame1/label.tscn" id="5_i6cdq"]
+[ext_resource type="PackedScene" uid="uid://crr6585nucjqm" path="res://SCENES/MINIGAMES/MiniGame1/Trash2.tscn" id="5_svoge"]
+[ext_resource type="PackedScene" uid="uid://c116ul6a2pkl5" path="res://SCENES/MINIGAMES/MiniGame1/Trash3.tscn" id="7_4s6o7"]
+[ext_resource type="PackedScene" uid="uid://b6xrtog78lmth" path="res://SCENES/MINIGAMES/MiniGame1/Trash_4.tscn" id="8_ofafy"]
+[ext_resource type="PackedScene" uid="uid://m2ejacj7etwa" path="res://SCENES/MINIGAMES/MiniGame1/trash_5.tscn" id="9_v6plw"]
 
 [sub_resource type="GDScript" id="GDScript_f57qm"]
 
 [node name="Minigame1Segregation" type="Node2D"]
 script = SubResource("GDScript_f57qm")
+
+[node name="Menu" parent="." instance=ExtResource("1_v6plw")]
 
 [node name="Area" parent="." instance=ExtResource("2_wnusr")]
 position = Vector2(79, 20)
@@ -20,9 +28,25 @@ position = Vector2(39, 71)
 [node name="Bin2" parent="." instance=ExtResource("3_wlfmg")]
 position = Vector2(113, 70)
 
-[node name="TrashPiece" parent="." node_paths=PackedStringArray("correct_bin") instance=ExtResource("3_6co4y")]
+[node name="GameManager" type="Node2D" parent="."]
+script = ExtResource("4_colne")
+
+[node name="Trash2" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("5_svoge")]
+position = Vector2(26, 10)
+correct_bin = NodePath("../../Bins")
+
+[node name="TrashPiece" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("3_6co4y")]
 position = Vector2(50, 11)
-correct_bin = NodePath("../Bins")
+correct_bin = NodePath("../../Bins")
+
+[node name="Trash3" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("7_4s6o7")]
+correct_bin = NodePath("../../Bins")
+
+[node name="trash4" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("8_ofafy")]
+correct_bin = NodePath("../../Bins")
+
+[node name="Trash5" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("9_v6plw")]
+correct_bin = NodePath("../../Bins")
 
 [node name="Score" parent="." instance=ExtResource("5_i6cdq")]
 offset_left = 20.0
