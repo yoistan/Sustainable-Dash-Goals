@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://dphxa4y4rd1rv"]
 
-[ext_resource type="Script" uid="uid://bd56sbmkivvqj" path="res://menu.gd" id="1_6vm3l"]
-[ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="2_q5k1k"]
+[ext_resource type="Script" uid="uid://bd56sbmkivvqj" path="res://menu.gd" id="1_qnims"]
+[ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="2_vbyvk"]
 
 [node name="Menu" type="CanvasLayer"]
-script = ExtResource("1_6vm3l")
+script = ExtResource("1_qnims")
 
 [node name="Control" type="Control" parent="."]
 process_mode = 2
@@ -14,6 +14,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Panel" type="Panel" parent="Control"]
+layout_mode = 0
 offset_right = 160.0
 offset_bottom = 90.0
 
@@ -24,34 +25,37 @@ offset_left = 57.0
 offset_top = 8.0
 offset_right = 97.0
 offset_bottom = 31.0
-theme_override_fonts/font = ExtResource("2_q5k1k")
+theme_override_fonts/font = ExtResource("2_vbyvk")
 text = "PAUSED"
 
 [node name="Resume" type="Button" parent="Control/Panel"]
+layout_mode = 0
 offset_left = 26.0
 offset_top = 43.0
 offset_right = 83.0
 offset_bottom = 74.0
 scale = Vector2(0.6, 0.6)
-theme_override_fonts/font = ExtResource("2_q5k1k")
+theme_override_fonts/font = ExtResource("2_vbyvk")
 text = "Resume"
 
 [node name="settingsButton" type="Button" parent="Control/Panel"]
+layout_mode = 0
 offset_left = 62.0
 offset_top = 43.0
 offset_right = 121.0
 offset_bottom = 74.0
 scale = Vector2(0.6, 0.6)
-theme_override_fonts/font = ExtResource("2_q5k1k")
+theme_override_fonts/font = ExtResource("2_vbyvk")
 text = "Settings"
 
 [node name="mainMenu" type="Button" parent="Control/Panel"]
+layout_mode = 0
 offset_left = 99.0
 offset_top = 43.0
 offset_right = 173.0
 offset_bottom = 74.0
 scale = Vector2(0.6, 0.6)
-theme_override_fonts/font = ExtResource("2_q5k1k")
+theme_override_fonts/font = ExtResource("2_vbyvk")
 text = "Main Menu"
 
 [connection signal="pressed" from="Control/Panel/Resume" to="." method="_on_resume_pressed"]

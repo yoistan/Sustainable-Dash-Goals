@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4jjha4yuxw6c"]
+
+[ext_resource type="Script" uid="uid://dxne4bvmvjofw" path="res://audio.gd" id="1_qc0l7"]
+[ext_resource type="AudioStream" uid="uid://dnuqpsngtq5u4" path="res://ASSETS/MUSIC/GMMF - title screen.wav" id="2_q45hi"]
+[ext_resource type="AudioStream" uid="uid://df0wbtj3nrg73" path="res://ASSETS/MUSIC/Swing.wav" id="3_ybffx"]
+
+[node name="Audio" type="Node"]
+script = ExtResource("1_qc0l7")
+
+[node name="BgMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_q45hi")
+
+[node name="Bg2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ybffx")

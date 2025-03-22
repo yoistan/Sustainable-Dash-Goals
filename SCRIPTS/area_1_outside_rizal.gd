@@ -6,3 +6,5 @@ extends Node2D
 
 func _ready():
 	$InGame/Dash.add_child(player_camera)
+	Audio.stop_music1()
+	Audio.play_music2()

@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cni0810xyrd0k"]
+[gd_scene load_steps=3 format=3 uid="uid://cni0810xyrd0k"]
 
 [ext_resource type="Script" uid="uid://de0bqav3jfg7h" path="res://SCRIPTS/settings.gd" id="1_vtnoc"]
 [ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="2_o155n"]
-[ext_resource type="PackedScene" uid="uid://b36htfr55psld" path="res://SCENES/BGM/TITLE SCREEN BGM.tscn" id="3_w6dp3"]
 
 [node name="Settings" type="Control"]
 layout_mode = 3
@@ -12,6 +11,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vtnoc")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 90.0
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
@@ -65,8 +69,6 @@ offset_bottom = 102.0
 scale = Vector2(0.4, 0.4)
 theme_override_fonts/font = ExtResource("2_o155n")
 text = "Back"
-
-[node name="AudioStreamPlayer2D" parent="." instance=ExtResource("3_w6dp3")]
 
 [connection signal="mouse_exited" from="Volume" to="." method="_on_volume_mouse_exited"]
 [connection signal="toggled" from="CheckBox" to="." method="_on_check_box_toggled"]
