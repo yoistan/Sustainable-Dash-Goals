@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsdno41h4tqoh"]
+
+[ext_resource type="Script" uid="uid://dfxxh8eryo15b" path="res://SCENES/MINIGAMES/MiniGame1/trash_6.gd" id="1_34swt"]
+[ext_resource type="Texture2D" uid="uid://cpepodmlxqkl3" path="res://icon.svg" id="2_tfqid"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_osy6w"]
+size = Vector2(130, 130)
+
+[node name="Trash_6" type="Node2D"]
+script = ExtResource("1_34swt")
+
+[node name="Icon" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_tfqid")
+
+[node name="Area2D" type="Area2D" parent="Icon"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Icon/Area2D"]
+shape = SubResource("RectangleShape2D_osy6w")
+
+[connection signal="input_event" from="Icon/Area2D" to="." method="_on_area_2d_input_event"]

@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://6aaq15svbwic"]
+
+[ext_resource type="Texture2D" uid="uid://cpepodmlxqkl3" path="res://icon.svg" id="1_k183x"]
+[ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="2_l6gio"]
+
+[node name="Congratulations message" type="CanvasLayer"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(24.6875, 59.3125)
+scale = Vector2(0.473633, 0.473633)
+texture = ExtResource("1_k183x")
+
+[node name="Panel" type="Panel" parent="Icon"]
+offset_left = 38.0
+offset_top = -68.0
+offset_right = 271.0
+offset_bottom = 1.0
+
+[node name="Label" type="Label" parent="Icon/Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 5.11134
+offset_top = 4.11134
+offset_right = 191.111
+offset_bottom = 58.1113
+scale = Vector2(1.17, 1.17)
+theme_override_fonts/font = ExtResource("2_l6gio")
+text = "Congratulations!
+You have passed this level!"
+horizontal_alignment = 1
