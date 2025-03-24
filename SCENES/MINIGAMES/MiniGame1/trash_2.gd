@@ -59,6 +59,7 @@ func check_correctness(bin):
 		show_feedback("Nice!
 		It's Correct!", Color.GREEN)
 	else:
+		icon.show()
 		show_feedback("Hmm, I don’t think 
 		that’s right. ", Color.RED)
 	

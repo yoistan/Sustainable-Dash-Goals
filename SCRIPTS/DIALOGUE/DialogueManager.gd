@@ -42,6 +42,6 @@ func handle_dialogue_option(option):
 	elif next_state == "START_MINIGAME_1":
 		npc.set_dialogue_state("start")
 		hide_dialogue()
-		get_tree().change_scene_to_file("res://SCENES/MINIGAMES/minigame_1_segregation.tscn")
+		get_tree().change_scene_to_file("res://SCENES/MINIGAMES/MiniGame1/instructions_1.tscn")
 	else:
 		show_dialogue(npc)

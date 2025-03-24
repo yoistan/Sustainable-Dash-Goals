@@ -33,3 +33,4 @@ func _on_settings_button_pressed():
 func _on_main_menu_pressed():
 	toggle_pause()
 	get_tree().change_scene_to_file("res://SCENES/main.tscn")
+	

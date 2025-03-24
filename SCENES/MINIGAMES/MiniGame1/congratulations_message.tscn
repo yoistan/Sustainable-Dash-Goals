@@ -11,20 +11,20 @@ scale = Vector2(0.473633, 0.473633)
 texture = ExtResource("1_k183x")
 
 [node name="Panel" type="Panel" parent="Icon"]
-offset_left = 38.0
+offset_left = 34.0
 offset_top = -68.0
-offset_right = 271.0
+offset_right = 279.0
 offset_bottom = 1.0
 
 [node name="Label" type="Label" parent="Icon/Panel"]
 texture_filter = 1
 layout_mode = 0
-offset_left = 5.11134
-offset_top = 4.11134
-offset_right = 191.111
-offset_bottom = 58.1113
+offset_left = 6.77524
+offset_top = 4.00002
+offset_right = 207.775
+offset_bottom = 58.0
 scale = Vector2(1.17, 1.17)
 theme_override_fonts/font = ExtResource("2_l6gio")
 text = "Congratulations!
-You have passed this level!"
+You have completed this quest!"
 horizontal_alignment = 1
