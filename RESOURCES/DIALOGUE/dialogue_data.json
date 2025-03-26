@@ -133,4 +133,55 @@
 			},
 		],
 	},
+	"NPC_Sophia": {
+		"trees": [
+			{
+				"branch_id": "NPC_Sophia_1",
+				"dialogues": [
+					{
+						"state": "start",
+						"text": "",
+						"options": {
+							"": ""
+						}
+					},
+					{
+						"state": "in_progress",
+						"text": "",
+						"options": {
+							
+						}
+					},
+					{
+						"state": "instructions",
+						"text": "Really? You’ll do that? Thank you! You just need to visit 4 rooms on this floor: R308, R306, R304, and R302.",
+						"options": {
+							"On it!": "START_MINIGAME_2"
+						}
+					}
+				]
+			},
+			{
+				"branch_id": "NPC_Sophia_default",
+				"dialogues": [
+					{
+						"state": "start",
+						"text": "Welcome back! Here to test your knowledge on ICT again?",
+						"options": {
+							"Play": "play",
+							"Wrong room!": "exit"
+						}
+					},
+					{
+						"state": "question_1",
+						"text": "In animation, what are the frames that define the start and end of an action or motion called?",
+						"options": {
+							"Keyframes": "Q1_correct",
+							"Main frames": "Q1_incorrect"
+						}
+					}
+				]
+			},
+		],
+	},
 }
