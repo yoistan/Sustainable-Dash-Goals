@@ -1,6 +1,6 @@
-[gd_scene load_steps=24 format=3 uid="uid://0big80ylwpx3"]
+[gd_scene load_steps=24 format=3 uid="uid://pve6ms6fqf4r"]
 
-[ext_resource type="Script" uid="uid://df03hx7jg8v82" path="res://SCENES/achivement.gd" id="1_0wy82"]
+[ext_resource type="Script" path="res://SCENES/achivement.gd" id="1_0wy82"]
 [ext_resource type="Texture2D" uid="uid://c4yr8tfxa1wwa" path="res://SDGs/sdg1.png" id="1_sylfw"]
 [ext_resource type="Texture2D" uid="uid://drpbhcm0ikscf" path="res://SDGs/sdg2.png" id="2_bm7c7"]
 [ext_resource type="Texture2D" uid="uid://ce5556m8tconw" path="res://SDGs/sdg3.jpg" id="3_0wy82"]
@@ -18,7 +18,70 @@
 [ext_resource type="Texture2D" uid="uid://ba1jl66pyvn0f" path="res://SDGs/sdg15.png" id="15_cthaq"]
 [ext_resource type="Texture2D" uid="uid://cfq0ku0swda2g" path="res://SDGs/sdg16.png" id="16_x2y5v"]
 [ext_resource type="Texture2D" uid="uid://ce3op0epsb4xm" path="res://SDGs/sdg17.png" id="17_7t8oj"]
-[ext_resource type="Script" uid="uid://chweiewxjkkmb" path="res://SCENES/Achieve.gd" id="18_bm7c7"]
+[ext_resource type="Script" path="res://SCENES/Achieve.gd" id="18_bm7c7"]
+
+[sub_resource type="Animation" id="Animation_bm7c7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("13:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.211765, 0.239216, 0.290196, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("13:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(7, 63.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("13:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.0316797, 0.0316797)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Button:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("13:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_sylfw"]
 resource_name = "SDG 13"
@@ -82,69 +145,6 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(0.659681, 0.679551, 0.682224, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_bm7c7"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("13:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0.211765, 0.239216, 0.290196, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("13:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(7, 63.5)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("13:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0.0316797, 0.0316797)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Button:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("13:self_modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0wy82"]

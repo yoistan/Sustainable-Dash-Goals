@@ -10,6 +10,12 @@ extends Control
 
 # sprites
 const LAURA = preload("res://ASSETS/CHARACTERS/DIALOGUE SPRITES/Laura.png")
+const GAB = preload("res://ASSETS/CHARACTERS/DIALOGUE SPRITES/Gab.png")
+const GABRIEL = preload("res://ASSETS/CHARACTERS/DIALOGUE SPRITES/Gabriel.png")
+const JUSTIN = preload("res://ASSETS/CHARACTERS/DIALOGUE SPRITES/Justin.png")
+const MICKAEL = preload("res://ASSETS/CHARACTERS/DIALOGUE SPRITES/Mickael.png")
+const PANTS = preload("res://ASSETS/CHARACTERS/DIALOGUE SPRITES/Pants.png")
+const SOPHIA = preload("res://ASSETS/CHARACTERS/DIALOGUE SPRITES/Sophia.png")
 
 # button theme
 const DIALOGUE_BUTTON_THEME = preload("res://THEMES/dialogue_button_theme.tres")
@@ -53,4 +59,15 @@ func set_sprite(npc):
 	match npc:
 		"Laura":
 			npc_sprite.texture = LAURA
-		# TODO: ADD MORE HERE
+		"Gab":
+			npc_sprite.texture = GAB
+		"Justin":
+			npc_sprite.texture = JUSTIN
+		"Mickael":
+			npc_sprite.texture = MICKAEL
+		"Pants":
+			npc_sprite.texture = PANTS
+		"Sophia":
+			npc_sprite.texture = SOPHIA
+		"Gabriel":
+			npc_sprite.texture = GABRIEL

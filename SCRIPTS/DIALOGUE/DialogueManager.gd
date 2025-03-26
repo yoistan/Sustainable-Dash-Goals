@@ -43,5 +43,9 @@ func handle_dialogue_option(option):
 		npc.set_dialogue_state("start")
 		hide_dialogue()
 		get_tree().change_scene_to_file("res://SCENES/MINIGAMES/MiniGame1/instructions_1.tscn")
+	elif next_state == "START_MINIGAME_2":
+		npc.set_dialogue_state("start")
+		hide_dialogue()
+		npc.set_dialogue_branch(npc.current_branch_index + 1) # move to ongoing quest branch
 	else:
 		show_dialogue(npc)

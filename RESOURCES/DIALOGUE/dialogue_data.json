@@ -49,4 +49,88 @@
 			},
 		],
 	},
+	
+	"NPC_Gab": {
+		"trees": [
+			{
+				"branch_id": "NPC_Gab_1",
+				"dialogues": [
+					{
+						"state": "start",
+						"text": "Eight... ten... twelve Filipino books...",
+						"options": {
+							"Good day Gab! What's going on?": "in_progress"
+						}
+					},
+					{
+						"state": "in_progress",
+						"text": "Hey, Dash! We’re currently doing a book drive in support of SDG 4 Quality Education. Would you like to donate?",
+						"options": {
+							"I do!": "yes_books",
+							"Ah... I didn't bring any...": "no_books",
+						}
+					},
+					{
+						"state": "yes_books",
+						"text": "Really? Great! What is it?",
+						"options": {
+							"Give 'Magic 101'": "book_received"
+						}
+					},
+					{
+						"state": "book_received",
+						"text": "Woah, Magic 101? Thanks for your contribution! Would love to read it while I'm here. I won't bring it home, of course!",
+						"options": {
+							"No problem!": "about_donations"
+						}
+					},
+					{
+						"state": "no_books",
+						"text": "That’s okay. The book drive will run until Friday, then we’ll deliver them by next week.",
+						"options": {
+							"Oh, awesome!": "about_donations"
+						}
+					},
+					{
+						"state": "about_donations",
+						"text": "Speaking of donations, I was going to go room-to-room on this floor to collect some books, but then no one would be here in case someone wants to donate here directly…",
+						"options": {
+							"I can help": "instructions"
+						}
+					},
+					{
+						"state": "instructions",
+						"text": "Really? You’ll do that? Thank you! You just need to visit 4 rooms on this floor: R308, R306, R304, and R302.",
+						"options": {
+							"On it!": "START_MINIGAME_2"
+						}
+					}
+				]
+			},
+			{
+				"branch_id": "NPC_Gab_ongoing_quest",
+				"dialogues": [
+					{
+						"state": "start",
+						"text": "The rooms are on the right.",
+						"options": {
+							"Okay": "exit"
+						}
+					}
+				]
+			},
+			{
+				"branch_id": "NPC_Gab_default",
+				"dialogues": [
+					{
+						"state": "start",
+						"text": "Hey! Thanks for helping me. These donations will surely be of help.",
+						"options": {
+							"No problem!": "exit"
+						}
+					}
+				]
+			},
+		],
+	},
 }

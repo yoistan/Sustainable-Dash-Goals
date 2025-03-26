@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://rfo21mxn8hqw"]
+
+[ext_resource type="Script" uid="uid://b7aibdvnwy37g" path="res://SCRIPTS/CHARACTERS/gab.gd" id="1_uyed7"]
+[ext_resource type="Texture2D" uid="uid://cpepodmlxqkl3" path="res://icon.svg" id="2_0umiw"]
+[ext_resource type="Script" uid="uid://ddjpebo5figom" path="res://RESOURCES/DIALOGUE/Dialogue.gd" id="2_wlnnt"]
+[ext_resource type="PackedScene" uid="uid://c0k4crxwnd6xv" path="res://SCENES/DIALOGUE/DialogueManager.tscn" id="3_wlnnt"]
+
+[sub_resource type="Resource" id="Resource_81wkx"]
+script = ExtResource("2_wlnnt")
+dialogues = {}
+metadata/_custom_type_script = "uid://ddjpebo5figom"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_81wkx"]
+radius = 21.0
+height = 78.0
+
+[node name="Gab" type="CharacterBody2D" groups=["npc"]]
+collision_layer = 4
+script = ExtResource("1_uyed7")
+dialogue_resource = SubResource("Resource_81wkx")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -9.0
+offset_top = -52.0
+offset_right = 29.0
+offset_bottom = -29.0
+scale = Vector2(0.5, 0.5)
+text = "Gab"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.328125, 0.609375)
+texture = ExtResource("2_0umiw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_81wkx")
+
+[node name="DialogueManager" parent="." instance=ExtResource("3_wlnnt")]
