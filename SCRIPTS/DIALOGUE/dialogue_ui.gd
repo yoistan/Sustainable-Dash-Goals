@@ -6,6 +6,13 @@ extends Control
 @onready var speaker_name = $CanvasLayer/TextBoxContainer/speaker/SpeakerName
 @onready var dialogue_text = $CanvasLayer/TextBoxContainer/text/DialogueText
 @onready var dialogue_options = $CanvasLayer/TextBoxContainer/options/dialogueOptions
+@onready var npc_sprite = $CanvasLayer/TextBoxContainer/NPC
+
+# sprites
+const LAURA = preload("res://ASSETS/CHARACTERS/DIALOGUE SPRITES/Laura.png")
+
+# button theme
+const DIALOGUE_BUTTON_THEME = preload("res://THEMES/dialogue_button_theme.tres")
 
 func _ready():
 	ui.visible = false
@@ -14,6 +21,7 @@ func show_dialogue(speaker, text, options):
 	ui.visible = true
 	
 	# populate data
+	set_sprite(speaker)
 	speaker_name.text = speaker
 	dialogue_text.text = text
 	
@@ -25,8 +33,12 @@ func show_dialogue(speaker, text, options):
 	for option in options.keys():
 		var button = Button.new()
 		button.text = option
-		button.add_theme_font_size_override("font_size", 5)
 		button.pressed.connect(_on_option_selected.bind(option))
+		
+		# theme
+		button.set_theme(DIALOGUE_BUTTON_THEME)
+		button.add_theme_color_override("font_color", Color.BLACK)
+		
 		dialogue_options.add_child(button)
 
 func _on_option_selected(option):
@@ -35,3 +47,10 @@ func _on_option_selected(option):
 func hide_dialogue():
 	ui.visible = false
 	Global.player.can_move = true
+	
+# set the texture of the npc
+func set_sprite(npc):
+	match npc:
+		"Laura":
+			npc_sprite.texture = LAURA
+		# TODO: ADD MORE HERE

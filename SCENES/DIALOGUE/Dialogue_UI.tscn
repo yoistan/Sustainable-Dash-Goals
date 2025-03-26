@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://c2e2ue13jpgp3"]
+[gd_scene load_steps=10 format=3 uid="uid://c2e2ue13jpgp3"]
 
 [ext_resource type="Script" uid="uid://crfeflo4hm3ue" path="res://SCRIPTS/DIALOGUE/dialogue_ui.gd" id="1_kw7sn"]
 [ext_resource type="StyleBox" uid="uid://crrk65moaup13" path="res://THEMES/dialogue box.tres" id="2_8ojuh"]
 [ext_resource type="Texture2D" uid="uid://cpepodmlxqkl3" path="res://icon.svg" id="2_vvmma"]
 [ext_resource type="Theme" uid="uid://cpgxmotex3pwn" path="res://THEMES/dialogue text theme.tres" id="3_vvmma"]
+[ext_resource type="Theme" uid="uid://xpgv5lbnpmxr" path="res://THEMES/dialogue_button_theme.tres" id="5_vvmma"]
 
 [sub_resource type="Animation" id="Animation_h6h6k"]
 length = 0.001
@@ -85,14 +86,9 @@ theme_override_constants/margin_left = 2
 theme_override_constants/margin_right = 2
 theme_override_constants/margin_bottom = 2
 
-[node name="Player" type="Sprite2D" parent="CanvasLayer/TextBoxContainer"]
-position = Vector2(33, -1)
-scale = Vector2(0.421875, 0.421875)
-texture = ExtResource("2_vvmma")
-
 [node name="NPC" type="Sprite2D" parent="CanvasLayer/TextBoxContainer"]
-position = Vector2(124, -1)
-scale = Vector2(0.421875, 0.421875)
+position = Vector2(124, -7)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_vvmma")
 
 [node name="Panel" type="Panel" parent="CanvasLayer/TextBoxContainer"]
@@ -128,12 +124,18 @@ scroll_active = false
 
 [node name="options" type="MarginContainer" parent="CanvasLayer/TextBoxContainer"]
 layout_mode = 2
-theme_override_constants/margin_left = 50
+theme_override_constants/margin_left = 35
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 32
 
 [node name="dialogueOptions" type="HBoxContainer" parent="CanvasLayer/TextBoxContainer/options"]
 layout_mode = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 5
 alignment = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/TextBoxContainer/options/dialogueOptions"]
+layout_mode = 2
+theme = ExtResource("5_vvmma")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Test Button"

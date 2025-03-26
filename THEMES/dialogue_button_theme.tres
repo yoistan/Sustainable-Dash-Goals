@@ -1,0 +1,18 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://xpgv5lbnpmxr"]
+
+[ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="1_54lai"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y3nmb"]
+bg_color = Color(1, 0.988235, 0.470588, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+
+[resource]
+default_font = ExtResource("1_54lai")
+default_font_size = 5
+Button/styles/hover = null
+Button/styles/normal = SubResource("StyleBoxFlat_y3nmb")
