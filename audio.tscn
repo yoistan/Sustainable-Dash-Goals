@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c4jjha4yuxw6c"]
+[gd_scene load_steps=8 format=3 uid="uid://c4jjha4yuxw6c"]
 
 [ext_resource type="Script" uid="uid://dxne4bvmvjofw" path="res://audio.gd" id="1_qc0l7"]
 [ext_resource type="AudioStream" uid="uid://dnuqpsngtq5u4" path="res://ASSETS/MUSIC/GMMF - title screen.wav" id="2_q45hi"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://d2ve3r6cqqdbg" path="res://ASSETS/MUSIC/Midnight_Hour.wav" id="4_8w7rj"]
 [ext_resource type="AudioStream" uid="uid://b7nbqsh1s6fpf" path="res://ASSETS/MUSIC/GoingDown.wav" id="5_74vr2"]
 [ext_resource type="AudioStream" uid="uid://qj3lnwq7p5hq" path="res://ASSETS/MUSIC/Achieve.mp3" id="6_74vr2"]
+[ext_resource type="AudioStream" uid="uid://b7rivlp48c61" path="res://ASSETS/MUSIC/gewonnen2-7000.mp3" id="7_x5nyw"]
 
 [node name="Audio" type="Node"]
 script = ExtResource("1_qc0l7")
@@ -24,3 +25,6 @@ stream = ExtResource("5_74vr2")
 
 [node name="Achievement" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_74vr2")
+
+[node name="Congrats" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_x5nyw")
