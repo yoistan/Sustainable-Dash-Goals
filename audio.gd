@@ -6,6 +6,7 @@ extends Node
 @onready var bg_2: AudioStreamPlayer = $Bg2
 @onready var area_2_music = $Area2Music
 @onready var minigame_2_music = $Minigame2Music
+@onready var achievement: AudioStreamPlayer = $Achievement
 
 # Title screen music
 func play_music1():
@@ -34,3 +35,9 @@ func play_minigame_2_music():
 
 func stop_minigame_2_music():
 	minigame_2_music.stop()
+
+func play_achieve():
+	achievement.play()
+	
+func stop_achieve():
+	achievement.stop()

@@ -24,6 +24,7 @@ script/source = "extends Node2D
 
 func _ready():
 	Audio.stop_music2()
+	Audio.play_minigame_2_music()
 	
 func _on_settings_button_pressed() -> void:
 	get_tree().paused = true  # Pause the game

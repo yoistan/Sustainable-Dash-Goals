@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bu8u2qyf2m1td"]
 
-[ext_resource type="Script" uid="uid://cwg7sd8nyvure" path="res://SCRIPTS/mg_2_television.gd" id="1_apwu3"]
+[ext_resource type="Script" path="res://SCRIPTS/mg_2_television.gd" id="1_apwu3"]
 
 [node name="Mg-2Television" type="Node2D"]
 script = ExtResource("1_apwu3")
