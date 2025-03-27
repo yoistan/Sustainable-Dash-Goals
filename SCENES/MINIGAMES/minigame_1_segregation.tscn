@@ -68,7 +68,7 @@ correct_bin = NodePath("../../Bins")
 
 [node name="Trash5" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("9_v6plw")]
 position = Vector2(83, 94)
-correct_bin = NodePath("../../Bins")
+correct_bin = NodePath("../../Bin2")
 
 [node name="Trash_6" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("11_5capr")]
 position = Vector2(81, 111)

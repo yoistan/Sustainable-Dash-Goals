@@ -1,21 +1,22 @@
 [gd_scene load_steps=4 format=3 uid="uid://m2ejacj7etwa"]
 
-[ext_resource type="Texture2D" uid="uid://cpepodmlxqkl3" path="res://icon.svg" id="1_cgdv5"]
 [ext_resource type="Script" uid="uid://dcebi7ubfxax5" path="res://SCENES/MINIGAMES/MiniGame1/trash_5.gd" id="1_gfvsy"]
+[ext_resource type="Texture2D" uid="uid://cygd4uni37voj" path="res://ASSETS/Game1/UsedSpraypaint_B.png" id="2_gfvsy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gfvsy"]
-size = Vector2(130, 130)
+size = Vector2(660, 780)
 
 [node name="Trash5" type="Node2D"]
 script = ExtResource("1_gfvsy")
 
 [node name="Icon" type="Sprite2D" parent="."]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_cgdv5")
+scale = Vector2(0.0182292, 0.0182292)
+texture = ExtResource("2_gfvsy")
 
 [node name="Area2D" type="Area2D" parent="Icon"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Icon/Area2D"]
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_gfvsy")
 
 [connection signal="input_event" from="Icon/Area2D" to="." method="_on_area_2d_input_event"]

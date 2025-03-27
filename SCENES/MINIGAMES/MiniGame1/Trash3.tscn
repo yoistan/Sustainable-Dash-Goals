@@ -1,21 +1,22 @@
 [gd_scene load_steps=4 format=3 uid="uid://c116ul6a2pkl5"]
 
-[ext_resource type="Texture2D" uid="uid://cpepodmlxqkl3" path="res://icon.svg" id="1_bcstp"]
 [ext_resource type="Script" uid="uid://byp2smavewyex" path="res://SCENES/MINIGAMES/MiniGame1/trash_3.gd" id="1_grs32"]
+[ext_resource type="Texture2D" uid="uid://cru1ghwh56xpj" path="res://ASSETS/Game1/PaperApple_B.png" id="2_grs32"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_grs32"]
-size = Vector2(130, 130)
+size = Vector2(540, 660)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_grs32")
 
 [node name="Icon" type="Sprite2D" parent="."]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_bcstp")
+scale = Vector2(0.0208333, 0.0208333)
+texture = ExtResource("2_grs32")
 
 [node name="Area2D" type="Area2D" parent="Icon"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Icon/Area2D"]
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_grs32")
 
 [connection signal="input_event" from="Icon/Area2D" to="." method="_on_area_2d_input_event"]
