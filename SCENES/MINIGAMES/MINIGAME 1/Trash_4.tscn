@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b6xrtog78lmth"]
 
-[ext_resource type="Script" uid="uid://dskn5kum5w01e" path="res://SCENES/MINIGAMES/MiniGame1/trash_4.gd" id="1_3c8r1"]
+[ext_resource type="Script" uid="uid://dskn5kum5w01e" path="res://SCENES/MINIGAMES/MINIGAME 1/trash_4.gd" id="1_3c8r1"]
 [ext_resource type="Texture2D" uid="uid://cpepodmlxqkl3" path="res://icon.svg" id="1_btrcp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3c8r1"]

@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://6aaq15svbwic"]
 
-[ext_resource type="Script" uid="uid://cb1wummmuoapg" path="res://SCENES/MINIGAMES/MiniGame1/congratulations_message.gd" id="1_24vq0"]
+[ext_resource type="Script" uid="uid://cb1wummmuoapg" path="res://SCENES/MINIGAMES/MINIGAME 1/congratulations_message.gd" id="1_24vq0"]
 [ext_resource type="Texture2D" uid="uid://cpepodmlxqkl3" path="res://icon.svg" id="1_k183x"]
 [ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="2_l6gio"]
-[ext_resource type="Script" uid="uid://vl2dvjt5o7fg" path="res://SCENES/MINIGAMES/MiniGame1/Type.gd" id="3_l6gio"]
+[ext_resource type="Script" uid="uid://vl2dvjt5o7fg" path="res://SCENES/MINIGAMES/MINIGAME 1/Type.gd" id="3_l6gio"]
 
 [sub_resource type="Animation" id="Animation_4urvl"]
 length = 0.001

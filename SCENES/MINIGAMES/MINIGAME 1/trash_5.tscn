@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://m2ejacj7etwa"]
 
-[ext_resource type="Script" uid="uid://dcebi7ubfxax5" path="res://SCENES/MINIGAMES/MiniGame1/trash_5.gd" id="1_gfvsy"]
+[ext_resource type="Script" uid="uid://dcebi7ubfxax5" path="res://SCENES/MINIGAMES/MINIGAME 1/trash_5.gd" id="1_gfvsy"]
 [ext_resource type="Texture2D" uid="uid://cygd4uni37voj" path="res://ASSETS/Game1/UsedSpraypaint_B.png" id="2_gfvsy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gfvsy"]

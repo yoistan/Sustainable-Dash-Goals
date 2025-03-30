@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://crf3tcjr0ah2n"]
 
 [ext_resource type="Texture2D" uid="uid://cpepodmlxqkl3" path="res://icon.svg" id="1_2ubtb"]
-[ext_resource type="Script" uid="uid://c7lm2omvo03r5" path="res://SCENES/MINIGAMES/MiniGame1/bin_2.gd" id="1_8kls1"]
+[ext_resource type="Script" uid="uid://c7lm2omvo03r5" path="res://SCENES/MINIGAMES/MINIGAME 1/bin_2.gd" id="1_8kls1"]
 
 [node name="Bin2" type="Marker2D" groups=["zone"]]
 script = ExtResource("1_8kls1")

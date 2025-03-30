@@ -17,7 +17,7 @@ const MICKAEL = preload("res://ASSETS/CHARACTERS/DIALOGUE SPRITES/Mickael.png")
 const PANTS = preload("res://ASSETS/CHARACTERS/DIALOGUE SPRITES/Pants.png")
 const SOPHIA = preload("res://ASSETS/CHARACTERS/DIALOGUE SPRITES/Sophia.png")
 
-# button theme
+# button themes
 const DIALOGUE_BUTTON_THEME = preload("res://THEMES/dialogue_button_theme.tres")
 
 func _ready():
@@ -42,9 +42,13 @@ func show_dialogue(speaker, text, options):
 		button.pressed.connect(_on_option_selected.bind(option))
 		
 		# theme
+		
 		button.set_theme(DIALOGUE_BUTTON_THEME)
 		button.add_theme_color_override("font_color", Color.BLACK)
-		
+		button.add_theme_color_override("font_focus_color", Color.BLACK)
+		button.add_theme_color_override("font_normal_color", Color.BLACK)
+		button.add_theme_color_override("font_pressed_color", Color.BLACK)
+		button.add_theme_color_override("font_hover_color", Color.BLACK)
 		dialogue_options.add_child(button)
 
 func _on_option_selected(option):

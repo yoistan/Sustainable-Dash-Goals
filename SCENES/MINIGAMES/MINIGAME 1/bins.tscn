@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://u53fyrnunff2"]
 
 [ext_resource type="Texture2D" uid="uid://cpepodmlxqkl3" path="res://icon.svg" id="1_4x2lf"]
-[ext_resource type="Script" uid="uid://ekwxt17fuhr6" path="res://SCENES/MINIGAMES/MiniGame1/bins.gd" id="1_7bosr"]
+[ext_resource type="Script" uid="uid://ekwxt17fuhr6" path="res://SCENES/MINIGAMES/MINIGAME 1/bins.gd" id="1_7bosr"]
 
 [node name="Bins" type="Marker2D" groups=["zone"]]
 position = Vector2(0, -1)

@@ -1,10 +1,19 @@
-[gd_scene load_steps=10 format=3 uid="uid://c2e2ue13jpgp3"]
+[gd_scene load_steps=17 format=3 uid="uid://c2e2ue13jpgp3"]
 
 [ext_resource type="Script" uid="uid://crfeflo4hm3ue" path="res://SCRIPTS/DIALOGUE/dialogue_ui.gd" id="1_kw7sn"]
-[ext_resource type="StyleBox" uid="uid://crrk65moaup13" path="res://THEMES/dialogue box.tres" id="2_8ojuh"]
+[ext_resource type="Texture2D" uid="uid://0w82wivcyksl" path="res://ASSETS/DIALOGUE BOX/dialogue box.png" id="1_vvmma"]
+[ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="2_6bus2"]
 [ext_resource type="Texture2D" uid="uid://cpepodmlxqkl3" path="res://icon.svg" id="2_vvmma"]
 [ext_resource type="Theme" uid="uid://cpgxmotex3pwn" path="res://THEMES/dialogue text theme.tres" id="3_vvmma"]
+[ext_resource type="Texture2D" uid="uid://c3ixw4d13c023" path="res://ASSETS/CHARACTERS/DASH/Dash.png" id="4_6bus2"]
+[ext_resource type="StyleBox" uid="uid://mvielnssypl6" path="res://THEMES/speaker_label.tres" id="5_rehgc"]
 [ext_resource type="Theme" uid="uid://xpgv5lbnpmxr" path="res://THEMES/dialogue_button_theme.tres" id="5_vvmma"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6bus2"]
+texture = ExtResource("1_vvmma")
+
+[sub_resource type="Theme" id="Theme_x8rbi"]
+Panel/styles/panel = SubResource("StyleBoxTexture_6bus2")
 
 [sub_resource type="Animation" id="Animation_h6h6k"]
 length = 0.001
@@ -58,6 +67,14 @@ _data = {
 &"dialogue_box_exit": SubResource("Animation_i5fyq")
 }
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vvmma"]
+texture = ExtResource("1_vvmma")
+
+[sub_resource type="Theme" id="Theme_rehgc"]
+default_font = ExtResource("2_6bus2")
+default_font_size = 5
+Label/styles/normal = ExtResource("5_rehgc")
+
 [node name="DialogueUi" type="Control"]
 z_index = 30
 layout_mode = 3
@@ -66,6 +83,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_x8rbi")
 script = ExtResource("1_kw7sn")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -80,7 +98,8 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -54.0
+offset_top = -51.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/margin_left = 2
@@ -92,28 +111,34 @@ position = Vector2(124, -7)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_vvmma")
 
+[node name="DASH" type="Sprite2D" parent="CanvasLayer/TextBoxContainer"]
+position = Vector2(26, -2)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_6bus2")
+
 [node name="Panel" type="Panel" parent="CanvasLayer/TextBoxContainer"]
 layout_mode = 2
-theme_override_styles/panel = ExtResource("2_8ojuh")
+theme_override_styles/panel = SubResource("StyleBoxTexture_vvmma")
 
 [node name="speaker" type="MarginContainer" parent="CanvasLayer/TextBoxContainer"]
 layout_mode = 2
-theme_override_constants/margin_left = 7
-theme_override_constants/margin_top = 4
-theme_override_constants/margin_right = 124
-theme_override_constants/margin_bottom = 29
+theme_override_constants/margin_left = 117
+theme_override_constants/margin_top = -10
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 46
 
 [node name="SpeakerName" type="Label" parent="CanvasLayer/TextBoxContainer/speaker"]
 layout_mode = 2
-theme = ExtResource("3_vvmma")
+theme = SubResource("Theme_rehgc")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Laura"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="text" type="MarginContainer" parent="CanvasLayer/TextBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 24
-theme_override_constants/margin_top = 24
+theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 7
 
@@ -121,19 +146,23 @@ theme_override_constants/margin_bottom = 7
 layout_mode = 2
 theme = ExtResource("3_vvmma")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "whatsup"
 scroll_active = false
+
+[node name="Panel" type="Panel" parent="CanvasLayer/TextBoxContainer/text"]
+layout_mode = 2
 
 [node name="options" type="MarginContainer" parent="CanvasLayer/TextBoxContainer"]
 layout_mode = 2
-theme_override_constants/margin_left = 35
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 32
+theme_override_constants/margin_left = 45
+theme_override_constants/margin_top = -7
+theme_override_constants/margin_right = 45
+theme_override_constants/margin_bottom = 49
 
 [node name="dialogueOptions" type="HBoxContainer" parent="CanvasLayer/TextBoxContainer/options"]
 layout_mode = 2
 theme_override_constants/separation = 5
-alignment = 2
+alignment = 1
 
 [node name="Button" type="Button" parent="CanvasLayer/TextBoxContainer/options/dialogueOptions"]
 layout_mode = 2

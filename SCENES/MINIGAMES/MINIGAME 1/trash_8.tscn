@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://exxabbko6ewh"]
 
-[ext_resource type="Script" uid="uid://c8wgk5lthf4l4" path="res://SCENES/MINIGAMES/MiniGame1/trash_8.gd" id="1_yem7d"]
+[ext_resource type="Script" uid="uid://c8wgk5lthf4l4" path="res://SCENES/MINIGAMES/MINIGAME 1/trash_8.gd" id="1_yem7d"]
 [ext_resource type="Texture2D" uid="uid://bud8g63x2scwa" path="res://ASSETS/Game1/EmptyWaterBottle_C.png" id="2_yem7d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yem7d"]

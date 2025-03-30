@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c116ul6a2pkl5"]
 
-[ext_resource type="Script" uid="uid://byp2smavewyex" path="res://SCENES/MINIGAMES/MiniGame1/trash_3.gd" id="1_grs32"]
+[ext_resource type="Script" uid="uid://byp2smavewyex" path="res://SCENES/MINIGAMES/MINIGAME 1/trash_3.gd" id="1_grs32"]
 [ext_resource type="Texture2D" uid="uid://cru1ghwh56xpj" path="res://ASSETS/Game1/PaperApple_B.png" id="2_grs32"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_grs32"]
