@@ -4,6 +4,8 @@ extends CharacterBody2D
 
 @onready var dash = $AnimatedSprite2D
 @onready var ray_cast_2d = $RayCast2D
+@onready var player_animation = $AnimationPlayer
+@onready var touch_controls = $TouchControls
 
 var can_move : bool = true
 
@@ -27,15 +29,18 @@ func _physics_process(delta):
 		var direction = Input.get_axis("move_left", "move_right")
 		
 		# Apply movement
-		if direction:
-			dash.play("running")
+		if direction == 1:
+			player_animation.play("WALK")
 			velocity.x = direction * SPEED
+			$rigging.scale.x = 1
+		elif direction == -1:
+			player_animation.play("WALK")
+			velocity.x = direction * SPEED
+			$rigging.scale.x = -1
 		else:
-			dash.play("idle")
+			player_animation.play("IDLE")
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 		
-		if direction != 0:
-			dash.flip_h = (direction == -1)
 			
 		if velocity != Vector2.ZERO:
 			ray_cast_2d.target_position = velocity.normalized() * 50

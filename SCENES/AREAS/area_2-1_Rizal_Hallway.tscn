@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bhqwubjf3kxtn"]
+[gd_scene load_steps=6 format=3 uid="uid://bhqwubjf3kxtn"]
 
 [ext_resource type="PackedScene" uid="uid://dkxygka7r5bfx" path="res://SCENES/BACKGROUNDS/area_2-1_bg_Rizal_Hallway.tscn" id="1_a2ihi"]
 [ext_resource type="Script" uid="uid://ts07yky6y2ca" path="res://SCRIPTS/AREAS/area_2_1_rizal_hallway.gd" id="1_vjoi2"]
 [ext_resource type="PackedScene" uid="uid://drmpfqi10hj1l" path="res://SCENES/CHARACTERS/dash.tscn" id="2_vjoi2"]
 [ext_resource type="PackedScene" uid="uid://dphxa4y4rd1rv" path="res://SCENES/menu.tscn" id="3_qdddx"]
+[ext_resource type="PackedScene" uid="uid://gtu3ewkewaj3" path="res://SCENES/touch_controls.tscn" id="5_qdddx"]
 
 [node name="Area2-1RizalHallway" type="Node2D"]
 script = ExtResource("1_vjoi2")
@@ -19,3 +20,5 @@ scale = Vector2(0.5, 0.5)
 
 [node name="Menu" parent="." instance=ExtResource("3_qdddx")]
 visible = false
+
+[node name="TouchControls" parent="." instance=ExtResource("5_qdddx")]

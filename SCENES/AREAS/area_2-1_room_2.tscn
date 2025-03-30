@@ -1,3 +1,12 @@
-[gd_scene format=3 uid="uid://ctl8haktp7g4b"]
+[gd_scene load_steps=3 format=3 uid="uid://ctl8haktp7g4b"]
+
+[ext_resource type="PackedScene" uid="uid://cvtctfogo2r27" path="res://SCENES/BACKGROUNDS/area_2-1_bg_room.tscn" id="1_vb5p7"]
+[ext_resource type="PackedScene" uid="uid://bu8u2qyf2m1td" path="res://SCENES/MINIGAMES/MINIGAME 2/mg-2_television.tscn" id="2_gwsl3"]
 
 [node name="Area2-1Room2" type="Node2D"]
+
+[node name="Area2-1BgRoom" parent="." instance=ExtResource("1_vb5p7")]
+
+[node name="Mg-2Television" parent="." instance=ExtResource("2_gwsl3")]
+position = Vector2(78, 28)
+script = null

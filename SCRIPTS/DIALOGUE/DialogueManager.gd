@@ -47,5 +47,10 @@ func handle_dialogue_option(option):
 		npc.set_dialogue_state("start")
 		hide_dialogue()
 		npc.set_dialogue_branch(npc.current_branch_index + 1) # move to ongoing quest branch
+	elif next_state == "go_out":
+		npc.set_dialogue_state("start")
+		npc.set_dialogue_branch(npc.current_branch_index + 1) # move to ongoing quest branch
+		get_tree().change_scene_to_file("res://SCENES/AREAS/area_2-1_Rizal_Hallway.tscn")
+		dialogue_ui.ui.visible = false
 	else:
 		show_dialogue(npc)

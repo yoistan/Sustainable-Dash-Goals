@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://ba7w77h0uutar"]
+[gd_scene load_steps=7 format=3 uid="uid://ba7w77h0uutar"]
 
 [ext_resource type="PackedScene" uid="uid://dl5ixbxv0owni" path="res://SCENES/BACKGROUNDS/area_2_bg_Rizal_Lobby.tscn" id="1_5mtxj"]
 [ext_resource type="Script" uid="uid://cbcp5n1jaf2dh" path="res://SCRIPTS/AREAS/area_2_rizal_lobby.gd" id="1_jsm53"]
 [ext_resource type="PackedScene" uid="uid://drmpfqi10hj1l" path="res://SCENES/CHARACTERS/dash.tscn" id="2_jsm53"]
 [ext_resource type="PackedScene" uid="uid://rfo21mxn8hqw" path="res://SCENES/CHARACTERS/gab.tscn" id="3_7qyrv"]
 [ext_resource type="PackedScene" uid="uid://dphxa4y4rd1rv" path="res://SCENES/menu.tscn" id="4_mvksh"]
+[ext_resource type="PackedScene" uid="uid://gtu3ewkewaj3" path="res://SCENES/touch_controls.tscn" id="6_7qyrv"]
 
 [node name="Area2RizalLobby" type="Node2D"]
 script = ExtResource("1_jsm53")
@@ -23,3 +24,5 @@ scale = Vector2(0.5, 0.5)
 
 [node name="Menu" parent="." instance=ExtResource("4_mvksh")]
 visible = false
+
+[node name="TouchControls" parent="." instance=ExtResource("6_7qyrv")]

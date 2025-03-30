@@ -140,23 +140,75 @@
 				"dialogues": [
 					{
 						"state": "start",
-						"text": "",
+						"text": "Hi Dash! I’m Sophia, the class representative of I120a. Here are all the donated books from my section.",
 						"options": {
-							"": ""
+							"Thanks!": "in_progress"
 						}
 					},
 					{
 						"state": "in_progress",
-						"text": "",
+						"text": "Nope, not yet! Let's have a Flash Recitation!",
 						"options": {
-							
+							"Flash Rectiation!?": "instructions"
 						}
 					},
 					{
 						"state": "instructions",
-						"text": "Really? You’ll do that? Thank you! You just need to visit 4 rooms on this floor: R308, R306, R304, and R302.",
+						"text": "Yep! Just answer one question related to ICT correctly and I’ll lend you these books.",
 						"options": {
-							"On it!": "START_MINIGAME_2"
+							"And if I get it wrong?": "what_if_wrong",
+							"I'm ready!": "start_recitation"
+						}
+					},
+					{
+						"state": "what_if_wrong",
+						"text": "I’ll ask you another until you get it right! Don’t worry, they won’t be that hard.",
+						"options": {
+							"I'm ready!": "start_recitation"
+						}
+					},
+					{
+						"state": "start_recitation",
+						"text": "Question 1: What variable type stores true or false?",
+						"options": {
+							"Boolean": "Q1_correct",
+							"String": "Q1_incorrect"
+						}
+					},
+					{
+						"state": "Q1_incorrect",
+						"text": "Close! It's boolean. A boolean's value can either be true or false. A string, on the other hand, stores text values.",
+						"options": {
+							"Next question": "Q2"
+						}
+					},
+					{
+						"state": "Q1_correct",
+						"text": "Correct! As promised, here are your books!",
+						"options": {
+							"Nice!": "go_out"
+						}
+					},
+					{
+						"state": "Q2",
+						"text": "Question 2: What tool can you use to create geometric shapes in Adobe Animate?",
+						"options": {
+							"Lasso tool": "Q2_incorrect",
+							"Shape tool": "Q2_correct"
+						}
+					},
+					{
+						"state": "Q2_incorrect",
+						"text": "Close! It's Shape tool. The shape tool is for making simple geometric shapes, while the lasso tool is used for selecting elements.",
+						"options": {
+							"Next question": "Q3"
+						}
+					},
+					{
+						"state": "Q2_correct",
+						"text": "Correct! As promised, here are your books.",
+						"options": {
+							"Nice!": "go_out"
 						}
 					}
 				]

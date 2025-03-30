@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://br81y231rkul"]
+[gd_scene load_steps=7 format=3 uid="uid://br81y231rkul"]
 
 [ext_resource type="PackedScene" uid="uid://c1lbtikfidyi8" path="res://SCENES/BACKGROUNDS/area_1_bg_Outside_Rizal.tscn" id="1_2ox3u"]
 [ext_resource type="Script" uid="uid://ca6ovjfutik3x" path="res://SCRIPTS/AREAS/area_1_outside_rizal.gd" id="1_y1pt7"]
 [ext_resource type="PackedScene" uid="uid://drmpfqi10hj1l" path="res://SCENES/CHARACTERS/dash.tscn" id="2_beq6n"]
 [ext_resource type="PackedScene" uid="uid://dphxa4y4rd1rv" path="res://SCENES/menu.tscn" id="2_y1pt7"]
+[ext_resource type="PackedScene" uid="uid://gtu3ewkewaj3" path="res://SCENES/touch_controls.tscn" id="6_y1pt7"]
 [ext_resource type="PackedScene" uid="uid://bh3t55otv546" path="res://SCENES/CHARACTERS/laura.tscn" id="7_3pq7h"]
 
 [node name="Area1OutsideRizal" type="Node2D"]
@@ -22,3 +23,5 @@ position = Vector2(61, 55)
 scale = Vector2(0.5, 0.5)
 
 [node name="Menu" parent="." instance=ExtResource("2_y1pt7")]
+
+[node name="TouchControls" parent="." instance=ExtResource("6_y1pt7")]

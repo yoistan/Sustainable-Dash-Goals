@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dkxygka7r5bfx"]
+[gd_scene load_steps=6 format=3 uid="uid://dkxygka7r5bfx"]
 
 [ext_resource type="Script" uid="uid://o51cjqqw8vwx" path="res://SCRIPTS/AREAS/Rizal_Hallway_exits.gd" id="1_bpb2m"]
-[ext_resource type="Theme" uid="uid://cpgxmotex3pwn" path="res://THEMES/dialogue text theme.tres" id="2_8r256"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yw3da"]
 size = Vector2(1302, 35)
@@ -93,22 +92,6 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ROOM_1/enter_room_1"]
 position = Vector2(112.5, 38)
 shape = SubResource("RectangleShape2D_ruovh")
-
-[node name="Label" type="Label" parent="ROOM_1/enter_room_1/CollisionShape2D"]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = -30.0
-offset_right = 20.0
-offset_bottom = -7.0
-grow_horizontal = 2
-grow_vertical = 0
-theme = ExtResource("2_8r256")
-text = "Test"
-horizontal_alignment = 1
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="ROOM_1/enter_room_1"]
 position = Vector2(248, 38)

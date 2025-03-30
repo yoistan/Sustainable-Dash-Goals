@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://ba1jl66pyvn0f" path="res://SDGs/sdg15.png" id="15_cthaq"]
 [ext_resource type="Texture2D" uid="uid://cfq0ku0swda2g" path="res://SDGs/sdg16.png" id="16_x2y5v"]
 [ext_resource type="Texture2D" uid="uid://ce3op0epsb4xm" path="res://SDGs/sdg17.png" id="17_7t8oj"]
-[ext_resource type="Script" uid="uid://chweiewxjkkmb" path="res://SCENES/Achieve.gd" id="18_bm7c7"]
+[ext_resource type="Script" path="res://SCENES/Achieve.gd" id="18_bm7c7"]
 
 [sub_resource type="Animation" id="Animation_bm7c7"]
 length = 0.001
