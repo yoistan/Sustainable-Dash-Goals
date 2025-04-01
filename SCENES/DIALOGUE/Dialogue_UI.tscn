@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://c2e2ue13jpgp3"]
+[gd_scene load_steps=20 format=3 uid="uid://c2e2ue13jpgp3"]
 
 [ext_resource type="Script" uid="uid://crfeflo4hm3ue" path="res://SCRIPTS/DIALOGUE/dialogue_ui.gd" id="1_kw7sn"]
 [ext_resource type="Texture2D" uid="uid://0w82wivcyksl" path="res://ASSETS/DIALOGUE BOX/dialogue box.png" id="1_vvmma"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://brnj6s13ce3dl" path="res://ASSETS/CHARACTERS/DASH/Dash sprite.png" id="5_giuu3"]
 [ext_resource type="StyleBox" uid="uid://mvielnssypl6" path="res://THEMES/speaker_label.tres" id="5_rehgc"]
 [ext_resource type="Theme" uid="uid://xpgv5lbnpmxr" path="res://THEMES/dialogue_button_theme.tres" id="5_vvmma"]
-[ext_resource type="AudioStream" uid="uid://cpwlljgfd8ccy" path="res://ASSETS/SFX/page_flip.mp3" id="10_giuu3"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6bus2"]
 texture = ExtResource("1_vvmma")
@@ -202,7 +201,3 @@ layout_mode = 2
 theme = ExtResource("5_vvmma")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Test Button"
-
-[node name="PageFlip" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("10_giuu3")
-volume_db = 10.0

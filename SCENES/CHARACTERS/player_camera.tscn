@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bg50lbycn2xim"]
+[gd_scene load_steps=5 format=3 uid="uid://bg50lbycn2xim"]
 
 [ext_resource type="Shader" uid="uid://codkg4dua6ba" path="res://SHADERS/blur.gdshader" id="1_g5pks"]
 [ext_resource type="Script" uid="uid://cq1dubll5arxg" path="res://SCRIPTS/blur_effect.gd" id="1_tw3sm"]
+[ext_resource type="PackedScene" uid="uid://cmklnemra7p7j" path="res://SCENES/CUTSCENES/scene_transition.tscn" id="3_daq54"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tw3sm"]
 shader = ExtResource("1_g5pks")
@@ -20,3 +21,5 @@ offset_top = -166.0
 offset_right = 257.0
 offset_bottom = 160.0
 color = Color(0, 0, 0, 1)
+
+[node name="SceneTransition" parent="." instance=ExtResource("3_daq54")]

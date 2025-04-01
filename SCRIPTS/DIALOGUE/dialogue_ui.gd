@@ -56,7 +56,7 @@ func show_dialogue(speaker, speaking, text, options):
 		dialogue_options.add_child(button)
 
 func _on_option_selected(option):
-	$PageFlip.play()
+	Audio.play_page_flip_sfx()
 	get_parent().handle_dialogue_option(option)
 
 func hide_dialogue():

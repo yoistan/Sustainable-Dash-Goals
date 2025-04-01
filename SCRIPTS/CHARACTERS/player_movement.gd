@@ -5,6 +5,7 @@ extends CharacterBody2D
 @onready var ray_cast_2d = $RayCast2D
 @onready var player_animation = $AnimationPlayer
 @onready var step_sfx = $StepSfx
+@onready var rigging = $rigging
 
 var can_move : bool = true
 
@@ -28,14 +29,14 @@ func _physics_process(delta):
 		var direction = Input.get_axis("move_left", "move_right")
 		
 		# Apply movement
-		if direction == 1:
+		if direction == 1: # to the right
 			player_animation.play("WALK")
 			velocity.x = direction * SPEED
-			$rigging.scale.x = 1
-		elif direction == -1:
+			rigging.scale.x = 1
+		elif direction == -1: # to the left
 			player_animation.play("WALK")
 			velocity.x = direction * SPEED
-			$rigging.scale.x = -1
+			rigging.scale.x = -1
 		else:
 			player_animation.play("IDLE")
 			step_sfx.stop()
@@ -56,8 +57,18 @@ func _input(event):
 				if target.is_in_group("npc"):
 					print("im talking to an npc")
 					can_move = false
+					set_player_last_location()
 					target.start_dialogue()
 
 func _play_step_audio():
 	step_sfx.pitch_scale = randf_range(0.8, 1.2)
 	step_sfx.play()
+
+func set_player_last_location():
+	match Global.current_scene:
+		Global.area_1_name:
+			Global.area_1_players_last_location = position
+		Global.area_2_name:
+			Global.area_2_players_last_location = position
+		Global.area_2_hallway_name:
+			Global.area_2_hallway_players_last_location = position

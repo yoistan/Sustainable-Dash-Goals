@@ -1,0 +1,75 @@
+[gd_scene load_steps=6 format=3 uid="uid://cmklnemra7p7j"]
+
+[ext_resource type="Script" uid="uid://dk64rw50uaoft" path="res://SCRIPTS/CUTSCENES/scene_transition.gd" id="1_e0ogs"]
+
+[sub_resource type="Animation" id="Animation_x5axt"]
+resource_name = "fade_in"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_e0ogs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ecnon"]
+resource_name = "fade_out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6bj3e"]
+_data = {
+&"RESET": SubResource("Animation_e0ogs"),
+&"fade_in": SubResource("Animation_x5axt"),
+&"fade_out": SubResource("Animation_ecnon")
+}
+
+[node name="SceneTransition" type="CanvasLayer"]
+script = ExtResource("1_e0ogs")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_6bj3e")
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 100
+offset_left = -5.0
+offset_top = -3.0
+offset_right = 167.0
+offset_bottom = 95.0
+color = Color(0, 0, 0, 1)
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

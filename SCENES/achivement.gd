@@ -6,4 +6,4 @@ func _ready() -> void:
 	
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://SCENES/AREAS/area_2_Rizal_Lobby.tscn")
+	get_tree().call_deferred("change_scene_to_file", "res://SCENES/AREAS/area_1_Outside_Rizal.tscn")

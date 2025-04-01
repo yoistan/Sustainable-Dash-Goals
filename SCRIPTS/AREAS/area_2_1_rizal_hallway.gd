@@ -5,4 +5,6 @@ extends Node2D
 @onready var player_camera = load("res://SCENES/CHARACTERS/player_camera.tscn").instantiate()
 
 func _ready():
+	Global.current_scene = Global.area_2_hallway_name
+	
 	$InGame/Dash.add_child(player_camera)

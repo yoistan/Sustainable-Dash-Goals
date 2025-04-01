@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://brcmcxe2124uv"]
+[gd_scene load_steps=5 format=3 uid="uid://brcmcxe2124uv"]
 
 [ext_resource type="Script" uid="uid://bc2cka0xrngdb" path="res://SCRIPTS/title_screen.gd" id="1_7luok"]
 [ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="1_8ukxt"]
 [ext_resource type="Theme" uid="uid://47r1e1w4epsx" path="res://THEMES/button.tres" id="3_wtx41"]
+[ext_resource type="PackedScene" uid="uid://cmklnemra7p7j" path="res://SCENES/CUTSCENES/scene_transition.tscn" id="4_rbu6d"]
 
 [node name="TitleScreen" type="Node"]
 script = ExtResource("1_7luok")
@@ -70,6 +71,8 @@ theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_8ukxt")
 text = "Quit"
+
+[node name="SceneTransition" parent="." instance=ExtResource("4_rbu6d")]
 
 [connection signal="pressed" from="playButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="settingsButton" to="." method="_on_settings_button_pressed"]
