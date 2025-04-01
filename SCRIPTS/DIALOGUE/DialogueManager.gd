@@ -5,18 +5,20 @@ extends Node2D
 @onready var dialogue_ui = $DialogueUi
 
 var npc : Node = null
+var minigame_1_done = false
+var minigame_2_done = false
 
 # show dialogue with data
-func show_dialogue(npc, text = "", options = {}):
+func show_dialogue(npc, speaking = "", text = "", options = {}):
 	if text != "":
 		# show empty box
-		dialogue_ui.show_dialogue(npc.npc_name, text, options)
+		dialogue_ui.show_dialogue(npc.npc_name, speaking, text, options)
 	else:
 		# show populated data
 		var dialogue = npc.get_current_dialogue()
 		if dialogue == null:
 			return
-		dialogue_ui.show_dialogue(npc.npc_name, dialogue["text"], dialogue["options"])
+		dialogue_ui.show_dialogue(npc.npc_name, dialogue["speaking"], dialogue["text"], dialogue["options"])
 
 func hide_dialogue():
 	dialogue_ui.hide_dialogue()
@@ -42,7 +44,8 @@ func handle_dialogue_option(option):
 	elif next_state == "START_MINIGAME_1":
 		npc.set_dialogue_state("start")
 		hide_dialogue()
-		get_tree().change_scene_to_file("res://SCENES/MINIGAMES/MiniGame1/instructions_1.tscn")
+		get_tree().change_scene_to_file("res://SCENES/MINIGAMES/MINIGAME 1/instructions_1.tscn")
+		npc.set_dialogue_branch(npc.current_branch_index + 1) # move to default branch
 	elif next_state == "START_MINIGAME_2":
 		npc.set_dialogue_state("start")
 		hide_dialogue()
@@ -54,3 +57,4 @@ func handle_dialogue_option(option):
 		dialogue_ui.ui.visible = false
 	else:
 		show_dialogue(npc)
+	

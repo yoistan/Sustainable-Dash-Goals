@@ -1,7 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://drmpfqi10hj1l"]
+[gd_scene load_steps=11 format=3 uid="uid://drmpfqi10hj1l"]
 
 [ext_resource type="Script" uid="uid://bvcl7w01armac" path="res://SCRIPTS/CHARACTERS/player_movement.gd" id="1_82tok"]
+[ext_resource type="PackedScene" uid="uid://c0k4crxwnd6xv" path="res://SCENES/DIALOGUE/DialogueManager.tscn" id="3_hwfgl"]
 [ext_resource type="Texture2D" uid="uid://xb2au7mgjl70" path="res://ASSETS/CHARACTERS/DASH/Dash atlas.png" id="4_vmh5o"]
+[ext_resource type="AudioStream" path="res://ASSETS/SFX/step sfx.mp3" id="4_yn03p"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_82tok"]
 radius = 21.0
@@ -455,6 +457,20 @@ tracks/11/keys = {
 "update": 0,
 "values": [-1.39116, -1.39116, -1.39116, -1.39116, -1.39116, -1.39116, -1.39116, -1.39116, -1.39116, -1.39116]
 }
+tracks/12/type = "method"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath(".")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.13253),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_play_step_audio"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vmh5o"]
 _data = {
@@ -597,3 +613,9 @@ bone_angle = 3.24823
 libraries = {
 &"": SubResource("AnimationLibrary_vmh5o")
 }
+
+[node name="DialogueManager" parent="." instance=ExtResource("3_hwfgl")]
+
+[node name="StepSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_yn03p")
+volume_db = 10.0

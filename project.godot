@@ -17,7 +17,6 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-DialogManager="*res://SCRIPTS/SINGLETONS/DialogManager.gd"
 GlobalScore="*res://GlobalScore.gd"
 Global="*res://SCRIPTS/SINGLETONS/Global.gd"
 Audio="*res://audio.tscn"

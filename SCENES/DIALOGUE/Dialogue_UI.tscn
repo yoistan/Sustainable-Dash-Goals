@@ -1,13 +1,15 @@
-[gd_scene load_steps=17 format=3 uid="uid://c2e2ue13jpgp3"]
+[gd_scene load_steps=21 format=3 uid="uid://c2e2ue13jpgp3"]
 
 [ext_resource type="Script" uid="uid://crfeflo4hm3ue" path="res://SCRIPTS/DIALOGUE/dialogue_ui.gd" id="1_kw7sn"]
 [ext_resource type="Texture2D" uid="uid://0w82wivcyksl" path="res://ASSETS/DIALOGUE BOX/dialogue box.png" id="1_vvmma"]
 [ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="2_6bus2"]
 [ext_resource type="Texture2D" uid="uid://cpepodmlxqkl3" path="res://icon.svg" id="2_vvmma"]
 [ext_resource type="Theme" uid="uid://cpgxmotex3pwn" path="res://THEMES/dialogue text theme.tres" id="3_vvmma"]
-[ext_resource type="Texture2D" uid="uid://c3ixw4d13c023" path="res://ASSETS/CHARACTERS/DASH/Dash.png" id="4_6bus2"]
+[ext_resource type="Shader" uid="uid://btk6r3dvcemum" path="res://SHADERS/darkened_sprite.gdshader" id="4_245nx"]
+[ext_resource type="Texture2D" path="res://ASSETS/CHARACTERS/DASH/Dash sprite.png" id="5_giuu3"]
 [ext_resource type="StyleBox" uid="uid://mvielnssypl6" path="res://THEMES/speaker_label.tres" id="5_rehgc"]
 [ext_resource type="Theme" uid="uid://xpgv5lbnpmxr" path="res://THEMES/dialogue_button_theme.tres" id="5_vvmma"]
+[ext_resource type="AudioStream" path="res://ASSETS/SFX/page_flip.mp3" id="10_giuu3"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6bus2"]
 texture = ExtResource("1_vvmma")
@@ -67,6 +69,22 @@ _data = {
 &"dialogue_box_exit": SubResource("Animation_i5fyq")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_245nx"]
+shader = ExtResource("4_245nx")
+shader_parameter/hue_shift = 0.0
+shader_parameter/saturation_mult = 1.0
+shader_parameter/value_mult = 1.0
+shader_parameter/brightness_add = 0.0
+shader_parameter/contrast_mult = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_giuu3"]
+shader = ExtResource("4_245nx")
+shader_parameter/hue_shift = 0.0
+shader_parameter/saturation_mult = 1.0
+shader_parameter/value_mult = 1.0
+shader_parameter/brightness_add = 4.75e-08
+shader_parameter/contrast_mult = 1.0
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vvmma"]
 texture = ExtResource("1_vvmma")
 
@@ -107,14 +125,18 @@ theme_override_constants/margin_right = 2
 theme_override_constants/margin_bottom = 2
 
 [node name="NPC" type="Sprite2D" parent="CanvasLayer/TextBoxContainer"]
-position = Vector2(124, -7)
-scale = Vector2(0.1, 0.1)
+material = SubResource("ShaderMaterial_245nx")
+position = Vector2(124.97, -17.97)
+scale = Vector2(0.0785937, 0.0785937)
 texture = ExtResource("2_vvmma")
 
 [node name="DASH" type="Sprite2D" parent="CanvasLayer/TextBoxContainer"]
-position = Vector2(26, -2)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("4_6bus2")
+material = SubResource("ShaderMaterial_giuu3")
+position = Vector2(106, -19)
+scale = Vector2(0.0778589, 0.0778589)
+texture = ExtResource("5_giuu3")
+offset = Vector2(-1014.66, 154.125)
+flip_h = true
 
 [node name="Panel" type="Panel" parent="CanvasLayer/TextBoxContainer"]
 layout_mode = 2
@@ -131,7 +153,21 @@ theme_override_constants/margin_bottom = 46
 layout_mode = 2
 theme = SubResource("Theme_rehgc")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Laura"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="listener" type="MarginContainer" parent="CanvasLayer/TextBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = -10
+theme_override_constants/margin_right = 117
+theme_override_constants/margin_bottom = 46
+
+[node name="DashName" type="Label" parent="CanvasLayer/TextBoxContainer/listener"]
+layout_mode = 2
+theme = SubResource("Theme_rehgc")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Dash"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -148,9 +184,6 @@ theme = ExtResource("3_vvmma")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "whatsup"
 scroll_active = false
-
-[node name="Panel" type="Panel" parent="CanvasLayer/TextBoxContainer/text"]
-layout_mode = 2
 
 [node name="options" type="MarginContainer" parent="CanvasLayer/TextBoxContainer"]
 layout_mode = 2
@@ -169,3 +202,7 @@ layout_mode = 2
 theme = ExtResource("5_vvmma")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Test Button"
+
+[node name="PageFlip" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_giuu3")
+volume_db = 10.0

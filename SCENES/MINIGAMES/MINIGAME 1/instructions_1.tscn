@@ -1,16 +1,15 @@
-[gd_scene load_steps=13 format=3 uid="uid://cpo5ga8lntgwq"]
+[gd_scene load_steps=10 format=3 uid="uid://cpo5ga8lntgwq"]
 
 [ext_resource type="Script" uid="uid://d2bmgf4fn6fks" path="res://SCENES/MINIGAMES/MINIGAME 1/instructions_1.gd" id="1_b43up"]
 [ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="2_3hcta"]
 [ext_resource type="Texture2D" uid="uid://0w82wivcyksl" path="res://ASSETS/DIALOGUE BOX/dialogue box.png" id="2_ym6wh"]
 [ext_resource type="Script" uid="uid://bx0rj2gocbo1w" path="res://SCENES/MINIGAMES/MINIGAME 1/Typewrite.gd" id="4_ym6wh"]
-[ext_resource type="StyleBox" uid="uid://c3fva3a3aync4" path="res://THEMES/BUTTONS/button_hover.tres" id="5_due7q"]
-[ext_resource type="StyleBox" uid="uid://cx2sfg0f2owra" path="res://THEMES/BUTTONS/button_normal.tres" id="6_gqy6p"]
-[ext_resource type="StyleBox" uid="uid://kypwmscppp0p" path="res://THEMES/BUTTONS/button_pressed.tres" id="6_veg8d"]
+[ext_resource type="Theme" path="res://THEMES/button.tres" id="5_hrjs4"]
+[ext_resource type="AudioStream" path="res://ASSETS/SFX/writing_sfx.mp3" id="8_qctln"]
 
 [sub_resource type="Animation" id="Animation_g5nyb"]
 resource_name = "Intructions"
-length = 11.0
+length = 8.8997
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -54,10 +53,24 @@ tracks/3/path = NodePath("Button:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.0333333, 8.9),
+"times": PackedFloat32Array(0, 8.83333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.166667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_play_writing_sfx"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_due7q"]
@@ -117,20 +130,11 @@ _data = {
 &"RESET": SubResource("Animation_due7q")
 }
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_due7q"]
-
-[sub_resource type="Theme" id="Theme_g5nyb"]
-default_font = ExtResource("2_3hcta")
-Button/styles/focus = SubResource("StyleBoxEmpty_due7q")
-Button/styles/hover = ExtResource("5_due7q")
-Button/styles/normal = ExtResource("6_gqy6p")
-Button/styles/pressed = ExtResource("6_veg8d")
-
 [node name="Instructions1" type="Node2D"]
 script = ExtResource("1_b43up")
 
 [node name="DialogueBox" type="Sprite2D" parent="."]
-position = Vector2(80, 39)
+position = Vector2(80, 45)
 scale = Vector2(0.122155, 0.186141)
 texture = ExtResource("2_ym6wh")
 
@@ -163,9 +167,9 @@ visible_characters = 0
 visible_ratio = 0.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 25.0
+offset_left = 27.0
 offset_top = 33.0
-offset_right = 347.0
+offset_right = 349.0
 offset_bottom = 166.0
 scale = Vector2(0.377023, 0.338854)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
@@ -188,7 +192,7 @@ offset_bottom = 94.0
 scale = Vector2(0.437949, 0.437949)
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme = SubResource("Theme_g5nyb")
+theme = ExtResource("5_hrjs4")
 theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
@@ -204,4 +208,9 @@ theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 text = "START"
 
+[node name="WritingSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_qctln")
+volume_db = 20.0
+
+[connection signal="animation_finished" from="AnimationPlayer" to="AnimationPlayer" method="_on_animation_finished"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -7,6 +7,8 @@ extends Control
 @onready var dialogue_text = $CanvasLayer/TextBoxContainer/text/DialogueText
 @onready var dialogue_options = $CanvasLayer/TextBoxContainer/options/dialogueOptions
 @onready var npc_sprite = $CanvasLayer/TextBoxContainer/NPC
+@onready var dash_sprite = $CanvasLayer/TextBoxContainer/DASH
+
 
 # sprites
 const LAURA = preload("res://ASSETS/CHARACTERS/DIALOGUE SPRITES/Laura.png")
@@ -23,11 +25,12 @@ const DIALOGUE_BUTTON_THEME = preload("res://THEMES/dialogue_button_theme.tres")
 func _ready():
 	ui.visible = false
 
-func show_dialogue(speaker, text, options):
+func show_dialogue(speaker, speaking, text, options):
 	ui.visible = true
 	
 	# populate data
 	set_sprite(speaker)
+	highlight_speaker(speaker, speaking)
 	speaker_name.text = speaker
 	dialogue_text.text = text
 	
@@ -41,22 +44,38 @@ func show_dialogue(speaker, text, options):
 		button.text = option
 		button.pressed.connect(_on_option_selected.bind(option))
 		
-		# theme
 		
+		# theme
 		button.set_theme(DIALOGUE_BUTTON_THEME)
 		button.add_theme_color_override("font_color", Color.BLACK)
 		button.add_theme_color_override("font_focus_color", Color.BLACK)
 		button.add_theme_color_override("font_normal_color", Color.BLACK)
 		button.add_theme_color_override("font_pressed_color", Color.BLACK)
 		button.add_theme_color_override("font_hover_color", Color.BLACK)
+		
 		dialogue_options.add_child(button)
 
 func _on_option_selected(option):
+	$PageFlip.play()
 	get_parent().handle_dialogue_option(option)
 
 func hide_dialogue():
 	ui.visible = false
 	Global.player.can_move = true
+
+func highlight_speaker(npc, speaking):
+	if speaking == npc: # if the currently speaking character is the npc, highlight the npc
+		brighten_sprite(npc_sprite)
+		darken_sprite(dash_sprite)
+	else: # otherwise, highlight Dash
+		brighten_sprite(dash_sprite)
+		darken_sprite(npc_sprite)
+
+func darken_sprite(sprite):
+	sprite.material.set_shader_parameter("value_mult", 0.2)
+
+func brighten_sprite(sprite):
+	sprite.material.set_shader_parameter("value_mult", 1.0)
 	
 # set the texture of the npc
 func set_sprite(npc):

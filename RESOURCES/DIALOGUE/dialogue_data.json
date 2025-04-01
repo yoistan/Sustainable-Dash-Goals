@@ -6,31 +6,58 @@
 				"dialogues": [
 					{
 						"state": "start",
-						"text": "Hmm, what should I do with all this?",
+						"speaking": "Laura", 
+						"text": "(Laura talks to herself) Hmm, what should I do with all this?",
 						"options": {
-							"Hi Laura!": "in_progress",
-							"What are those?": "in_progress"
+							"   Next   ": "dash_reply_1"
+						}
+					},
+					{
+						"state": "dash_reply_1",
+						"speaking": "Dash", 
+						"text": "Hi Laura! What are those?",
+						"options": {
+							"   Next   ": "in_progress"
 						}
 					},
 					{
 						"state": "in_progress",
+						"speaking": "Laura", 
 						"text": "Oh, hi Dash! Yes, these are some leftover props from the stage play but no one claimed them. I’m thinking of organizing them based on whether the prop item can be segregated, recycled, or has to be thrown away.",
 						"options": {
-							"Why not just throw everything away?": "start_quest"
+							"   Next   ": "dash_reply_2"
+						}
+					},
+					{
+						"state": "dash_reply_2",
+						"speaking": "Dash", 
+						"text": "Why not just throw everything away?",
+						"options": {
+							"   Next   ": "start_quest"
 						}
 					},
 					{
 						"state": "start_quest",
+						"speaking": "Laura", 
 						"text": "That’ll only end up harming our environment if you don’t properly dispose of your waste items. Besides, doing this helps you practice SDG 13 as well as reducing the impact of climate change!",
 						"options": {
-							"That makes sense. Let's segregate them!": "instructions"
+							"   Next   ": "dash_reply_3"
+						}
+					},
+					{
+						"state": "dash_reply_3",
+						"speaking": "Dash", 
+						"text": "That makes sense. Let's segregate them!",
+						"options": {
+							"   Next   ": "instructions"
 						}
 					},
 					{
 						"state": "instructions",
+						"speaking": "Laura", 
 						"text": "All right! I'll segegrate them, but if I put it in the wrong bin I'd like you to tell me.",
 						"options": {
-							"Let's go!": "START_MINIGAME_1"
+							"Play Game": "START_MINIGAME_1"
 						}
 					}
 				]
@@ -40,9 +67,10 @@
 				"dialogues": [
 					{
 						"state": "start",
+						"speaking": "Laura", 
 						"text": "Hi again! Thanks for helping me. I got the hang of it now!",
 						"options": {
-							"No problem!": "exit"
+							"  No problem!  ": "exit"
 						}
 					}
 				]
@@ -57,13 +85,23 @@
 				"dialogues": [
 					{
 						"state": "start",
+						"speaking": "Gab", 
 						"text": "Eight... ten... twelve Filipino books...",
 						"options": {
-							"Good day Gab! What's going on?": "in_progress"
+							"  Next  ": "dash_reply_1"
+						}
+					},
+					{
+						"state": "dash_reply_1",
+						"speaking": "Dash", 
+						"text": "Good day Gab! What's going on?",
+						"options": {
+							"  Next  ": "in_progress"
 						}
 					},
 					{
 						"state": "in_progress",
+						"speaking": "Gab",
 						"text": "Hey, Dash! We’re currently doing a book drive in support of SDG 4 Quality Education. Would you like to donate?",
 						"options": {
 							"I do!": "yes_books",
@@ -72,6 +110,7 @@
 					},
 					{
 						"state": "yes_books",
+						"speaking": "Gab",
 						"text": "Really? Great! What is it?",
 						"options": {
 							"Give 'Magic 101'": "book_received"
@@ -79,30 +118,58 @@
 					},
 					{
 						"state": "book_received",
+						"speaking": "Gab",
 						"text": "Woah, Magic 101? Thanks for your contribution! Would love to read it while I'm here. I won't bring it home, of course!",
 						"options": {
-							"No problem!": "about_donations"
+							"  Next  ": "dash_reply_2"
+						}
+					},
+					{
+						"state": "dash_reply_2",
+						"speaking": "Dash",
+						"text": "No problem!",
+						"options": {
+							"  Next  ": "about_donations"
 						}
 					},
 					{
 						"state": "no_books",
+						"speaking": "Gab",
 						"text": "That’s okay. The book drive will run until Friday, then we’ll deliver them by next week.",
 						"options": {
-							"Oh, awesome!": "about_donations"
+							"  Next  ": "dash_reply_3"
+						}
+					},
+					{
+						"state": "dash_reply_3",
+						"speaking": "Dash",
+						"text": "Oh, awesome!",
+						"options": {
+							"  Next  ": "about_donations"
 						}
 					},
 					{
 						"state": "about_donations",
+						"speaking": "Gab",
 						"text": "Speaking of donations, I was going to go room-to-room on this floor to collect some books, but then no one would be here in case someone wants to donate here directly…",
 						"options": {
-							"I can help": "instructions"
+							"  Next  ": "dash_reply_4"
+						}
+					},
+					{
+						"state": "dash_reply_4",
+						"speaking": "Dash",
+						"text": "I can help!",
+						"options": {
+							"  Next  ": "instructions"
 						}
 					},
 					{
 						"state": "instructions",
+						"speaking": "Gab",
 						"text": "Really? You’ll do that? Thank you! You just need to visit 4 rooms on this floor: R308, R306, R304, and R302.",
 						"options": {
-							"On it!": "START_MINIGAME_2"
+							"  On it!  ": "START_MINIGAME_2"
 						}
 					}
 				]
@@ -112,9 +179,10 @@
 				"dialogues": [
 					{
 						"state": "start",
+						"speaking": "Gab",
 						"text": "The rooms are on the right.",
 						"options": {
-							"Okay": "exit"
+							"  Okay  ": "exit"
 						}
 					}
 				]
@@ -124,9 +192,10 @@
 				"dialogues": [
 					{
 						"state": "start",
+						"speaking": "Gab",
 						"text": "Hey! Thanks for helping me. These donations will surely be of help.",
 						"options": {
-							"No problem!": "exit"
+							"  No problem!  ": "exit"
 						}
 					}
 				]
@@ -140,20 +209,31 @@
 				"dialogues": [
 					{
 						"state": "start",
+						"speaking": "Sophia",
 						"text": "Hi Dash! I’m Sophia, the class representative of I120a. Here are all the donated books from my section.",
 						"options": {
-							"Thanks!": "in_progress"
+							"  Next  ": "dash_reply_1"
+						}
+					},
+					{
+						"state": "dash_reply_1",
+						"speaking": "Dash",
+						"text": "Thanks! I'll take these to Gab now.",
+						"options": {
+							"  Next  ": "in_progress"
 						}
 					},
 					{
 						"state": "in_progress",
-						"text": "Nope, not yet! Let's have a Flash Recitation!",
+						"speaking": "Sophia",
+						"text": "Not so fast! Before I allow you these books, ",
 						"options": {
 							"Flash Rectiation!?": "instructions"
 						}
 					},
 					{
 						"state": "instructions",
+						"speaking": "Sophia",
 						"text": "Yep! Just answer one question related to ICT correctly and I’ll lend you these books.",
 						"options": {
 							"And if I get it wrong?": "what_if_wrong",
@@ -162,6 +242,7 @@
 					},
 					{
 						"state": "what_if_wrong",
+						"speaking": "Sophia",
 						"text": "I’ll ask you another until you get it right! Don’t worry, they won’t be that hard.",
 						"options": {
 							"I'm ready!": "start_recitation"
@@ -169,6 +250,7 @@
 					},
 					{
 						"state": "start_recitation",
+						"speaking": "Sophia",
 						"text": "Question 1: What variable type stores true or false?",
 						"options": {
 							"Boolean": "Q1_correct",
@@ -177,6 +259,7 @@
 					},
 					{
 						"state": "Q1_incorrect",
+						"speaking": "Sophia",
 						"text": "Close! It's boolean. A boolean's value can either be true or false. A string, on the other hand, stores text values.",
 						"options": {
 							"Next question": "Q2"
@@ -184,6 +267,7 @@
 					},
 					{
 						"state": "Q1_correct",
+						"speaking": "Sophia",
 						"text": "Correct! As promised, here are your books!",
 						"options": {
 							"Nice!": "go_out"
@@ -191,6 +275,7 @@
 					},
 					{
 						"state": "Q2",
+						"speaking": "Sophia",
 						"text": "Question 2: What tool can you use to create geometric shapes in Adobe Animate?",
 						"options": {
 							"Lasso tool": "Q2_incorrect",
@@ -199,6 +284,7 @@
 					},
 					{
 						"state": "Q2_incorrect",
+						"speaking": "Sophia",
 						"text": "Close! It's Shape tool. The shape tool is for making simple geometric shapes, while the lasso tool is used for selecting elements.",
 						"options": {
 							"Next question": "Q3"
@@ -206,6 +292,7 @@
 					},
 					{
 						"state": "Q2_correct",
+						"speaking": "Sophia",
 						"text": "Correct! As promised, here are your books.",
 						"options": {
 							"Nice!": "go_out"
@@ -218,6 +305,7 @@
 				"dialogues": [
 					{
 						"state": "start",
+						"speaking": "Sophia",
 						"text": "Welcome back! Here to test your knowledge on ICT again?",
 						"options": {
 							"Play": "play",
@@ -226,6 +314,7 @@
 					},
 					{
 						"state": "question_1",
+						"speaking": "Sophia",
 						"text": "In animation, what are the frames that define the start and end of an action or motion called?",
 						"options": {
 							"Keyframes": "Q1_correct",

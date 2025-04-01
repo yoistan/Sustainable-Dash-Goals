@@ -2,10 +2,9 @@
 
 extends CharacterBody2D
 
-@onready var dash = $AnimatedSprite2D
 @onready var ray_cast_2d = $RayCast2D
 @onready var player_animation = $AnimationPlayer
-@onready var touch_controls = $TouchControls
+@onready var step_sfx = $StepSfx
 
 var can_move : bool = true
 
@@ -39,6 +38,7 @@ func _physics_process(delta):
 			$rigging.scale.x = -1
 		else:
 			player_animation.play("IDLE")
+			step_sfx.stop()
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 		
 			
@@ -57,3 +57,7 @@ func _input(event):
 					print("im talking to an npc")
 					can_move = false
 					target.start_dialogue()
+
+func _play_step_audio():
+	step_sfx.pitch_scale = randf_range(0.8, 1.2)
+	step_sfx.play()
