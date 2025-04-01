@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://pve6ms6fqf4r"]
+[gd_scene load_steps=28 format=3 uid="uid://pve6ms6fqf4r"]
 
 [ext_resource type="Script" uid="uid://df03hx7jg8v82" path="res://SCENES/achivement.gd" id="1_0wy82"]
 [ext_resource type="Texture2D" uid="uid://c4yr8tfxa1wwa" path="res://SDGs/sdg1.png" id="1_sylfw"]
@@ -18,78 +18,116 @@
 [ext_resource type="Texture2D" uid="uid://ba1jl66pyvn0f" path="res://SDGs/sdg15.png" id="15_cthaq"]
 [ext_resource type="Texture2D" uid="uid://cfq0ku0swda2g" path="res://SDGs/sdg16.png" id="16_x2y5v"]
 [ext_resource type="Texture2D" uid="uid://ce3op0epsb4xm" path="res://SDGs/sdg17.png" id="17_7t8oj"]
-[ext_resource type="Script" path="res://SCENES/Achieve.gd" id="18_bm7c7"]
+[ext_resource type="Script" uid="uid://chweiewxjkkmb" path="res://SCENES/Achieve.gd" id="18_bm7c7"]
+[ext_resource type="Script" uid="uid://euemwe6t4a0t" path="res://SCENES/MINIGAMES/MINIGAME 1/area_2d.gd" id="19_2pcik"]
 [ext_resource type="Theme" uid="uid://47r1e1w4epsx" path="res://THEMES/button.tres" id="20_n01ot"]
+[ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="21_04jy0"]
 
 [sub_resource type="Animation" id="Animation_bm7c7"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("13:modulate")
+tracks/0/path = NodePath("13:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(0.211765, 0.239216, 0.290196, 1)]
+"values": [Vector2(0.0316797, 0.0316797)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("13:position")
+tracks/1/path = NodePath("13:self_modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(7, 63.5)]
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("13:scale")
+tracks/2/path = NodePath("Info1/ColorRect/Label:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0.0316797, 0.0316797)]
+"values": [false]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Button:visible")
+tracks/3/path = NodePath("Info1:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("13:self_modulate")
+tracks/4/path = NodePath("Info1:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("AnimationPlayer/ColorRect:modulate")
+tracks/5/path = NodePath("13:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(7, 63.5)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("13:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.211765, 0.239216, 0.290196, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Button:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AnimationPlayer/ColorRect:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -98,66 +136,66 @@ tracks/5/keys = {
 
 [sub_resource type="Animation" id="Animation_sylfw"]
 resource_name = "SDG 13"
-length = 10.0
+length = 7.62
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("13:modulate")
+tracks/0/path = NodePath("13:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(3.03333, 4.66667),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 2.8, 5.6, 7.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Color(0.211765, 0.239216, 0.290196, 1), Color(1, 1, 1, 1)]
+"values": [Vector2(0.0316797, 0.0316797), Vector2(0.067, 0.067), Vector2(0.067, 0.067), Vector2(0.0316797, 0.0316797)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("13:position")
+tracks/1/path = NodePath("13:self_modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 2.8, 5.6, 7.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(4.7, 5.63),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(7, 63.5), Vector2(71.88, 38.905), Vector2(71.88, 38.905), Vector2(7, 63.5)]
+"values": [Color(1, 1, 1, 1), Color(0.659681, 0.679551, 0.682224, 1)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("13:scale")
+tracks/2/path = NodePath("13:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 2.8, 5.6, 7.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(0.0316797, 0.0316797), Vector2(0.067, 0.067), Vector2(0.067, 0.067), Vector2(0.0316797, 0.0316797)]
+"values": [Vector2(7, 63.5), Vector2(71.88, 38.905), Vector2(71.88, 38.905), Vector2(7, 63.5)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Button:visible")
+tracks/3/path = NodePath("13:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 7.7),
+"times": PackedFloat32Array(3.03333, 4.66667),
 "transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
+"update": 0,
+"values": [Color(0.211765, 0.239216, 0.290196, 1), Color(1, 1, 1, 1)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("13:self_modulate")
+tracks/4/path = NodePath("Button:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(4.7, 5.63),
+"times": PackedFloat32Array(0, 7.5),
 "transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(0.659681, 0.679551, 0.682224, 1)]
+"update": 1,
+"values": [false, true]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -182,6 +220,9 @@ _data = {
 background_mode = 3
 glow_enabled = true
 glow_blend_mode = 1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n06mt"]
+size = Vector2(820.715, 789.149)
 
 [node name="Achieve" type="Node2D"]
 position = Vector2(8, 6)
@@ -283,12 +324,6 @@ position = Vector2(111, 63.5)
 scale = Vector2(0.0244141, 0.0244141)
 texture = ExtResource("17_7t8oj")
 
-[node name="13" type="Sprite2D" parent="."]
-modulate = Color(0.211765, 0.239216, 0.290196, 1)
-position = Vector2(7, 63.5)
-scale = Vector2(0.0316797, 0.0316797)
-texture = ExtResource("13_cs6sq")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_0wy82")
@@ -296,6 +331,7 @@ libraries = {
 script = ExtResource("18_bm7c7")
 
 [node name="ColorRect" type="ColorRect" parent="AnimationPlayer"]
+visible = false
 self_modulate = Color(0, 0, 0, 1)
 offset_right = 159.0
 offset_bottom = 90.0
@@ -316,5 +352,81 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 text = ">"
+
+[node name="Info1" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_right = 41.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Info1"]
+self_modulate = Color(1, 1, 1, 0.509804)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 3.0
+offset_right = 135.0
+offset_bottom = 69.0
+
+[node name="Label" type="Label" parent="Info1/ColorRect"]
+modulate = Color(0, 0, 0, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 158.0
+offset_bottom = 50.0
+scale = Vector2(0.705, 0.705)
+theme_override_colors/font_color = Color(0.25098, 0.427451, 0.219608, 1)
+theme_override_fonts/font = ExtResource("21_04jy0")
+text = "SDG 13: CLIMATE ACTION"
+
+[node name="Label2" type="Label" parent="Info1/ColorRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 7.0
+offset_top = 23.0
+offset_right = 162.0
+offset_bottom = 50.0
+scale = Vector2(0.45, 0.45)
+theme_override_colors/font_color = Color(0.25098, 0.427451, 0.219608, 1)
+theme_override_fonts/font = ExtResource("21_04jy0")
+text = "This sdg is askljhndfasjd"
+
+[node name="Label3" type="Label" parent="Info1/ColorRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 7.0
+offset_top = 37.0
+offset_right = 162.0
+offset_bottom = 64.0
+scale = Vector2(0.4, 0.4)
+theme_override_colors/font_color = Color(0.25098, 0.427451, 0.219608, 1)
+theme_override_fonts/font = ExtResource("21_04jy0")
+text = "You can help by haslodf"
+
+[node name="Label4" type="Label" parent="Info1/ColorRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 2.0
+offset_top = 49.0
+offset_right = 157.0
+offset_bottom = 76.0
+scale = Vector2(0.705, 0.705)
+theme_override_colors/font_color = Color(0.25098, 0.427451, 0.219608, 1)
+theme_override_fonts/font = ExtResource("21_04jy0")
+text = "Link"
+
+[node name="13" type="Sprite2D" parent="."]
+modulate = Color(0.211765, 0.239216, 0.290196, 1)
+position = Vector2(7, 63.5)
+scale = Vector2(0.0316797, 0.0316797)
+texture = ExtResource("13_cs6sq")
+
+[node name="Area2D" type="Area2D" parent="13"]
+script = ExtResource("19_2pcik")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="13/Area2D"]
+shape = SubResource("RectangleShape2D_n06mt")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

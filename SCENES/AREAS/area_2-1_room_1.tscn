@@ -12,7 +12,6 @@ script = ExtResource("1_84ibi")
 
 [node name="Mg-2Television" parent="." instance=ExtResource("2_fcavf")]
 position = Vector2(78, 28)
-script = null
 
 [node name="Sophia" parent="." instance=ExtResource("3_84ibi")]
 position = Vector2(184, 41)

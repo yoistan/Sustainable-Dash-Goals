@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://e6bltu3ywpbl"]
 
-[ext_resource type="StyleBox" uid="uid://crrk65moaup13" path="res://THEMES/dialogue box.tres" id="2_h6h6k"]
+[ext_resource type="StyleBox" uid="uid://bw611c4k2bo0" path="res://THEMES/dialogue box.tres" id="2_h6h6k"]
 [ext_resource type="Theme" uid="uid://cpgxmotex3pwn" path="res://THEMES/dialogue text theme.tres" id="3_i5fyq"]
 
 [sub_resource type="Animation" id="Animation_h6h6k"]
