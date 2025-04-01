@@ -18,10 +18,10 @@
 [ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="13_lsl64"]
 [ext_resource type="PackedScene" uid="uid://bs01a745mx6l2" path="res://SCENES/MINIGAMES/MINIGAME 1/trash_9.tscn" id="14_f1e0b"]
 [ext_resource type="PackedScene" uid="uid://dkps63g3b7l1v" path="res://SCENES/MINIGAMES/MINIGAME 1/trash_10.tscn" id="15_xikne"]
-[ext_resource type="PackedScene" uid="uid://dtoxo2yc7373o" path="res://SCENES/MINIGAMES/MINIGAME 1/trash_11.tscn" id="16_g5rxx"]
-[ext_resource type="PackedScene" uid="uid://dlfcmunggky2n" path="res://SCENES/MINIGAMES/MINIGAME 1/trash_12.tscn" id="17_f1e0b"]
-[ext_resource type="PackedScene" uid="uid://cwcnie5islis7" path="res://SCENES/MINIGAMES/MINIGAME 1/trash_13.tscn" id="18_xikne"]
-[ext_resource type="PackedScene" uid="uid://cnalrkmu7vspd" path="res://SCENES/MINIGAMES/MINIGAME 1/trash_14.tscn" id="19_10trf"]
+[ext_resource type="PackedScene" path="res://SCENES/MINIGAMES/MINIGAME 1/trash_11.tscn" id="16_g5rxx"]
+[ext_resource type="PackedScene" path="res://SCENES/MINIGAMES/MINIGAME 1/trash_12.tscn" id="17_f1e0b"]
+[ext_resource type="PackedScene" path="res://SCENES/MINIGAMES/MINIGAME 1/trash_13.tscn" id="18_xikne"]
+[ext_resource type="PackedScene" path="res://SCENES/MINIGAMES/MINIGAME 1/trash_14.tscn" id="19_10trf"]
 [ext_resource type="Texture2D" uid="uid://ds1fw4rrai54n" path="res://ASSETS/Game1/OJT-Dash.png" id="23_e6oig"]
 
 [sub_resource type="GDScript" id="GDScript_f57qm"]
@@ -42,79 +42,93 @@ script = SubResource("GDScript_f57qm")
 
 [node name="bg" type="Sprite2D" parent="."]
 position = Vector2(79.8, 45)
-scale = Vector2(0.12375, 0.11)
+scale = Vector2(0.129375, 0.115)
 texture = ExtResource("1_e6oig")
 
 [node name="Menu" parent="." instance=ExtResource("1_v6plw")]
 visible = false
 
 [node name="Area" parent="." instance=ExtResource("2_wnusr")]
-position = Vector2(79, 71)
+position = Vector2(79, 65)
 scale = Vector2(1.46, 1.46)
 
 [node name="Bins" parent="." instance=ExtResource("1_xsg15")]
-position = Vector2(41, 16)
+position = Vector2(41, 28)
 
 [node name="Bin2" parent="." instance=ExtResource("3_wlfmg")]
-position = Vector2(115, 17)
+position = Vector2(115, 30)
 
 [node name="GameManager" type="Node2D" parent="."]
 script = ExtResource("4_colne")
 
 [node name="Trash2" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("5_svoge")]
-position = Vector2(82, 94)
+position = Vector2(82, 123)
+scale = Vector2(1.8, 1.8)
 correct_bin = NodePath("../../Bins")
 
 [node name="TrashPiece" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("3_6co4y")]
-position = Vector2(82, 93)
+position = Vector2(82, 122)
+scale = Vector2(1.8, 1.8)
 correct_bin = NodePath("../../Bins")
 
 [node name="Trash3" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("7_4s6o7")]
-position = Vector2(80, 92)
+position = Vector2(80, 121)
+scale = Vector2(1.8, 1.8)
 correct_bin = NodePath("../../Bins")
 
 [node name="trash4" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("8_ofafy")]
-position = Vector2(107, 90)
+position = Vector2(107, 119)
+scale = Vector2(1.8, 1.8)
 correct_bin = NodePath("../../Bins")
 
 [node name="Trash5" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("9_v6plw")]
-position = Vector2(83, 94)
+position = Vector2(83, 123)
+scale = Vector2(1.8, 1.8)
 correct_bin = NodePath("../../Bin2")
 
 [node name="Trash_6" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("11_5capr")]
-position = Vector2(81, 111)
+position = Vector2(81, 140)
+scale = Vector2(1.8, 1.8)
 correct_bin = NodePath("../../Bin2")
 
 [node name="trash_7" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("12_pguy0")]
-position = Vector2(90, 112)
+position = Vector2(90, 141)
+scale = Vector2(1.8, 1.8)
 correct_bin = NodePath("../../Bin2")
 
 [node name="Trash_8" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("13_g5rxx")]
-position = Vector2(82, 118)
+position = Vector2(82, 147)
+scale = Vector2(1.8, 1.8)
 correct_bin = NodePath("../../Bin2")
 
 [node name="Trash_9" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("14_f1e0b")]
-position = Vector2(66, 118)
+position = Vector2(66, 147)
+scale = Vector2(1.8, 1.8)
 correct_bin = NodePath("../../Bin2")
 
 [node name="Trash_10" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("15_xikne")]
-position = Vector2(102, 116)
+position = Vector2(102, 145)
+scale = Vector2(1.8, 1.8)
 correct_bin = NodePath("../../Bin2")
 
 [node name="Trash11" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("16_g5rxx")]
-position = Vector2(85, 101)
+position = Vector2(85, 130)
+scale = Vector2(1.8, 1.8)
 correct_bin = NodePath("../../Bins")
 
 [node name="Trash12" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("17_f1e0b")]
-position = Vector2(85, 116)
+position = Vector2(85, 145)
+scale = Vector2(1.8, 1.8)
 correct_bin = NodePath("../../Bin2")
 
 [node name="Trash13" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("18_xikne")]
-position = Vector2(87, 111)
+position = Vector2(87, 140)
+scale = Vector2(1.8, 1.8)
 correct_bin = NodePath("../../Bin2")
 
 [node name="Trash14" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("19_10trf")]
-position = Vector2(78, 113)
+position = Vector2(78, 142)
+scale = Vector2(1.8, 1.8)
 correct_bin = NodePath("../../Bin2")
 
 [node name="Score" parent="." instance=ExtResource("5_i6cdq")]

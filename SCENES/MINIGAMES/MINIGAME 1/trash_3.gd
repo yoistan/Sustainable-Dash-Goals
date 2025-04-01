@@ -77,4 +77,5 @@ func disappear():
 	
 	if get_parent().has_method("on_node_placed"):
 		get_parent().on_node_placed()  # Notify the parent to show the next node
-	queue_free()  # Removes the item
+
+	visible = false # the item

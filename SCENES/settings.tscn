@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cni0810xyrd0k"]
+[gd_scene load_steps=5 format=3 uid="uid://cni0810xyrd0k"]
 
 [ext_resource type="Script" uid="uid://de0bqav3jfg7h" path="res://SCRIPTS/settings.gd" id="1_vtnoc"]
 [ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="2_o155n"]
+[ext_resource type="Theme" uid="uid://47r1e1w4epsx" path="res://THEMES/button.tres" id="3_afrjb"]
+[ext_resource type="AudioStream" uid="uid://bya1mofvds4qv" path="res://ASSETS/SFX/click sfx 2.mp3" id="4_hddla"]
 
 [node name="Settings" type="Control"]
 layout_mode = 3
@@ -58,18 +60,36 @@ offset_top = 56.0
 offset_right = 132.0
 offset_bottom = 87.0
 scale = Vector2(0.3, 0.3)
+focus_mode = 0
 theme_override_fonts/font = ExtResource("2_o155n")
 text = "Mute"
 
 [node name="quitButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 69.0
-offset_top = 71.0
-offset_right = 110.0
-offset_bottom = 102.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -9.0
+offset_top = -21.0
+offset_right = 32.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 0
 scale = Vector2(0.4, 0.4)
+theme = ExtResource("3_afrjb")
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_o155n")
 text = "Back"
+
+[node name="ClickSfx2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_hddla")
+volume_db = 20.0
 
 [connection signal="mouse_exited" from="Volume" to="." method="_on_volume_mouse_exited"]
 [connection signal="toggled" from="CheckBox" to="." method="_on_check_box_toggled"]

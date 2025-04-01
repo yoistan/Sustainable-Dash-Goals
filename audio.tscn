@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://c4jjha4yuxw6c"]
+[gd_scene load_steps=9 format=3 uid="uid://c4jjha4yuxw6c"]
 
 [ext_resource type="Script" uid="uid://dxne4bvmvjofw" path="res://audio.gd" id="1_qc0l7"]
+[ext_resource type="AudioStream" uid="uid://bya1mofvds4qv" path="res://ASSETS/SFX/click sfx 2.mp3" id="2_0svpk"]
 [ext_resource type="AudioStream" uid="uid://dnuqpsngtq5u4" path="res://ASSETS/MUSIC/GMMF - title screen.wav" id="2_q45hi"]
 [ext_resource type="AudioStream" uid="uid://df0wbtj3nrg73" path="res://ASSETS/MUSIC/Swing.wav" id="3_ybffx"]
 [ext_resource type="AudioStream" uid="uid://d2ve3r6cqqdbg" path="res://ASSETS/MUSIC/Midnight_Hour.wav" id="4_8w7rj"]
@@ -10,6 +11,10 @@
 
 [node name="Audio" type="Node"]
 script = ExtResource("1_qc0l7")
+
+[node name="ClickSfx2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_0svpk")
+volume_db = 10.0
 
 [node name="BgMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_q45hi")

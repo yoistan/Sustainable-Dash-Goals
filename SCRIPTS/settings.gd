@@ -21,10 +21,12 @@ func set_is_game_paused(paused: bool) -> void:
 	is_game_paused = paused
 
 func _on_check_box_toggled(toggled_on: bool):
+	Audio.button_click()
 	AudioServer.set_bus_mute(0, toggled_on)
 
 # Handle Back button (returns to Pause Menu if applicable)
 func _on_quit_button_pressed() -> void:
+	Audio.button_click()
 	if is_game_paused:
 		# Show Pause Menu again instead of unpausing the game
 		var pause_menu = preload("res://SCENES/menu.tscn").instantiate()

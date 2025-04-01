@@ -6,14 +6,15 @@ var rest_nodes = []
 @export var correct_bin: Node2D
 @onready var feedback_label = $"../../Icon/Panel/Label" # Reference the Label node
 @onready var icon: Sprite2D = $"../../Icon"
+@onready var spawn_point = $"../../Area"
 
 func _ready():
 	rest_nodes = get_tree().get_nodes_in_group("zone")
 
 	if rest_nodes.size() > 0:
-		rest_point = rest_nodes[0].global_position  # Set default rest point
+		rest_point = spawn_point.position  # Set default rest point
 	else:
-		rest_point = global_position  # Use object's current position as fallback
+		rest_point = spawn_point.position  # Use object's current position as fallback
 	
 	feedback_label.text = ""  # Ensure label is empty at start
 	feedback_label.hide()  # Hide label initially
@@ -46,12 +47,12 @@ func _input(event):
 			rest_point = closest_bin.global_position
 			check_correctness(closest_bin)
 
-var already_scored = false  # Prevent multiple scoring
+#var already_scored = false  # Prevent multiple scoring
 
 func check_correctness(bin):
-	if already_scored:
-		return
-	already_scored = true
+	#if already_scored:
+		#return
+	#already_scored = true
 	
 	if bin == correct_bin:
 		icon.show()
@@ -77,4 +78,6 @@ func disappear():
 	
 	if get_parent().has_method("on_node_placed"):
 		get_parent().on_node_placed()  # Notify the parent to show the next node
-	queue_free()  # Removes the item
+
+	visible = false # the item
+	

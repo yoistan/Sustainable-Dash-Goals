@@ -8,6 +8,10 @@ extends Node
 @onready var minigame_2_music = $Minigame2Music
 @onready var achievement: AudioStreamPlayer = $Achievement
 @onready var congrats: AudioStreamPlayer = $Congrats
+@onready var click_sfx_2 = $ClickSfx2
+
+func button_click():
+	click_sfx_2.play()
 
 # Title screen music
 func play_music1():
