@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0gvhuv0ji7cl"
-path="res://.godot/imported/CardboardSword.png-b1c3194e168b18244408620376795f8b.ctex"
+uid="uid://tk4vrxkugwbv"
+path="res://.godot/imported/LeftoverCan_B.png-3c86a4de3c834f54bca85143d0e5a173.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ASSETS/Game1/CardboardSword.png"
-dest_files=["res://.godot/imported/CardboardSword.png-b1c3194e168b18244408620376795f8b.ctex"]
+source_file="res://ASSETS/Game1/LeftoverCan_B.png"
+dest_files=["res://.godot/imported/LeftoverCan_B.png-3c86a4de3c834f54bca85143d0e5a173.ctex"]
 
 [params]
 

@@ -18,7 +18,7 @@ func _ready():
 	feedback_label.text = ""  # Ensure label is empty at start
 	feedback_label.hide()  # Hide label initially
 
-func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int):
+func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		selected = true 
 

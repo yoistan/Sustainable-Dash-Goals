@@ -14,4 +14,4 @@ func add_score():
 
 func go_to_next_scene():
 	await get_tree().create_timer(1.0).timeout  # Optional delay before scene change
-	get_tree().change_scene_to_file("res://SCENES/MINIGAMES/MiniGame1/congratulations_message.tscn")  # Change scene
+	get_tree().change_scene_to_file("res://SCENES/MINIGAMES/MINIGAME 1/congratulations_message.tscn")  # Change scene

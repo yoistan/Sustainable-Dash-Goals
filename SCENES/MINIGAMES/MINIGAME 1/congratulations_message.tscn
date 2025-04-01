@@ -1,63 +1,64 @@
-[gd_scene load_steps=8 format=3 uid="uid://6aaq15svbwic"]
+[gd_scene load_steps=9 format=3 uid="uid://6aaq15svbwic"]
 
 [ext_resource type="Script" uid="uid://cb1wummmuoapg" path="res://SCENES/MINIGAMES/MINIGAME 1/congratulations_message.gd" id="1_24vq0"]
-[ext_resource type="Texture2D" uid="uid://cpepodmlxqkl3" path="res://icon.svg" id="1_k183x"]
 [ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="2_l6gio"]
+[ext_resource type="Texture2D" uid="uid://bh2cxoub7kahr" path="res://ASSETS/Game1/487563015_998253318943820_9041308416311652833_n.jpg" id="2_p5hdd"]
+[ext_resource type="Texture2D" uid="uid://ds1fw4rrai54n" path="res://ASSETS/Game1/OJT-Dash.png" id="3_7n2gh"]
 [ext_resource type="Script" uid="uid://vl2dvjt5o7fg" path="res://SCENES/MINIGAMES/MINIGAME 1/Type.gd" id="3_l6gio"]
 
 [sub_resource type="Animation" id="Animation_4urvl"]
-length = 0.001
+length = 5.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Icon/Panel/Label:visible_ratio")
+tracks/0/path = NodePath("AnimationPlayer/ColorRect:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
+"times": PackedFloat32Array(3.96667, 3.98, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("bg/Icon2/Panel2/Label:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.0]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimationPlayer/ColorRect:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
 
 [sub_resource type="Animation" id="Animation_24vq0"]
 resource_name = "Type"
-length = 3.0
+length = 4.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Icon/Panel/Label:visible_ratio")
+tracks/0/path = NodePath("AnimationPlayer/ColorRect:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.99),
+"times": PackedFloat32Array(3.19667, 3.96667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.0, 1.0]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("AnimationPlayer/ColorRect:modulate")
+tracks/1/path = NodePath("bg/Icon2/Panel2/Label:visible_ratio")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(2.23, 3),
+"times": PackedFloat32Array(0, 2.46667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [0.0, 1.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5ewys"]
@@ -69,25 +70,30 @@ _data = {
 [node name="Congratulations message" type="CanvasLayer"]
 script = ExtResource("1_24vq0")
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(24.6875, 59.3125)
-scale = Vector2(0.473633, 0.473633)
-texture = ExtResource("1_k183x")
+[node name="bg" type="Sprite2D" parent="."]
+position = Vector2(172.5, -6.5)
+scale = Vector2(0.268594, 0.23875)
+texture = ExtResource("2_p5hdd")
 
-[node name="Panel" type="Panel" parent="Icon"]
-offset_left = 34.0
-offset_top = -68.0
-offset_right = 279.0
-offset_bottom = 1.0
+[node name="Icon2" type="Sprite2D" parent="bg"]
+position = Vector2(-515.555, 290.909)
+scale = Vector2(0.509091, 0.572727)
+texture = ExtResource("3_7n2gh")
 
-[node name="Label" type="Label" parent="Icon/Panel"]
+[node name="Panel2" type="Panel" parent="bg/Icon2"]
+offset_left = 116.829
+offset_top = -255.63
+offset_right = 885.829
+offset_bottom = 65.3697
+
+[node name="Label" type="Label" parent="bg/Icon2/Panel2"]
 texture_filter = 1
 layout_mode = 0
-offset_left = 6.77524
-offset_top = 4.00002
-offset_right = 207.775
-offset_bottom = 58.0
-scale = Vector2(1.17, 1.17)
+offset_left = 1.43051e-05
+offset_top = 51.1926
+offset_right = 208.0
+offset_bottom = 108.193
+scale = Vector2(3.65, 3.65)
 theme_override_fonts/font = ExtResource("2_l6gio")
 text = "Congratulations!
 You have completed this quest!"
@@ -103,6 +109,7 @@ script = ExtResource("3_l6gio")
 
 [node name="ColorRect" type="ColorRect" parent="AnimationPlayer"]
 modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0.00422883, 0.00346357, 0.00197965, 1)
 offset_right = 160.0
 offset_bottom = 90.0
 color = Color(0, 0, 0, 1)

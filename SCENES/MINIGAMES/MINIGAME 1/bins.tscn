@@ -1,20 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://u53fyrnunff2"]
 
-[ext_resource type="Texture2D" uid="uid://cpepodmlxqkl3" path="res://icon.svg" id="1_4x2lf"]
 [ext_resource type="Script" uid="uid://ekwxt17fuhr6" path="res://SCENES/MINIGAMES/MINIGAME 1/bins.gd" id="1_7bosr"]
+[ext_resource type="Texture2D" uid="uid://c1mgx3gsmwh0w" path="res://ASSETS/Game1/TrashBinBio.png" id="2_1btvd"]
 
 [node name="Bins" type="Marker2D" groups=["zone"]]
 position = Vector2(0, -1)
 script = ExtResource("1_7bosr")
 
 [node name="Icon" type="Sprite2D" parent="."]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_4x2lf")
-
-[node name="Label" type="Label" parent="."]
-offset_left = -10.0
-offset_top = -18.0
-offset_right = 102.0
-offset_bottom = 5.0
-scale = Vector2(0.2, 0.2)
-text = "Biodegradable"
+position = Vector2(0, 11)
+scale = Vector2(0.0703125, 0.0703125)
+texture = ExtResource("2_1btvd")

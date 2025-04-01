@@ -1,5 +1,6 @@
-[gd_scene load_steps=20 format=3 uid="uid://dfwqi8ldv6mpf"]
+[gd_scene load_steps=25 format=3 uid="uid://dfwqi8ldv6mpf"]
 
+[ext_resource type="Texture2D" uid="uid://bh2cxoub7kahr" path="res://ASSETS/Game1/487563015_998253318943820_9041308416311652833_n.jpg" id="1_e6oig"]
 [ext_resource type="PackedScene" uid="uid://dphxa4y4rd1rv" path="res://SCENES/menu.tscn" id="1_v6plw"]
 [ext_resource type="PackedScene" uid="uid://u53fyrnunff2" path="res://SCENES/MINIGAMES/MINIGAME 1/bins.tscn" id="1_xsg15"]
 [ext_resource type="PackedScene" uid="uid://crha708f33d6y" path="res://SCENES/MINIGAMES/MINIGAME 1/area.tscn" id="2_wnusr"]
@@ -12,12 +13,16 @@
 [ext_resource type="PackedScene" uid="uid://b6xrtog78lmth" path="res://SCENES/MINIGAMES/MINIGAME 1/Trash_4.tscn" id="8_ofafy"]
 [ext_resource type="PackedScene" uid="uid://m2ejacj7etwa" path="res://SCENES/MINIGAMES/MINIGAME 1/trash_5.tscn" id="9_v6plw"]
 [ext_resource type="PackedScene" uid="uid://bsdno41h4tqoh" path="res://SCENES/MINIGAMES/MINIGAME 1/trash_6.tscn" id="11_5capr"]
-[ext_resource type="Texture2D" uid="uid://cpepodmlxqkl3" path="res://icon.svg" id="12_lsl64"]
 [ext_resource type="PackedScene" uid="uid://cra2gyps7aq6p" path="res://SCENES/MINIGAMES/MINIGAME 1/trash_7.tscn" id="12_pguy0"]
 [ext_resource type="PackedScene" uid="uid://exxabbko6ewh" path="res://SCENES/MINIGAMES/MINIGAME 1/trash_8.tscn" id="13_g5rxx"]
 [ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="13_lsl64"]
 [ext_resource type="PackedScene" uid="uid://bs01a745mx6l2" path="res://SCENES/MINIGAMES/MINIGAME 1/trash_9.tscn" id="14_f1e0b"]
 [ext_resource type="PackedScene" uid="uid://dkps63g3b7l1v" path="res://SCENES/MINIGAMES/MINIGAME 1/trash_10.tscn" id="15_xikne"]
+[ext_resource type="PackedScene" uid="uid://dtoxo2yc7373o" path="res://SCENES/MINIGAMES/MINIGAME 1/trash_11.tscn" id="16_g5rxx"]
+[ext_resource type="PackedScene" uid="uid://dlfcmunggky2n" path="res://SCENES/MINIGAMES/MINIGAME 1/trash_12.tscn" id="17_f1e0b"]
+[ext_resource type="PackedScene" uid="uid://cwcnie5islis7" path="res://SCENES/MINIGAMES/MINIGAME 1/trash_13.tscn" id="18_xikne"]
+[ext_resource type="PackedScene" uid="uid://cnalrkmu7vspd" path="res://SCENES/MINIGAMES/MINIGAME 1/trash_14.tscn" id="19_10trf"]
+[ext_resource type="Texture2D" uid="uid://ds1fw4rrai54n" path="res://ASSETS/Game1/OJT-Dash.png" id="23_e6oig"]
 
 [sub_resource type="GDScript" id="GDScript_f57qm"]
 script/source = "extends Node2D
@@ -35,17 +40,23 @@ func _on_settings_button_pressed() -> void:
 [node name="Minigame1Segregation" type="Node2D"]
 script = SubResource("GDScript_f57qm")
 
+[node name="bg" type="Sprite2D" parent="."]
+position = Vector2(79.8, 45)
+scale = Vector2(0.12375, 0.11)
+texture = ExtResource("1_e6oig")
+
 [node name="Menu" parent="." instance=ExtResource("1_v6plw")]
 visible = false
 
 [node name="Area" parent="." instance=ExtResource("2_wnusr")]
 position = Vector2(79, 71)
+scale = Vector2(1.46, 1.46)
 
 [node name="Bins" parent="." instance=ExtResource("1_xsg15")]
-position = Vector2(41, 29)
+position = Vector2(41, 16)
 
 [node name="Bin2" parent="." instance=ExtResource("3_wlfmg")]
-position = Vector2(115, 28)
+position = Vector2(115, 17)
 
 [node name="GameManager" type="Node2D" parent="."]
 script = ExtResource("4_colne")
@@ -55,15 +66,15 @@ position = Vector2(82, 94)
 correct_bin = NodePath("../../Bins")
 
 [node name="TrashPiece" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("3_6co4y")]
-position = Vector2(81, 97)
+position = Vector2(82, 93)
 correct_bin = NodePath("../../Bins")
 
 [node name="Trash3" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("7_4s6o7")]
-position = Vector2(81, 87)
+position = Vector2(80, 92)
 correct_bin = NodePath("../../Bins")
 
 [node name="trash4" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("8_ofafy")]
-position = Vector2(81, 87)
+position = Vector2(107, 90)
 correct_bin = NodePath("../../Bins")
 
 [node name="Trash5" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("9_v6plw")]
@@ -75,7 +86,7 @@ position = Vector2(81, 111)
 correct_bin = NodePath("../../Bin2")
 
 [node name="trash_7" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("12_pguy0")]
-position = Vector2(84, 111)
+position = Vector2(90, 112)
 correct_bin = NodePath("../../Bin2")
 
 [node name="Trash_8" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("13_g5rxx")]
@@ -90,34 +101,53 @@ correct_bin = NodePath("../../Bin2")
 position = Vector2(102, 116)
 correct_bin = NodePath("../../Bin2")
 
+[node name="Trash11" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("16_g5rxx")]
+position = Vector2(85, 101)
+correct_bin = NodePath("../../Bins")
+
+[node name="Trash12" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("17_f1e0b")]
+position = Vector2(85, 116)
+correct_bin = NodePath("../../Bin2")
+
+[node name="Trash13" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("18_xikne")]
+position = Vector2(87, 111)
+correct_bin = NodePath("../../Bin2")
+
+[node name="Trash14" parent="GameManager" node_paths=PackedStringArray("correct_bin") instance=ExtResource("19_10trf")]
+position = Vector2(78, 113)
+correct_bin = NodePath("../../Bin2")
+
 [node name="Score" parent="." instance=ExtResource("5_i6cdq")]
-offset_left = 113.0
+offset_left = 115.0
 offset_top = 66.0
-offset_right = 153.0
+offset_right = 155.0
 offset_bottom = 89.0
-scale = Vector2(0.4, 0.4)
+scale = Vector2(0.57, 0.57)
+theme_override_fonts/font = ExtResource("13_lsl64")
 
 [node name="Icon" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(16, 68)
-scale = Vector2(0.337891, 0.337891)
-texture = ExtResource("12_lsl64")
+position = Vector2(16, 77)
+scale = Vector2(0.063, 0.063)
+texture = ExtResource("23_e6oig")
 
 [node name="Panel" type="Panel" parent="Icon"]
-offset_left = 38.0
-offset_top = -38.0
-offset_right = 159.0
-offset_bottom = 15.0
+offset_left = 111.111
+offset_top = -222.222
+offset_right = 651.111
+offset_bottom = 47.7779
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Icon/Panel"]
 texture_filter = 1
 layout_mode = 0
-offset_left = 2.99998
-offset_top = 2.04047
-offset_right = 127.0
-offset_bottom = 52.0405
-scale = Vector2(0.94, 0.94)
+offset_left = 15.873
+offset_top = 31.746
+offset_right = 142.873
+offset_bottom = 95.746
+scale = Vector2(4.21, 4.21)
 theme_override_fonts/font = ExtResource("13_lsl64")
 text = "Hmm, I don’t think 
 that’s right. "
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true

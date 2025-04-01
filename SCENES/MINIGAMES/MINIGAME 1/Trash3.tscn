@@ -10,13 +10,12 @@ size = Vector2(540, 660)
 script = ExtResource("1_grs32")
 
 [node name="Icon" type="Sprite2D" parent="."]
-scale = Vector2(0.0208333, 0.0208333)
+scale = Vector2(0.0364583, 0.0364583)
 texture = ExtResource("2_grs32")
 
 [node name="Area2D" type="Area2D" parent="Icon"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Icon/Area2D"]
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_grs32")
 
 [connection signal="input_event" from="Icon/Area2D" to="." method="_on_area_2d_input_event"]
