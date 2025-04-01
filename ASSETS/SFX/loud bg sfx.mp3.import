@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://t0e2bhsh3lns"
+path="res://.godot/imported/loud bg sfx.mp3-8e28ed903f80e2edbd42c62fda6c4378.mp3str"
+
+[deps]
+
+source_file="res://ASSETS/SFX/loud bg sfx.mp3"
+dest_files=["res://.godot/imported/loud bg sfx.mp3-8e28ed903f80e2edbd42c62fda6c4378.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

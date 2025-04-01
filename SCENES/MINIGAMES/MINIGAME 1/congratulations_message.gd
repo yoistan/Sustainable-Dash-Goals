@@ -3,3 +3,4 @@ extends CanvasLayer
 func _ready() -> void:
 	Audio.stop_minigame_2_music()
 	Audio.play_congrats()
+	Global.minigame_1_done = true

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bvcl7w01armac" path="res://SCRIPTS/CHARACTERS/player_movement.gd" id="1_82tok"]
 [ext_resource type="PackedScene" uid="uid://c0k4crxwnd6xv" path="res://SCENES/DIALOGUE/DialogueManager.tscn" id="3_hwfgl"]
 [ext_resource type="Texture2D" uid="uid://xb2au7mgjl70" path="res://ASSETS/CHARACTERS/DASH/Dash atlas.png" id="4_vmh5o"]
-[ext_resource type="AudioStream" path="res://ASSETS/SFX/step sfx.mp3" id="4_yn03p"]
+[ext_resource type="AudioStream" uid="uid://cml4vih4y355n" path="res://ASSETS/SFX/step sfx.mp3" id="4_yn03p"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_82tok"]
 radius = 21.0

@@ -17,6 +17,8 @@ func _ready():
 	dialogue_resource.load_from_json("res://RESOURCES/DIALOGUE/dialogue_data.json")
 	# initialize NPC reference
 	dialogue_manager.npc = self
+	if Global.minigame_1_done:
+		current_branch_index = 1
 
 func start_dialogue():
 	var npc_dialogues = dialogue_resource.get_npc_dialogue(npc_id)

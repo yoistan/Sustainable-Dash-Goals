@@ -5,11 +5,11 @@
 [ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="2_6bus2"]
 [ext_resource type="Texture2D" uid="uid://cpepodmlxqkl3" path="res://icon.svg" id="2_vvmma"]
 [ext_resource type="Theme" uid="uid://cpgxmotex3pwn" path="res://THEMES/dialogue text theme.tres" id="3_vvmma"]
-[ext_resource type="Shader" uid="uid://btk6r3dvcemum" path="res://SHADERS/darkened_sprite.gdshader" id="4_245nx"]
-[ext_resource type="Texture2D" path="res://ASSETS/CHARACTERS/DASH/Dash sprite.png" id="5_giuu3"]
+[ext_resource type="Shader" uid="uid://dry1xsqtlrvwf" path="res://SHADERS/darkened_sprite.gdshader" id="4_245nx"]
+[ext_resource type="Texture2D" uid="uid://brnj6s13ce3dl" path="res://ASSETS/CHARACTERS/DASH/Dash sprite.png" id="5_giuu3"]
 [ext_resource type="StyleBox" uid="uid://mvielnssypl6" path="res://THEMES/speaker_label.tres" id="5_rehgc"]
 [ext_resource type="Theme" uid="uid://xpgv5lbnpmxr" path="res://THEMES/dialogue_button_theme.tres" id="5_vvmma"]
-[ext_resource type="AudioStream" path="res://ASSETS/SFX/page_flip.mp3" id="10_giuu3"]
+[ext_resource type="AudioStream" uid="uid://cpwlljgfd8ccy" path="res://ASSETS/SFX/page_flip.mp3" id="10_giuu3"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6bus2"]
 texture = ExtResource("1_vvmma")

@@ -1,0 +1,15 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://47r1e1w4epsx"]
+
+[ext_resource type="StyleBox" uid="uid://c3fva3a3aync4" path="res://THEMES/BUTTONS/button_hover.tres" id="1_rxes3"]
+[ext_resource type="StyleBox" uid="uid://cx2sfg0f2owra" path="res://THEMES/BUTTONS/button_normal.tres" id="2_u2u1v"]
+[ext_resource type="StyleBox" uid="uid://kypwmscppp0p" path="res://THEMES/BUTTONS/button_pressed.tres" id="3_favtc"]
+[ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="4_rsgi7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_due7q"]
+
+[resource]
+default_font = ExtResource("4_rsgi7")
+Button/styles/focus = SubResource("StyleBoxEmpty_due7q")
+Button/styles/hover = ExtResource("1_rxes3")
+Button/styles/normal = ExtResource("2_u2u1v")
+Button/styles/pressed = ExtResource("3_favtc")
