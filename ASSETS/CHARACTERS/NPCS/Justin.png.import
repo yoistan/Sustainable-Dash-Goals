@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6fnn4cjukkyh"
-path="res://.godot/imported/Mickael.png-fe31e9e0e617c957d9a573782e01c59c.ctex"
+uid="uid://cawod1aci7wi5"
+path="res://.godot/imported/Justin.png-9a036c8abc64637c479146e347e71fd7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ASSETS/CHARACTERS/DIALOGUE SPRITES/Mickael.png"
-dest_files=["res://.godot/imported/Mickael.png-fe31e9e0e617c957d9a573782e01c59c.ctex"]
+source_file="res://ASSETS/CHARACTERS/NPCS/Justin.png"
+dest_files=["res://.godot/imported/Justin.png-9a036c8abc64637c479146e347e71fd7.ctex"]
 
 [params]
 

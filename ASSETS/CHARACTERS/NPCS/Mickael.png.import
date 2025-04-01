@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g5x71td5s0wa"
-path="res://.godot/imported/Gabriel.png-e7d45d25a58081ba31b74f6f6892d341.ctex"
+uid="uid://6fnn4cjukkyh"
+path="res://.godot/imported/Mickael.png-21ed9c2791aec7558f3c2b0e9cbb0f79.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ASSETS/CHARACTERS/DIALOGUE SPRITES/Gabriel.png"
-dest_files=["res://.godot/imported/Gabriel.png-e7d45d25a58081ba31b74f6f6892d341.ctex"]
+source_file="res://ASSETS/CHARACTERS/NPCS/Mickael.png"
+dest_files=["res://.godot/imported/Mickael.png-21ed9c2791aec7558f3c2b0e9cbb0f79.ctex"]
 
 [params]
 

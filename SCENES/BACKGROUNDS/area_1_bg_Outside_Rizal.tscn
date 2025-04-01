@@ -1,42 +1,42 @@
 [gd_scene load_steps=6 format=3 uid="uid://c1lbtikfidyi8"]
 
 [ext_resource type="Script" uid="uid://dye6r65x24c77" path="res://SCRIPTS/AREAS/Outside_Rizal_exits.gd" id="1_7ikhb"]
-[ext_resource type="Texture2D" uid="uid://xtcl41gxxpit" path="res://ASSETS/BACKGROUNDS/area 1 background.png" id="2_d0pp5"]
+[ext_resource type="Texture2D" uid="uid://btb2wpwshxmg1" path="res://ASSETS/BACKGROUNDS/bg_rizaloutdoors2.png" id="2_d0pp5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wijm6"]
-size = Vector2(363, 35)
+size = Vector2(414, 35)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ikhb"]
 size = Vector2(20, 89)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d0pp5"]
-size = Vector2(20, 82)
+size = Vector2(52, 82)
 
 [node name="Area1BgOutsideRizal" type="StaticBody2D"]
 script = ExtResource("1_7ikhb")
 
 [node name="background" type="Sprite2D" parent="."]
-position = Vector2(110, 24)
-scale = Vector2(0.28274, 0.13125)
+position = Vector2(189, 31)
+scale = Vector2(0.113889, 0.113889)
 texture = ExtResource("2_d0pp5")
 
 [node name="floor" type="CollisionShape2D" parent="."]
-position = Vector2(172.5, 92.5)
+position = Vector2(198, 102.5)
 shape = SubResource("RectangleShape2D_wijm6")
 
 [node name="wall" type="CollisionShape2D" parent="."]
-position = Vector2(345, 38)
+position = Vector2(397, 48)
 shape = SubResource("RectangleShape2D_7ikhb")
 
 [node name="wall2" type="CollisionShape2D" parent="."]
-position = Vector2(6, 38)
+position = Vector2(6, 48)
 shape = SubResource("RectangleShape2D_7ikhb")
 
 [node name="next_scene" type="Area2D" parent="."]
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="next_scene"]
-position = Vector2(327, 37)
+position = Vector2(363, 47)
 shape = SubResource("RectangleShape2D_d0pp5")
 
 [connection signal="body_entered" from="next_scene" to="." method="_on_next_scene_body_entered"]

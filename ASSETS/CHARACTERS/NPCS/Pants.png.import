@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bv6sesyyr166d"
-path="res://.godot/imported/Pants.png-8d2d05aaf718b4335dfb46a8bfa2db60.ctex"
+path="res://.godot/imported/Pants.png-bb30ba6483f59417d4d04d5048e178b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ASSETS/CHARACTERS/DIALOGUE SPRITES/Pants.png"
-dest_files=["res://.godot/imported/Pants.png-8d2d05aaf718b4335dfb46a8bfa2db60.ctex"]
+source_file="res://ASSETS/CHARACTERS/NPCS/Pants.png"
+dest_files=["res://.godot/imported/Pants.png-bb30ba6483f59417d4d04d5048e178b5.ctex"]
 
 [params]
 

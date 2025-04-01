@@ -10,6 +10,8 @@ shader_parameter/lod = 2.0
 
 [node name="Camera2D" type="Camera2D"]
 offset = Vector2(0, -9)
+limit_left = 0
+limit_bottom = 100
 limit_smoothed = true
 position_smoothing_enabled = true
 script = ExtResource("1_tw3sm")

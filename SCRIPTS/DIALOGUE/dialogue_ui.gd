@@ -11,18 +11,18 @@ extends Control
 
 
 # sprites
-const LAURA = preload("res://ASSETS/CHARACTERS/DIALOGUE SPRITES/Laura.png")
-const GAB = preload("res://ASSETS/CHARACTERS/DIALOGUE SPRITES/Gab.png")
-const GABRIEL = preload("res://ASSETS/CHARACTERS/DIALOGUE SPRITES/Gabriel.png")
-const JUSTIN = preload("res://ASSETS/CHARACTERS/DIALOGUE SPRITES/Justin.png")
-const MICKAEL = preload("res://ASSETS/CHARACTERS/DIALOGUE SPRITES/Mickael.png")
-const PANTS = preload("res://ASSETS/CHARACTERS/DIALOGUE SPRITES/Pants.png")
-const SOPHIA = preload("res://ASSETS/CHARACTERS/DIALOGUE SPRITES/Sophia.png")
+const LAURA = preload("res://ASSETS/CHARACTERS/NPCS/Laura.png")
+const GAB = preload("res://ASSETS/CHARACTERS/NPCS/Gab.png")
+const GABRIEL = preload("res://ASSETS/CHARACTERS/NPCS/Gabriel.png")
+const JUSTIN = preload("res://ASSETS/CHARACTERS/NPCS/Justin.png")
+const MICKAEL = preload("res://ASSETS/CHARACTERS/NPCS/Mickael.png")
+const PANTS = preload("res://ASSETS/CHARACTERS/NPCS/Pants.png")
+const SOPHIA = preload("res://ASSETS/CHARACTERS/NPCS/Sophia.png")
 
 # button themes
 const DIALOGUE_BUTTON_THEME = preload("res://THEMES/dialogue_button_theme.tres")
 
-func _ready():
+func _ready(): 
 	ui.visible = false
 
 func show_dialogue(speaker, speaking, text, options):

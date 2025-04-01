@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://cpo5ga8lntgwq"]
+[gd_scene load_steps=11 format=3 uid="uid://cpo5ga8lntgwq"]
 
 [ext_resource type="Script" uid="uid://d2bmgf4fn6fks" path="res://SCENES/MINIGAMES/MINIGAME 1/instructions_1.gd" id="1_b43up"]
 [ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="2_3hcta"]
 [ext_resource type="Texture2D" uid="uid://0w82wivcyksl" path="res://ASSETS/DIALOGUE BOX/dialogue box.png" id="2_ym6wh"]
 [ext_resource type="Script" uid="uid://bx0rj2gocbo1w" path="res://SCENES/MINIGAMES/MINIGAME 1/Typewrite.gd" id="4_ym6wh"]
 [ext_resource type="Theme" uid="uid://47r1e1w4epsx" path="res://THEMES/button.tres" id="5_hrjs4"]
+[ext_resource type="PackedScene" uid="uid://cmklnemra7p7j" path="res://SCENES/CUTSCENES/scene_transition.tscn" id="7_kg2af"]
 [ext_resource type="AudioStream" uid="uid://g6lelel21hyi" path="res://ASSETS/SFX/writing_sfx.mp3" id="8_qctln"]
 
 [sub_resource type="Animation" id="Animation_g5nyb"]
@@ -211,6 +212,8 @@ text = "START"
 [node name="WritingSfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_qctln")
 volume_db = 20.0
+
+[node name="SceneTransition" parent="." instance=ExtResource("7_kg2af")]
 
 [connection signal="animation_finished" from="AnimationPlayer" to="AnimationPlayer" method="_on_animation_finished"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

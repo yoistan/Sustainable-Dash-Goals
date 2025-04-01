@@ -1,5 +1,7 @@
 extends Node2D
 
+func _ready():
+	$SceneTransition.fade_in()
 
 func _on_button_pressed() -> void:
 	Audio.button_click()
