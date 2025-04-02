@@ -1,8 +1,9 @@
-[gd_scene load_steps=31 format=3 uid="uid://pve6ms6fqf4r"]
+[gd_scene load_steps=32 format=3 uid="uid://pve6ms6fqf4r"]
 
 [ext_resource type="Script" uid="uid://df03hx7jg8v82" path="res://SCENES/achivement.gd" id="1_0wy82"]
 [ext_resource type="Texture2D" uid="uid://c4yr8tfxa1wwa" path="res://SDGs/sdg1.png" id="1_sylfw"]
 [ext_resource type="Texture2D" uid="uid://drpbhcm0ikscf" path="res://SDGs/sdg2.png" id="2_bm7c7"]
+[ext_resource type="PackedScene" path="res://SCENES/BACKGROUNDS/smithereens_background.tscn" id="2_q8nnk"]
 [ext_resource type="Texture2D" uid="uid://ce5556m8tconw" path="res://SDGs/sdg3.jpg" id="3_0wy82"]
 [ext_resource type="Texture2D" uid="uid://b66871rgraf1d" path="res://SDGs/sdg4.png" id="4_n01ot"]
 [ext_resource type="Texture2D" uid="uid://ddy5g8dylvcys" path="res://SDGs/sdg5.png" id="5_04jy0"]
@@ -18,11 +19,51 @@
 [ext_resource type="Texture2D" uid="uid://ba1jl66pyvn0f" path="res://SDGs/sdg15.png" id="15_cthaq"]
 [ext_resource type="Texture2D" uid="uid://cfq0ku0swda2g" path="res://SDGs/sdg16.png" id="16_x2y5v"]
 [ext_resource type="Texture2D" uid="uid://ce3op0epsb4xm" path="res://SDGs/sdg17.png" id="17_7t8oj"]
-[ext_resource type="Script" uid="uid://chweiewxjkkmb" path="res://SCENES/Achieve.gd" id="18_bm7c7"]
+[ext_resource type="Script" path="res://SCENES/Achieve.gd" id="18_bm7c7"]
 [ext_resource type="Script" uid="uid://euemwe6t4a0t" path="res://SCENES/MINIGAMES/MINIGAME 1/area_2d.gd" id="19_2pcik"]
 [ext_resource type="Theme" uid="uid://47r1e1w4epsx" path="res://THEMES/button.tres" id="20_n01ot"]
 [ext_resource type="Texture2D" uid="uid://0w82wivcyksl" path="res://ASSETS/DIALOGUE BOX/dialogue box.png" id="20_n06mt"]
 [ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="21_04jy0"]
+
+[sub_resource type="Animation" id="Animation_q8nnk"]
+resource_name = "Hide"
+length = 0.78
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Info1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("13:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.0395898, 0.0395898), Vector2(0.0316797, 0.0316797)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("13:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.66),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(10.63, 61.813), Vector2(7.074, 63.081)]
+}
 
 [sub_resource type="Animation" id="Animation_bm7c7"]
 length = 0.001
@@ -359,46 +400,6 @@ tracks/7/keys = {
 "values": [Vector2(7.074, 63.081), Vector2(10.679, 61.796)]
 }
 
-[sub_resource type="Animation" id="Animation_q8nnk"]
-resource_name = "Hide"
-length = 0.78
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Info1:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.666667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("13:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.666667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0.0395898, 0.0395898), Vector2(0.0316797, 0.0316797)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("13:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.66),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(10.63, 61.813), Vector2(7.074, 63.081)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0wy82"]
 _data = {
 &"Hide": SubResource("Animation_q8nnk"),
@@ -418,6 +419,8 @@ size = Vector2(820.715, 789.149)
 [node name="Achieve" type="Node2D"]
 position = Vector2(8, 6)
 script = ExtResource("1_0wy82")
+
+[node name="SmithereensBackground" parent="." instance=ExtResource("2_q8nnk")]
 
 [node name="1" type="Sprite2D" parent="."]
 modulate = Color(0.0536814, 0.0651887, 0.0865703, 1)

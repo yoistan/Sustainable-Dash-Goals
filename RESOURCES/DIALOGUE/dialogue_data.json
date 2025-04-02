@@ -55,7 +55,7 @@
 					{
 						"state": "instructions",
 						"speaking": "Laura", 
-						"text": "All right! I'll segegrate them, but if I put it in the wrong bin I'd like you to tell me.",
+						"text": "All right! I'll segregate them, but if I put it in the wrong bin, I'd like you to tell me.",
 						"options": {
 							"Play Game": "START_MINIGAME_1"
 						}
