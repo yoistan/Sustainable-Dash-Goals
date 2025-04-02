@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://df03hx7jg8v82" path="res://SCENES/achivement.gd" id="1_0wy82"]
 [ext_resource type="Texture2D" uid="uid://c4yr8tfxa1wwa" path="res://SDGs/sdg1.png" id="1_sylfw"]
 [ext_resource type="Texture2D" uid="uid://drpbhcm0ikscf" path="res://SDGs/sdg2.png" id="2_bm7c7"]
-[ext_resource type="PackedScene" path="res://SCENES/BACKGROUNDS/smithereens_background.tscn" id="2_q8nnk"]
+[ext_resource type="PackedScene" uid="uid://cg06tyesx8kri" path="res://SCENES/BACKGROUNDS/smithereens_background.tscn" id="2_q8nnk"]
 [ext_resource type="Texture2D" uid="uid://ce5556m8tconw" path="res://SDGs/sdg3.jpg" id="3_0wy82"]
 [ext_resource type="Texture2D" uid="uid://b66871rgraf1d" path="res://SDGs/sdg4.png" id="4_n01ot"]
 [ext_resource type="Texture2D" uid="uid://ddy5g8dylvcys" path="res://SDGs/sdg5.png" id="5_04jy0"]
@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://ba1jl66pyvn0f" path="res://SDGs/sdg15.png" id="15_cthaq"]
 [ext_resource type="Texture2D" uid="uid://cfq0ku0swda2g" path="res://SDGs/sdg16.png" id="16_x2y5v"]
 [ext_resource type="Texture2D" uid="uid://ce3op0epsb4xm" path="res://SDGs/sdg17.png" id="17_7t8oj"]
-[ext_resource type="Script" path="res://SCENES/Achieve.gd" id="18_bm7c7"]
+[ext_resource type="Script" uid="uid://chweiewxjkkmb" path="res://SCENES/Achieve.gd" id="18_bm7c7"]
 [ext_resource type="Script" uid="uid://euemwe6t4a0t" path="res://SCENES/MINIGAMES/MINIGAME 1/area_2d.gd" id="19_2pcik"]
 [ext_resource type="Theme" uid="uid://47r1e1w4epsx" path="res://THEMES/button.tres" id="20_n01ot"]
 [ext_resource type="Texture2D" uid="uid://0w82wivcyksl" path="res://ASSETS/DIALOGUE BOX/dialogue box.png" id="20_n06mt"]
@@ -555,7 +555,7 @@ offset_right = 41.0
 offset_bottom = 40.0
 
 [node name="DialogueBox" type="Sprite2D" parent="Info1"]
-modulate = Color(1, 1, 1, 0.733333)
+modulate = Color(0.691357, 0.691357, 0.691357, 1)
 position = Vector2(72.5, 35.96)
 scale = Vector2(0.115137, 0.142414)
 texture = ExtResource("20_n06mt")
