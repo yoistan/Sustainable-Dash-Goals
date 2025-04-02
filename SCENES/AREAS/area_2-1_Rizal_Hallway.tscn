@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://bhqwubjf3kxtn"]
+[gd_scene load_steps=8 format=3 uid="uid://bhqwubjf3kxtn"]
 
 [ext_resource type="PackedScene" uid="uid://dkxygka7r5bfx" path="res://SCENES/BACKGROUNDS/area_2-1_bg_Rizal_Hallway.tscn" id="1_a2ihi"]
 [ext_resource type="Script" uid="uid://ts07yky6y2ca" path="res://SCRIPTS/AREAS/area_2_1_rizal_hallway.gd" id="1_vjoi2"]
 [ext_resource type="PackedScene" uid="uid://drmpfqi10hj1l" path="res://SCENES/CHARACTERS/dash.tscn" id="2_vjoi2"]
 [ext_resource type="PackedScene" uid="uid://dphxa4y4rd1rv" path="res://SCENES/menu.tscn" id="3_qdddx"]
 [ext_resource type="PackedScene" uid="uid://gtu3ewkewaj3" path="res://SCENES/touch_controls.tscn" id="5_qdddx"]
+[ext_resource type="PackedScene" uid="uid://cmklnemra7p7j" path="res://SCENES/CUTSCENES/scene_transition.tscn" id="6_g4fm6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nevxn"]
+size = Vector2(9, 78)
 
 [node name="Area2-1RizalHallway" type="Node2D"]
 script = ExtResource("1_vjoi2")
@@ -15,9 +19,19 @@ script = ExtResource("1_vjoi2")
 
 [node name="Dash" parent="InGame" instance=ExtResource("2_vjoi2")]
 z_index = 20
-position = Vector2(57, 36)
+position = Vector2(84, 36)
 scale = Vector2(0.5, 0.5)
 
 [node name="Menu" parent="." instance=ExtResource("3_qdddx")]
 
 [node name="TouchControls" parent="." instance=ExtResource("5_qdddx")]
+
+[node name="go_back" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="go_back"]
+position = Vector2(-12, 31)
+shape = SubResource("RectangleShape2D_nevxn")
+
+[node name="SceneTransition" parent="." instance=ExtResource("6_g4fm6")]
+
+[connection signal="body_entered" from="go_back" to="." method="_on_go_back_body_entered"]

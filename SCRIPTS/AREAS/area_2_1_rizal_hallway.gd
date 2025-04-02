@@ -6,5 +6,8 @@ extends Node2D
 
 func _ready():
 	Global.current_scene = Global.area_2_hallway_name
-	
 	$InGame/Dash.add_child(player_camera)
+	
+
+func _on_go_back_body_entered(_body):
+	$SceneTransition.fade_out_and_switch_to("res://SCENES/AREAS/area_2_Rizal_Lobby.tscn")
