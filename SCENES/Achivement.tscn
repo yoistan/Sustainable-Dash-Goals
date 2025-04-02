@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://pve6ms6fqf4r"]
+[gd_scene load_steps=31 format=3 uid="uid://pve6ms6fqf4r"]
 
 [ext_resource type="Script" uid="uid://df03hx7jg8v82" path="res://SCENES/achivement.gd" id="1_0wy82"]
 [ext_resource type="Texture2D" uid="uid://c4yr8tfxa1wwa" path="res://SDGs/sdg1.png" id="1_sylfw"]
@@ -21,6 +21,7 @@
 [ext_resource type="Script" uid="uid://chweiewxjkkmb" path="res://SCENES/Achieve.gd" id="18_bm7c7"]
 [ext_resource type="Script" uid="uid://euemwe6t4a0t" path="res://SCENES/MINIGAMES/MINIGAME 1/area_2d.gd" id="19_2pcik"]
 [ext_resource type="Theme" uid="uid://47r1e1w4epsx" path="res://THEMES/button.tres" id="20_n01ot"]
+[ext_resource type="Texture2D" uid="uid://0w82wivcyksl" path="res://ASSETS/DIALOGUE BOX/dialogue box.png" id="20_n06mt"]
 [ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="21_04jy0"]
 
 [sub_resource type="Animation" id="Animation_bm7c7"]
@@ -52,7 +53,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Info1/ColorRect/Label:modulate")
+tracks/2/path = NodePath("Info1/Label:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -133,6 +134,54 @@ tracks/8/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Info1/Label:visible_ratio")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Info1/Label2:visible_ratio")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Info1/Label3:visible_ratio")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Info1/Label4:visible_ratio")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_sylfw"]
 resource_name = "SDG 13"
@@ -210,10 +259,152 @@ tracks/5/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_2pcik"]
+resource_name = "Show"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Info1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Info1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.01),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Info1/Label:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.03, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Info1/Label2:visible_ratio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.33333, 2.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Info1/Label3:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2, 2.66667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Info1/Label4:visible_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2.54667, 2.86667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("13:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.0333333, 1.02),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.0316797, 0.0316797), Vector2(0.0395898, 0.0395898)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("13:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.0433333, 1.03333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(7.074, 63.081), Vector2(10.679, 61.796)]
+}
+
+[sub_resource type="Animation" id="Animation_q8nnk"]
+resource_name = "Hide"
+length = 0.78
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Info1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("13:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.0395898, 0.0395898), Vector2(0.0316797, 0.0316797)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("13:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.66),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(10.63, 61.813), Vector2(7.074, 63.081)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0wy82"]
 _data = {
+&"Hide": SubResource("Animation_q8nnk"),
 &"RESET": SubResource("Animation_bm7c7"),
-&"SDG 13": SubResource("Animation_sylfw")
+&"SDG 13": SubResource("Animation_sylfw"),
+&"Show": SubResource("Animation_2pcik")
 }
 
 [sub_resource type="Environment" id="Environment_0wy82"]
@@ -360,62 +551,104 @@ offset_left = 1.0
 offset_right = 41.0
 offset_bottom = 40.0
 
+[node name="DialogueBox" type="Sprite2D" parent="Info1"]
+modulate = Color(1, 1, 1, 0.733333)
+position = Vector2(72.5, 35.96)
+scale = Vector2(0.115137, 0.142414)
+texture = ExtResource("20_n06mt")
+
+[node name="Label" type="Label" parent="Info1"]
+modulate = Color(0, 0, 0, 1)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.125
+anchor_top = -0.025
+anchor_bottom = -0.025
+offset_left = 37.0
+offset_top = 6.0
+offset_right = 192.0
+offset_bottom = 33.0
+scale = Vector2(0.605, 0.605)
+theme_override_colors/font_color = Color(0.25098, 0.427451, 0.219608, 1)
+theme_override_fonts/font = ExtResource("21_04jy0")
+text = "SDG 13: CLIMATE ACTION"
+visible_characters = 0
+visible_ratio = 0.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Info1"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0499999
+anchor_top = -0.175
+anchor_right = 6.925
+anchor_bottom = 0.95
+offset_left = 27.0
+offset_top = 26.0
+offset_right = 182.0
+offset_bottom = 53.0
+scale = Vector2(0.265, 0.265)
+theme_override_colors/font_color = Color(0.25098, 0.427451, 0.219608, 1)
+theme_override_fonts/font = ExtResource("21_04jy0")
+text = "This focuses on combating climate change by reducing emissions, enhancing resilience, and promoting climate policies globally."
+autowrap_mode = 3
+visible_characters = 0
+visible_ratio = 0.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Info1"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0249999
+anchor_top = -0.125
+anchor_right = 6.775
+anchor_bottom = 1.0
+offset_left = 27.0
+offset_top = 40.0
+offset_right = 182.0
+offset_bottom = 67.0
+scale = Vector2(0.26, 0.26)
+theme_override_colors/font_color = Color(0.25098, 0.427451, 0.219608, 1)
+theme_override_fonts/font = ExtResource("21_04jy0")
+text = "You can help by conserving energy, reducing waste, using 
+eco-friendly transportation, spreading awareness, and supporting climate initiatives."
+autowrap_mode = 3
+visible_characters = 0
+visible_ratio = 0.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="Info1"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.275
+anchor_top = 0.1
+anchor_right = 6.5
+anchor_bottom = 0.1
+offset_left = 22.0
+offset_top = 52.0
+offset_right = 177.0
+offset_bottom = 79.0
+scale = Vector2(0.26, 0.26)
+theme_override_colors/font_color = Color(0.25098, 0.427451, 0.219608, 1)
+theme_override_fonts/font = ExtResource("21_04jy0")
+text = "For more information, Visit https://sdgs.un.org/goals/goal13"
+autowrap_mode = 3
+visible_characters = 0
+visible_ratio = 0.0
+metadata/_edit_use_anchors_ = true
+
 [node name="ColorRect" type="ColorRect" parent="Info1"]
+visible = false
 self_modulate = Color(1, 1, 1, 0.509804)
 layout_mode = 0
 offset_left = 20.0
 offset_top = 3.0
 offset_right = 135.0
 offset_bottom = 69.0
-
-[node name="Label" type="Label" parent="Info1/ColorRect"]
-modulate = Color(0, 0, 0, 1)
-texture_filter = 1
-layout_mode = 0
-offset_left = 3.0
-offset_top = 3.0
-offset_right = 158.0
-offset_bottom = 50.0
-scale = Vector2(0.705, 0.705)
-theme_override_colors/font_color = Color(0.25098, 0.427451, 0.219608, 1)
-theme_override_fonts/font = ExtResource("21_04jy0")
-text = "SDG 13: CLIMATE ACTION"
-
-[node name="Label2" type="Label" parent="Info1/ColorRect"]
-texture_filter = 1
-layout_mode = 0
-offset_left = 7.0
-offset_top = 23.0
-offset_right = 162.0
-offset_bottom = 50.0
-scale = Vector2(0.45, 0.45)
-theme_override_colors/font_color = Color(0.25098, 0.427451, 0.219608, 1)
-theme_override_fonts/font = ExtResource("21_04jy0")
-text = "This sdg is askljhndfasjd"
-
-[node name="Label3" type="Label" parent="Info1/ColorRect"]
-texture_filter = 1
-layout_mode = 0
-offset_left = 7.0
-offset_top = 37.0
-offset_right = 162.0
-offset_bottom = 64.0
-scale = Vector2(0.4, 0.4)
-theme_override_colors/font_color = Color(0.25098, 0.427451, 0.219608, 1)
-theme_override_fonts/font = ExtResource("21_04jy0")
-text = "You can help by haslodf"
-
-[node name="Label4" type="Label" parent="Info1/ColorRect"]
-texture_filter = 1
-layout_mode = 0
-offset_left = 2.0
-offset_top = 49.0
-offset_right = 157.0
-offset_bottom = 76.0
-scale = Vector2(0.705, 0.705)
-theme_override_colors/font_color = Color(0.25098, 0.427451, 0.219608, 1)
-theme_override_fonts/font = ExtResource("21_04jy0")
-text = "Link"
 
 [node name="13" type="Sprite2D" parent="."]
 modulate = Color(0.211765, 0.239216, 0.290196, 1)

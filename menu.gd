@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var pause_menu = $Control  # Adjust path if needed
+@onready var pause_menu = $Control 
 
 func _ready():
 	pause_menu.visible = false 
