@@ -1,76 +1,100 @@
-[gd_scene load_steps=5 format=3 uid="uid://brcmcxe2124uv"]
+[gd_scene load_steps=21 format=3 uid="uid://brcmcxe2124uv"]
 
 [ext_resource type="Script" uid="uid://bc2cka0xrngdb" path="res://SCRIPTS/title_screen.gd" id="1_7luok"]
 [ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="1_8ukxt"]
-[ext_resource type="Theme" uid="uid://47r1e1w4epsx" path="res://THEMES/button.tres" id="3_wtx41"]
+[ext_resource type="Texture2D" uid="uid://cu841e1ly4jgl" path="res://ASSETS/BACKGROUNDS/Menu.png" id="2_bkfa4"]
+[ext_resource type="PackedScene" uid="uid://cg06tyesx8kri" path="res://SCENES/BACKGROUNDS/smithereens_background.tscn" id="2_fjp3f"]
+[ext_resource type="StyleBox" uid="uid://35lilw33d41k" path="res://THEMES/start_button.tres" id="3_uhs5y"]
 [ext_resource type="PackedScene" uid="uid://cmklnemra7p7j" path="res://SCENES/CUTSCENES/scene_transition.tscn" id="4_rbu6d"]
+[ext_resource type="StyleBox" uid="uid://b5sfp5ap26ljf" path="res://THEMES/settings_buttion.tres" id="5_uhs5y"]
+[ext_resource type="StyleBox" uid="uid://dhkp6uub5p2bw" path="res://THEMES/quit_button.tres" id="6_uhs5y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fjp3f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cn0fw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uhs5y"]
+
+[sub_resource type="Theme" id="Theme_ag10s"]
+Button/styles/focus = SubResource("StyleBoxEmpty_fjp3f")
+Button/styles/hover = ExtResource("3_uhs5y")
+Button/styles/normal = SubResource("StyleBoxEmpty_cn0fw")
+Button/styles/pressed = SubResource("StyleBoxEmpty_uhs5y")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_608iu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ag10s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kitau"]
+
+[sub_resource type="Theme" id="Theme_ydplf"]
+Button/styles/focus = SubResource("StyleBoxEmpty_608iu")
+Button/styles/hover = ExtResource("5_uhs5y")
+Button/styles/normal = SubResource("StyleBoxEmpty_ag10s")
+Button/styles/pressed = SubResource("StyleBoxEmpty_kitau")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yi148"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h4ype"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0j6pm"]
+
+[sub_resource type="Theme" id="Theme_v1r72"]
+Button/styles/focus = SubResource("StyleBoxEmpty_yi148")
+Button/styles/hover = ExtResource("6_uhs5y")
+Button/styles/normal = SubResource("StyleBoxEmpty_h4ype")
+Button/styles/pressed = SubResource("StyleBoxEmpty_0j6pm")
 
 [node name="TitleScreen" type="Node"]
 script = ExtResource("1_7luok")
 
-[node name="title" type="Label" parent="."]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -23.0
-offset_top = 8.0
-offset_right = 55.0
-offset_bottom = 80.0
-grow_horizontal = 2
-scale = Vector2(0.6, 0.6)
-size_flags_horizontal = 4
-size_flags_vertical = 0
-theme_override_fonts/font = ExtResource("1_8ukxt")
-theme_override_font_sizes/font_size = 0
-text = "Sustainable 
-Dash 
-Goals"
-horizontal_alignment = 1
+[node name="SmithereensBackground" parent="." instance=ExtResource("2_fjp3f")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(79, 43)
+scale = Vector2(0.100926, 0.100926)
+texture = ExtResource("2_bkfa4")
 
 [node name="playButton" type="Button" parent="."]
-offset_left = 34.0
-offset_top = 59.0
-offset_right = 75.0
-offset_bottom = 90.0
-scale = Vector2(0.6, 0.6)
-theme = ExtResource("3_wtx41")
+offset_left = 21.0
+offset_top = 23.0
+offset_right = 52.0
+offset_bottom = 54.0
+theme = SubResource("Theme_ag10s")
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_8ukxt")
-text = "Play"
 
 [node name="settingsButton" type="Button" parent="."]
-offset_left = 63.0
-offset_top = 59.0
-offset_right = 122.0
-offset_bottom = 90.0
+offset_left = 50.0
+offset_top = 38.0
+offset_right = 95.0
+offset_bottom = 83.0
 scale = Vector2(0.6, 0.6)
-theme = ExtResource("3_wtx41")
+theme = SubResource("Theme_ydplf")
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_8ukxt")
-text = "Settings"
 
 [node name="quitButton" type="Button" parent="."]
-offset_left = 103.0
-offset_top = 59.0
-offset_right = 144.0
-offset_bottom = 90.0
+offset_left = 21.0
+offset_top = 47.0
+offset_right = 72.0
+offset_bottom = 98.0
 scale = Vector2(0.6, 0.6)
-theme = ExtResource("3_wtx41")
+theme = SubResource("Theme_v1r72")
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_8ukxt")
-text = "Quit"
 
 [node name="SceneTransition" parent="." instance=ExtResource("4_rbu6d")]
 

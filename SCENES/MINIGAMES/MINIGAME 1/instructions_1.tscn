@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://cpo5ga8lntgwq"]
+[gd_scene load_steps=12 format=3 uid="uid://cpo5ga8lntgwq"]
 
 [ext_resource type="Script" uid="uid://d2bmgf4fn6fks" path="res://SCENES/MINIGAMES/MINIGAME 1/instructions_1.gd" id="1_b43up"]
 [ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="2_3hcta"]
+[ext_resource type="PackedScene" uid="uid://cg06tyesx8kri" path="res://SCENES/BACKGROUNDS/smithereens_background.tscn" id="2_qctln"]
 [ext_resource type="Texture2D" uid="uid://0w82wivcyksl" path="res://ASSETS/DIALOGUE BOX/dialogue box.png" id="2_ym6wh"]
 [ext_resource type="Script" uid="uid://bx0rj2gocbo1w" path="res://SCENES/MINIGAMES/MINIGAME 1/Typewrite.gd" id="4_ym6wh"]
 [ext_resource type="Theme" uid="uid://47r1e1w4epsx" path="res://THEMES/button.tres" id="5_hrjs4"]
@@ -134,6 +135,8 @@ _data = {
 [node name="Instructions1" type="Node2D"]
 script = ExtResource("1_b43up")
 
+[node name="SmithereensBackground" parent="." instance=ExtResource("2_qctln")]
+
 [node name="DialogueBox" type="Sprite2D" parent="."]
 position = Vector2(80, 45)
 scale = Vector2(0.122155, 0.186141)
@@ -214,6 +217,13 @@ stream = ExtResource("8_qctln")
 volume_db = 20.0
 
 [node name="SceneTransition" parent="." instance=ExtResource("7_kg2af")]
+visible = false
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [connection signal="animation_finished" from="AnimationPlayer" to="AnimationPlayer" method="_on_animation_finished"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

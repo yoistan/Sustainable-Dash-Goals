@@ -10,12 +10,16 @@ extends Node
 @onready var congrats: AudioStreamPlayer = $Congrats
 @onready var click_sfx_2 = $ClickSfx2
 @onready var page_flip = $PageFlip
+@onready var click_sfx_3 = $ClickSfx3
 
 func play_page_flip_sfx():
 	page_flip.play()
 	
 func button_click():
 	click_sfx_2.play()
+
+func game_paused_sfx():
+	click_sfx_3.play()
 
 # Title screen music
 func play_music1():

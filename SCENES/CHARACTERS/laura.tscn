@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bh3t55otv546"]
+[gd_scene load_steps=8 format=3 uid="uid://bh3t55otv546"]
 
 [ext_resource type="Script" uid="uid://0l0y04j4ku55" path="res://SCRIPTS/CHARACTERS/laura.gd" id="1_40ni5"]
 [ext_resource type="Script" uid="uid://ddjpebo5figom" path="res://RESOURCES/DIALOGUE/Dialogue.gd" id="2_w71r1"]
 [ext_resource type="Texture2D" uid="uid://djewybtqggsgw" path="res://ASSETS/CHARACTERS/NPCS/Laura.png" id="3_qlrkn"]
 [ext_resource type="PackedScene" uid="uid://c0k4crxwnd6xv" path="res://SCENES/DIALOGUE/DialogueManager.tscn" id="3_w71r1"]
+[ext_resource type="PackedScene" uid="uid://c5cenoneijgnn" path="res://SCENES/DIALOGUE/sdg_quest_marker.tscn" id="5_qlrkn"]
 
 [sub_resource type="Resource" id="Resource_qlrkn"]
 script = ExtResource("2_w71r1")
@@ -27,3 +28,8 @@ texture = ExtResource("3_qlrkn")
 shape = SubResource("CapsuleShape2D_766bg")
 
 [node name="DialogueManager" parent="." instance=ExtResource("3_w71r1")]
+
+[node name="QuestMarker" parent="." instance=ExtResource("5_qlrkn")]
+offset_top = -42.0
+offset_bottom = -26.0
+sdg = 13

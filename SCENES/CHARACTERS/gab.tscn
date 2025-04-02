@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://rfo21mxn8hqw"]
+[gd_scene load_steps=8 format=3 uid="uid://rfo21mxn8hqw"]
 
 [ext_resource type="Script" uid="uid://b7aibdvnwy37g" path="res://SCRIPTS/CHARACTERS/gab.gd" id="1_uyed7"]
 [ext_resource type="Script" uid="uid://ddjpebo5figom" path="res://RESOURCES/DIALOGUE/Dialogue.gd" id="2_wlnnt"]
 [ext_resource type="Texture2D" uid="uid://dixdaxebvlkfx" path="res://ASSETS/CHARACTERS/NPCS/Gab.png" id="3_0umiw"]
 [ext_resource type="PackedScene" uid="uid://c0k4crxwnd6xv" path="res://SCENES/DIALOGUE/DialogueManager.tscn" id="3_wlnnt"]
+[ext_resource type="PackedScene" uid="uid://c5cenoneijgnn" path="res://SCENES/DIALOGUE/sdg_quest_marker.tscn" id="5_wlnnt"]
 
 [sub_resource type="Resource" id="Resource_81wkx"]
 script = ExtResource("2_wlnnt")
@@ -19,14 +20,6 @@ collision_layer = 4
 script = ExtResource("1_uyed7")
 dialogue_resource = SubResource("Resource_81wkx")
 
-[node name="Label" type="Label" parent="."]
-offset_left = -9.0
-offset_top = -52.0
-offset_right = 29.0
-offset_bottom = -29.0
-scale = Vector2(0.5, 0.5)
-text = "Gab"
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -5.4495)
 scale = Vector2(0.0960591, 0.096059)
@@ -36,3 +29,8 @@ texture = ExtResource("3_0umiw")
 shape = SubResource("CapsuleShape2D_81wkx")
 
 [node name="DialogueManager" parent="." instance=ExtResource("3_wlnnt")]
+
+[node name="QuestMarker" parent="." instance=ExtResource("5_wlnnt")]
+offset_top = -44.0
+offset_bottom = -28.0
+sdg = 4

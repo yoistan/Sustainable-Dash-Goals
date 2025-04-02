@@ -1,11 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://cni0810xyrd0k"]
+[gd_scene load_steps=6 format=3 uid="uid://cni0810xyrd0k"]
 
 [ext_resource type="Script" uid="uid://de0bqav3jfg7h" path="res://SCRIPTS/settings.gd" id="1_vtnoc"]
+[ext_resource type="StyleBox" uid="uid://dvvo20w285goa" path="res://THEMES/panel_theme.tres" id="2_hddla"]
 [ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="2_o155n"]
 [ext_resource type="Theme" uid="uid://47r1e1w4epsx" path="res://THEMES/button.tres" id="3_afrjb"]
-[ext_resource type="AudioStream" uid="uid://bya1mofvds4qv" path="res://ASSETS/SFX/click sfx 2.mp3" id="4_hddla"]
+
+[sub_resource type="Theme" id="Theme_hddla"]
+Panel/styles/panel = ExtResource("2_hddla")
 
 [node name="Settings" type="Control"]
+z_index = 999
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,19 +24,25 @@ layout_mode = 0
 offset_right = 160.0
 offset_bottom = 90.0
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = 28.0
-offset_top = 5.0
-offset_right = 132.0
-offset_bottom = 85.0
-color = Color(0.237539, 0.237539, 0.237539, 1)
+[node name="ColorRect" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.0
+offset_top = -40.0
+offset_right = 52.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_hddla")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
-offset_left = 1.0
 offset_top = 7.0
-offset_right = 161.0
+offset_right = 160.0
 offset_bottom = 30.0
 theme_override_fonts/font = ExtResource("2_o155n")
 text = "Settings"
@@ -44,6 +54,8 @@ offset_left = 39.0
 offset_top = 36.0
 offset_right = 199.0
 offset_bottom = 59.0
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(0.5, 0.5)
 theme_override_fonts/font = ExtResource("2_o155n")
 text = "Volume"
@@ -80,9 +92,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -9.0
-offset_top = -21.0
+offset_top = -23.0
 offset_right = 32.0
-offset_bottom = 10.0
+offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.4, 0.4)
@@ -94,10 +106,6 @@ theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_o155n")
 text = "Back"
-
-[node name="ClickSfx2" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_hddla")
-volume_db = 20.0
 
 [connection signal="mouse_exited" from="Volume" to="." method="_on_volume_mouse_exited"]
 [connection signal="toggled" from="CheckBox" to="." method="_on_check_box_toggled"]

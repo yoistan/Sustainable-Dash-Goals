@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://dphxa4y4rd1rv"]
+[gd_scene load_steps=6 format=3 uid="uid://dphxa4y4rd1rv"]
 
 [ext_resource type="Script" uid="uid://bd56sbmkivvqj" path="res://menu.gd" id="1_qnims"]
+[ext_resource type="StyleBox" uid="uid://dvvo20w285goa" path="res://THEMES/panel_theme.tres" id="2_mawtk"]
 [ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="2_vbyvk"]
+[ext_resource type="Theme" uid="uid://47r1e1w4epsx" path="res://THEMES/button.tres" id="3_vbyvk"]
+
+[sub_resource type="Theme" id="Theme_5bv5n"]
+Panel/styles/panel = ExtResource("2_mawtk")
 
 [node name="Menu" type="CanvasLayer"]
 script = ExtResource("1_qnims")
@@ -15,57 +20,100 @@ offset_bottom = 40.0
 
 [node name="Panel" type="Panel" parent="Control"]
 layout_mode = 0
-offset_right = 160.0
-offset_bottom = 90.0
+offset_left = -9.0
+offset_top = -6.0
+offset_right = 169.0
+offset_bottom = 96.0
 
-[node name="ColorRect" type="ColorRect" parent="Control/Panel"]
-layout_mode = 0
-offset_left = 19.0
-offset_top = 9.0
-offset_right = 145.0
-offset_bottom = 69.0
-color = Color(0.355314, 0.355314, 0.355314, 1)
+[node name="ColorRect" type="Panel" parent="Control/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.0
+offset_top = -25.5
+offset_right = 70.0
+offset_bottom = 25.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_5bv5n")
 
-[node name="Label" type="Label" parent="Control/Panel"]
+[node name="Label" type="Label" parent="Control/Panel/ColorRect"]
 texture_filter = 1
-layout_mode = 0
-offset_left = 58.0
-offset_top = 12.0
-offset_right = 104.0
-offset_bottom = 35.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -23.0
+offset_right = 23.0
+offset_bottom = 23.0
+grow_horizontal = 2
 theme_override_fonts/font = ExtResource("2_vbyvk")
 text = "PAUSED"
 
-[node name="Resume" type="Button" parent="Control/Panel"]
+[node name="buttons" type="Control" parent="Control/Panel/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = -20.0
+offset_right = 63.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Resume" type="Button" parent="Control/Panel/ColorRect/buttons"]
 layout_mode = 0
-offset_left = 24.0
-offset_top = 43.0
-offset_right = 81.0
-offset_bottom = 74.0
+offset_top = 17.0
+offset_right = 57.0
+offset_bottom = 48.0
 scale = Vector2(0.6, 0.6)
+theme = ExtResource("3_vbyvk")
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_vbyvk")
 text = "Resume"
 
-[node name="settingsButton" type="Button" parent="Control/Panel"]
+[node name="settingsButton" type="Button" parent="Control/Panel/ColorRect/buttons"]
 layout_mode = 0
-offset_left = 60.0
-offset_top = 43.0
-offset_right = 119.0
-offset_bottom = 74.0
+offset_left = 39.0
+offset_top = 17.0
+offset_right = 98.0
+offset_bottom = 48.0
 scale = Vector2(0.6, 0.6)
+theme = ExtResource("3_vbyvk")
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_vbyvk")
 text = "Settings"
 
-[node name="mainMenu" type="Button" parent="Control/Panel"]
+[node name="mainMenu" type="Button" parent="Control/Panel/ColorRect/buttons"]
 layout_mode = 0
-offset_left = 97.0
-offset_top = 43.0
-offset_right = 171.0
-offset_bottom = 74.0
+offset_left = 79.0
+offset_top = 17.0
+offset_right = 153.0
+offset_bottom = 48.0
 scale = Vector2(0.6, 0.6)
+theme = ExtResource("3_vbyvk")
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_vbyvk")
 text = "Main Menu"
 
-[connection signal="pressed" from="Control/Panel/Resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="Control/Panel/settingsButton" to="." method="_on_settings_button_pressed"]
-[connection signal="pressed" from="Control/Panel/mainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="Control/Panel/ColorRect/buttons/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Control/Panel/ColorRect/buttons/settingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Control/Panel/ColorRect/buttons/mainMenu" to="." method="_on_main_menu_pressed"]

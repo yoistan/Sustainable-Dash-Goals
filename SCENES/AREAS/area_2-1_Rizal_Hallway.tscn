@@ -19,6 +19,5 @@ position = Vector2(57, 36)
 scale = Vector2(0.5, 0.5)
 
 [node name="Menu" parent="." instance=ExtResource("3_qdddx")]
-visible = false
 
 [node name="TouchControls" parent="." instance=ExtResource("5_qdddx")]

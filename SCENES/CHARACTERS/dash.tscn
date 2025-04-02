@@ -487,7 +487,7 @@ script = ExtResource("1_82tok")
 shape = SubResource("CapsuleShape2D_82tok")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-target_position = Vector2(57, 0)
+target_position = Vector2(25, 0)
 collision_mask = 5
 collide_with_areas = true
 

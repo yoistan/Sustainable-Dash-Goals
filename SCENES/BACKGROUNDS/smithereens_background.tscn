@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://cg06tyesx8kri"]
+
+[ext_resource type="Texture2D" uid="uid://cd8g55bdhgh4t" path="res://THEMES/smithereens_gradient.tres" id="1_v1kn3"]
+[ext_resource type="Script" uid="uid://ddpfuv13i8eq1" path="res://SCRIPTS/smithereens_background_autoplay.gd" id="1_y1uwc"]
+
+[sub_resource type="Animation" id="Animation_608iu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SmithereensBackground/TextureRect:texture:gradient:colors")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedColorArray(0.275317, 0.574168, 0.530984, 1, 0.188235, 0.247059, 0.341176, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_cn0fw"]
+resource_name = "title_background_animation"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SmithereensBackground/TextureRect:texture:gradient:colors")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [PackedColorArray(0.275317, 0.574168, 0.530984, 1, 0.188235, 0.247059, 0.341176, 1), PackedColorArray(0.392157, 0.737255, 0.843137, 1, 0.188235, 0.247059, 0.341176, 1), PackedColorArray(0.275317, 0.574168, 0.530984, 1, 0.188235, 0.247059, 0.341176, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ag10s"]
+_data = {
+&"RESET": SubResource("Animation_608iu"),
+&"title_background_animation": SubResource("Animation_cn0fw")
+}
+
+[node name="SmithereensBackground" type="AnimationPlayer"]
+libraries = {
+&"": SubResource("AnimationLibrary_ag10s")
+}
+script = ExtResource("1_y1uwc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+z_index = -5
+offset_right = 160.0
+offset_bottom = 90.0
+texture = ExtResource("1_v1kn3")

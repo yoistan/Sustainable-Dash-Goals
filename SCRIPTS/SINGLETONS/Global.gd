@@ -3,6 +3,7 @@
 extends Node
 
 var player : Node = null
+var touch_controls : Node = null
 var minigame_1_done : bool = false
 var minigame_2_started : bool = false
 var minigame_2_done : bool = false

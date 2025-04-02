@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b36htfr55psld"]
-
-[ext_resource type="AudioStream" uid="uid://dnuqpsngtq5u4" path="res://ASSETS/MUSIC/GMMF - title screen.wav" id="1_dng2o"]
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
-stream = ExtResource("1_dng2o")
-autoplay = true
