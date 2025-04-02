@@ -84,3 +84,10 @@ func remove_label():
 			child.queue_free()
 		
 	label_parents.clear()
+
+func _on_back_to_rizal_lobby_body_entered(body):
+	if body.is_in_group("player"):
+		print("going bakc")
+		Global.last_scene = Global.area_2_hallway_name
+		get_tree().call_deferred("change_scene_to_file", "res://SCENES/AREAS/area_2_Rizal_Lobby.tscn")
+		

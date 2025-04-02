@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dkxygka7r5bfx"]
+[gd_scene load_steps=9 format=3 uid="uid://dkxygka7r5bfx"]
 
 [ext_resource type="Script" uid="uid://o51cjqqw8vwx" path="res://SCRIPTS/AREAS/Rizal_Hallway_exits.gd" id="1_bpb2m"]
 [ext_resource type="Texture2D" uid="uid://h34tjarcvlnd" path="res://ASSETS/BACKGROUNDS/BG_hallways.png" id="2_8r256"]
@@ -18,6 +18,9 @@ size = Vector2(20, 89)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ruovh"]
 size = Vector2(23, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8r256"]
+size = Vector2(23.75, 71.75)
 
 [node name="Area2-1BgRizalHallway" type="StaticBody2D"]
 script = ExtResource("1_bpb2m")
@@ -100,53 +103,13 @@ shape = SubResource("RectangleShape2D_ruovh")
 position = Vector2(142, 38)
 shape = SubResource("RectangleShape2D_ruovh")
 
-[node name="ROOM_2" type="Node" parent="."]
-
-[node name="enter_room_2" type="Area2D" parent="ROOM_2" groups=["room"]]
-position = Vector2(232, 0)
+[node name="back_to_rizal_lobby" type="Area2D" parent="."]
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ROOM_2/enter_room_2"]
-position = Vector2(-45, 38)
-shape = SubResource("RectangleShape2D_ruovh")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="ROOM_2/enter_room_2"]
-position = Vector2(13, 38)
-shape = SubResource("RectangleShape2D_ruovh")
-
-[node name="ROOM_3" type="Node" parent="."]
-
-[node name="enter_room_3" type="Area2D" parent="ROOM_3" groups=["room"]]
-position = Vector2(472, 0)
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ROOM_3/enter_room_3"]
-position = Vector2(-183.2, 40.2)
-shape = SubResource("RectangleShape2D_ruovh")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="ROOM_3/enter_room_3"]
-position = Vector2(-126, 38)
-shape = SubResource("RectangleShape2D_ruovh")
-
-[node name="ROOM_4" type="Node" parent="." groups=["room"]]
-
-[node name="enter_room_4" type="Area2D" parent="ROOM_4"]
-position = Vector2(704, 0)
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ROOM_4/enter_room_4"]
-position = Vector2(-312.5, 38)
-shape = SubResource("RectangleShape2D_ruovh")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="ROOM_4/enter_room_4"]
-position = Vector2(-256, 38)
-shape = SubResource("RectangleShape2D_ruovh")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back_to_rizal_lobby"]
+position = Vector2(-0.625, 25.875)
+shape = SubResource("RectangleShape2D_8r256")
 
 [connection signal="body_entered" from="ROOM_1/enter_room_1" to="." method="_on_enter_room_1_body_entered"]
 [connection signal="body_exited" from="ROOM_1/enter_room_1" to="." method="_on_enter_room_1_body_exited"]
-[connection signal="body_entered" from="ROOM_2/enter_room_2" to="." method="_on_enter_room_2_body_entered"]
-[connection signal="body_exited" from="ROOM_2/enter_room_2" to="." method="_on_enter_room_2_body_exited"]
-[connection signal="body_entered" from="ROOM_3/enter_room_3" to="." method="_on_enter_room_3_body_entered"]
-[connection signal="body_exited" from="ROOM_3/enter_room_3" to="." method="_on_enter_room_3_body_exited"]
-[connection signal="body_entered" from="ROOM_4/enter_room_4" to="." method="_on_enter_room_4_body_entered"]
-[connection signal="body_exited" from="ROOM_4/enter_room_4" to="." method="_on_enter_room_4_body_exited"]
+[connection signal="body_entered" from="back_to_rizal_lobby" to="." method="_on_back_to_rizal_lobby_body_entered"]

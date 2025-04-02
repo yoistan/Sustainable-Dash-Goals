@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://pve6ms6fqf4r"]
+[gd_scene load_steps=34 format=3 uid="uid://pve6ms6fqf4r"]
 
 [ext_resource type="Script" uid="uid://df03hx7jg8v82" path="res://SCENES/achivement.gd" id="1_0wy82"]
 [ext_resource type="Texture2D" uid="uid://c4yr8tfxa1wwa" path="res://SDGs/sdg1.png" id="1_sylfw"]
@@ -223,6 +223,54 @@ tracks/12/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("4:self_modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("4:scale")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.0242947, 0.0242947)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("4:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.054902, 0.0666667, 0.0862745, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("4:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(85, 10)]
+}
 
 [sub_resource type="Animation" id="Animation_sylfw"]
 resource_name = "SDG 13"
@@ -298,6 +346,82 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bdwbv"]
+resource_name = "SDG 4"
+length = 7.62
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 7.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.77),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("4:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3, 4.63334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.211765, 0.239216, 0.290196, 1), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("4:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.8, 5.61, 7.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.0242947, 0.0242947), Vector2(0.053163, 0.053163), Vector2(0.053163, 0.053163), Vector2(0.0242947, 0.0242947)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("4:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(4.66667, 5.59667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.659681, 0.679551, 0.682224, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("4:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 2.8, 5.61, 7.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(85, 10), Vector2(72, 39), Vector2(72, 39), Vector2(85, 10)]
 }
 
 [sub_resource type="Animation" id="Animation_2pcik"]
@@ -400,12 +524,114 @@ tracks/7/keys = {
 "values": [Vector2(7.074, 63.081), Vector2(10.679, 61.796)]
 }
 
+[sub_resource type="Animation" id="Animation_geb05"]
+resource_name = "Show_SDG4"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Info1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Info1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.01),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Info1/Label:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.03, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Info1/Label2:visible_ratio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.33333, 2.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Info1/Label3:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2, 2.66667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Info1/Label4:visible_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2.54667, 2.86667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("4:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.91, 0.91333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(85, 10), Vector2(10.95, 61.6072), Vector2(10.679, 61.796)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("4:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.91),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.0242947, 0.0242947), Vector2(0.0336688, 0.0336688)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0wy82"]
 _data = {
 &"Hide": SubResource("Animation_q8nnk"),
 &"RESET": SubResource("Animation_bm7c7"),
 &"SDG 13": SubResource("Animation_sylfw"),
-&"Show": SubResource("Animation_2pcik")
+&"SDG 4": SubResource("Animation_bdwbv"),
+&"Show": SubResource("Animation_2pcik"),
+&"Show_SDG4": SubResource("Animation_geb05")
 }
 
 [sub_resource type="Environment" id="Environment_0wy82"]
@@ -441,9 +667,9 @@ scale = Vector2(0.049834, 0.049834)
 texture = ExtResource("3_0wy82")
 
 [node name="4" type="Sprite2D" parent="."]
-modulate = Color(0.0536814, 0.0651887, 0.0865703, 1)
+modulate = Color(0.054902, 0.0666667, 0.0862745, 1)
 position = Vector2(85, 10)
-scale = Vector2(0.0243164, 0.0243164)
+scale = Vector2(0.0242947, 0.0242947)
 texture = ExtResource("4_n01ot")
 
 [node name="5" type="Sprite2D" parent="."]
@@ -547,18 +773,18 @@ theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 text = ">"
 
+[node name="DialogueBox" type="Sprite2D" parent="."]
+modulate = Color(0.691357, 0.691357, 0.691357, 1)
+position = Vector2(73.5, 35.96)
+scale = Vector2(0.115137, 0.142414)
+texture = ExtResource("20_n06mt")
+
 [node name="Info1" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 1.0
 offset_right = 41.0
 offset_bottom = 40.0
-
-[node name="DialogueBox" type="Sprite2D" parent="Info1"]
-modulate = Color(0.691357, 0.691357, 0.691357, 1)
-position = Vector2(72.5, 35.96)
-scale = Vector2(0.115137, 0.142414)
-texture = ExtResource("20_n06mt")
 
 [node name="Label" type="Label" parent="Info1"]
 modulate = Color(0, 0, 0, 1)
@@ -623,7 +849,7 @@ visible_characters = 0
 visible_ratio = 0.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Label4" type="Label" parent="Info1"]
+[node name="Label4" type="RichTextLabel" parent="Info1"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -636,10 +862,10 @@ offset_top = 52.0
 offset_right = 177.0
 offset_bottom = 79.0
 scale = Vector2(0.26, 0.26)
-theme_override_colors/font_color = Color(0.25098, 0.427451, 0.219608, 1)
-theme_override_fonts/font = ExtResource("21_04jy0")
-text = "For more information, Visit https://sdgs.un.org/goals/goal13"
-autowrap_mode = 3
+theme_override_colors/default_color = Color(0.25098, 0.427451, 0.219608, 1)
+theme_override_fonts/normal_font = ExtResource("21_04jy0")
+bbcode_enabled = true
+text = "For more information, Visit the [url=\"https://www.globalgoals.org/goals/13-climate-action/\"]Global Goals website[/url]."
 visible_characters = 0
 visible_ratio = 0.0
 metadata/_edit_use_anchors_ = true
@@ -663,6 +889,8 @@ texture = ExtResource("13_cs6sq")
 script = ExtResource("19_2pcik")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="13/Area2D"]
+position = Vector2(1.79109, 1.41793)
 shape = SubResource("RectangleShape2D_n06mt")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="meta_clicked" from="Info1/Label4" to="." method="_on_label_4_meta_clicked"]

@@ -1,0 +1,657 @@
+[gd_scene load_steps=36 format=3 uid="uid://bifsw8nkfqeyb"]
+
+[ext_resource type="Script" uid="uid://df03hx7jg8v82" path="res://SCENES/achivement.gd" id="1_enc5v"]
+[ext_resource type="PackedScene" uid="uid://cg06tyesx8kri" path="res://SCENES/BACKGROUNDS/smithereens_background.tscn" id="2_v85js"]
+[ext_resource type="Texture2D" uid="uid://c4yr8tfxa1wwa" path="res://SDGs/sdg1.png" id="3_dpp6r"]
+[ext_resource type="Texture2D" uid="uid://drpbhcm0ikscf" path="res://SDGs/sdg2.png" id="4_15v7l"]
+[ext_resource type="Texture2D" uid="uid://ce5556m8tconw" path="res://SDGs/sdg3.jpg" id="5_ax8l5"]
+[ext_resource type="Texture2D" uid="uid://ddy5g8dylvcys" path="res://SDGs/sdg5.png" id="6_nrk46"]
+[ext_resource type="Texture2D" uid="uid://dq0a4s7e3k5o1" path="res://SDGs/sdg6.png" id="7_pjd0m"]
+[ext_resource type="Texture2D" uid="uid://b2i3mpu883lm7" path="res://SDGs/sdg7.png" id="8_xtnn8"]
+[ext_resource type="Texture2D" uid="uid://2eind46clg0j" path="res://SDGs/sdg8.png" id="9_w5y41"]
+[ext_resource type="Texture2D" uid="uid://bfn63g8ca4020" path="res://SDGs/sdg9.png" id="10_c6mua"]
+[ext_resource type="Texture2D" uid="uid://c647h0ckfov8l" path="res://SDGs/sdg10.png" id="11_gwffq"]
+[ext_resource type="Texture2D" uid="uid://7r6vb3oocywq" path="res://SDGs/sdg11.png" id="12_uv7m7"]
+[ext_resource type="Texture2D" uid="uid://bs4hdj26bxngc" path="res://SDGs/sdg12.png" id="13_ug3ka"]
+[ext_resource type="Texture2D" uid="uid://diwotrwp3l4q7" path="res://SDGs/sdg14.png" id="14_k6s8h"]
+[ext_resource type="Texture2D" uid="uid://ba1jl66pyvn0f" path="res://SDGs/sdg15.png" id="15_2krjv"]
+[ext_resource type="Texture2D" uid="uid://cfq0ku0swda2g" path="res://SDGs/sdg16.png" id="16_hi4ev"]
+[ext_resource type="Texture2D" uid="uid://ce3op0epsb4xm" path="res://SDGs/sdg17.png" id="17_labq1"]
+[ext_resource type="Script" uid="uid://chweiewxjkkmb" path="res://SCENES/Achieve.gd" id="18_a01fl"]
+[ext_resource type="Theme" uid="uid://47r1e1w4epsx" path="res://THEMES/button.tres" id="19_rktsk"]
+[ext_resource type="Texture2D" uid="uid://0w82wivcyksl" path="res://ASSETS/DIALOGUE BOX/dialogue box.png" id="20_xacb3"]
+[ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="21_srn6x"]
+[ext_resource type="Texture2D" uid="uid://bajpyo6orti74" path="res://SDGs/Sustainable_Development_Goal_13Climate.png" id="22_5rt7x"]
+[ext_resource type="Script" uid="uid://euemwe6t4a0t" path="res://SCENES/MINIGAMES/MINIGAME 1/area_2d.gd" id="23_x57j1"]
+[ext_resource type="Texture2D" uid="uid://b66871rgraf1d" path="res://SDGs/sdg4.png" id="24_nrfid"]
+[ext_resource type="Script" uid="uid://coep8mxjcppgh" path="res://scripts/sdg4.gd" id="25_cd522"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n06mt"]
+size = Vector2(820.715, 789.149)
+
+[sub_resource type="Animation" id="Animation_q8nnk"]
+resource_name = "Hide"
+length = 0.78
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("13:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.0395898, 0.0395898), Vector2(0.0316797, 0.0316797)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("13:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.66),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(10.63, 61.813), Vector2(7.074, 63.081)]
+}
+
+[sub_resource type="Animation" id="Animation_bm7c7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("13:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.0316797, 0.0316797)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("13:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("13:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(7, 63.5)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("13:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.211765, 0.239216, 0.290196, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Button:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/ColorRect:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("4:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(85, 10)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("4:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.054902, 0.0666667, 0.0862745, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("4:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.0242947, 0.0242947)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("4:self_modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_sylfw"]
+resource_name = "SDG 13"
+length = 7.62
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("13:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.8, 5.6, 7.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.0316797, 0.0316797), Vector2(0.067, 0.067), Vector2(0.067, 0.067), Vector2(0.0316797, 0.0316797)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("13:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(4.7, 5.63),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.659681, 0.679551, 0.682224, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("13:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.8, 5.6, 7.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(7, 63.5), Vector2(71.88, 38.905), Vector2(71.88, 38.905), Vector2(7, 63.5)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("13:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3.03333, 4.66667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.211765, 0.239216, 0.290196, 1), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Button:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 7.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/ColorRect:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.77),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bdwbv"]
+resource_name = "SDG 4"
+length = 7.62
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 7.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.77),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("4:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.8, 5.61, 7.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(85, 10), Vector2(72, 39), Vector2(72, 39), Vector2(85, 10)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("4:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(4.66667, 5.59667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.659681, 0.679551, 0.682224, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("4:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2.8, 5.61, 7.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.0242947, 0.0242947), Vector2(0.053163, 0.053163), Vector2(0.053163, 0.053163), Vector2(0.0242947, 0.0242947)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("4:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(3, 4.63334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.211765, 0.239216, 0.290196, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_2pcik"]
+resource_name = "Show"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("13:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 1.02),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.0316797, 0.0316797), Vector2(0.0395898, 0.0395898)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("13:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0433333, 1.03333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(7.074, 63.081), Vector2(10.679, 61.796)]
+}
+
+[sub_resource type="Animation" id="Animation_geb05"]
+resource_name = "Show_SDG4"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("4:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.91),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.0242947, 0.0242947), Vector2(0.0336688, 0.0336688)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("4:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.91, 0.91333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(85, 10), Vector2(10.95, 61.6072), Vector2(10.679, 61.796)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0wy82"]
+_data = {
+&"Hide": SubResource("Animation_q8nnk"),
+&"RESET": SubResource("Animation_bm7c7"),
+&"SDG 13": SubResource("Animation_sylfw"),
+&"SDG 4": SubResource("Animation_bdwbv"),
+&"Show": SubResource("Animation_2pcik"),
+&"Show_SDG4": SubResource("Animation_geb05")
+}
+
+[sub_resource type="Environment" id="Environment_0wy82"]
+background_mode = 3
+glow_enabled = true
+glow_blend_mode = 1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bdwbv"]
+
+[node name="Achieve" type="Node2D"]
+position = Vector2(8, 6)
+script = ExtResource("1_enc5v")
+
+[node name="SmithereensBackground" parent="." instance=ExtResource("2_v85js")]
+
+[node name="1" type="Sprite2D" parent="."]
+modulate = Color(0.0536814, 0.0651887, 0.0865703, 1)
+position = Vector2(7, 10)
+scale = Vector2(0.0242187, 0.0242187)
+texture = ExtResource("3_dpp6r")
+
+[node name="2" type="Sprite2D" parent="."]
+modulate = Color(0.0536814, 0.0651887, 0.0865703, 1)
+position = Vector2(33, 10)
+scale = Vector2(0.0243164, 0.0243164)
+texture = ExtResource("4_15v7l")
+
+[node name="3" type="Sprite2D" parent="."]
+modulate = Color(0.0536814, 0.0651887, 0.0865703, 1)
+position = Vector2(59, 10)
+scale = Vector2(0.049834, 0.049834)
+texture = ExtResource("5_ax8l5")
+
+[node name="5" type="Sprite2D" parent="."]
+modulate = Color(0.0536814, 0.0651887, 0.0865703, 1)
+position = Vector2(111, 10)
+scale = Vector2(0.0243164, 0.0243164)
+texture = ExtResource("6_nrk46")
+
+[node name="6" type="Sprite2D" parent="."]
+modulate = Color(0.0536814, 0.0651887, 0.0865703, 1)
+position = Vector2(137, 10)
+scale = Vector2(0.0163517, 0.0163517)
+texture = ExtResource("7_pjd0m")
+
+[node name="7" type="Sprite2D" parent="."]
+modulate = Color(0.0536814, 0.0651887, 0.0865703, 1)
+position = Vector2(7, 36.558)
+scale = Vector2(0.0242187, 0.0242187)
+texture = ExtResource("8_xtnn8")
+
+[node name="8" type="Sprite2D" parent="."]
+modulate = Color(0.0536814, 0.0651887, 0.0865703, 1)
+position = Vector2(33, 36.558)
+scale = Vector2(0.0243164, 0.0243164)
+texture = ExtResource("9_w5y41")
+
+[node name="9" type="Sprite2D" parent="."]
+modulate = Color(0.0536814, 0.0651887, 0.0865703, 1)
+position = Vector2(59, 36.558)
+scale = Vector2(0.016193, 0.016193)
+texture = ExtResource("10_c6mua")
+
+[node name="10" type="Sprite2D" parent="."]
+modulate = Color(0.0536814, 0.0651887, 0.0865703, 1)
+position = Vector2(85, 36.558)
+scale = Vector2(0.0161702, 0.0161702)
+texture = ExtResource("11_gwffq")
+
+[node name="11" type="Sprite2D" parent="."]
+modulate = Color(0.0536814, 0.0651887, 0.0865703, 1)
+position = Vector2(111, 36.558)
+scale = Vector2(0.0390625, 0.0390625)
+texture = ExtResource("12_uv7m7")
+
+[node name="12" type="Sprite2D" parent="."]
+modulate = Color(0.0536814, 0.0651887, 0.0865703, 1)
+position = Vector2(137, 36.558)
+scale = Vector2(0.0244141, 0.0244141)
+texture = ExtResource("13_ug3ka")
+
+[node name="14" type="Sprite2D" parent="."]
+modulate = Color(0.0536814, 0.0651887, 0.0865703, 1)
+position = Vector2(33, 63.5)
+scale = Vector2(0.0161702, 0.0161702)
+texture = ExtResource("14_k6s8h")
+
+[node name="15" type="Sprite2D" parent="."]
+modulate = Color(0.0536814, 0.0651887, 0.0865703, 1)
+position = Vector2(59, 63.5)
+scale = Vector2(0.016193, 0.016193)
+texture = ExtResource("15_2krjv")
+
+[node name="16" type="Sprite2D" parent="."]
+modulate = Color(0.0536814, 0.0651887, 0.0865703, 1)
+position = Vector2(85, 63.5)
+scale = Vector2(0.0244141, 0.0244141)
+texture = ExtResource("16_hi4ev")
+
+[node name="17" type="Sprite2D" parent="."]
+modulate = Color(0.0536814, 0.0651887, 0.0865703, 1)
+position = Vector2(111, 63.5)
+scale = Vector2(0.0244141, 0.0244141)
+texture = ExtResource("17_labq1")
+
+[node name="13" type="Sprite2D" parent="."]
+modulate = Color(0.211765, 0.239216, 0.290196, 1)
+position = Vector2(7, 63.5)
+scale = Vector2(0.0316797, 0.0316797)
+texture = ExtResource("22_5rt7x")
+
+[node name="Area2D" type="Area2D" parent="13"]
+script = ExtResource("23_x57j1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="13/Area2D"]
+position = Vector2(1.79109, 1.41793)
+shape = SubResource("RectangleShape2D_n06mt")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_0wy82")
+}
+script = ExtResource("18_a01fl")
+
+[node name="ColorRect" type="ColorRect" parent="AnimationPlayer"]
+visible = false
+self_modulate = Color(0, 0, 0, 1)
+offset_right = 159.0
+offset_bottom = 90.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0wy82")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 126.0
+offset_top = 52.0
+offset_right = 160.435
+offset_bottom = 86.695
+scale = Vector2(0.645, 0.645)
+theme = ExtResource("19_rktsk")
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+text = ">"
+
+[node name="DialogueBox" type="Sprite2D" parent="."]
+modulate = Color(0.691357, 0.691357, 0.691357, 1)
+position = Vector2(73.5, 35.96)
+scale = Vector2(0.115137, 0.142414)
+texture = ExtResource("20_xacb3")
+
+[node name="Info2" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_right = 41.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Info2"]
+modulate = Color(0, 0, 0, 1)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.125
+anchor_top = -0.025
+anchor_bottom = -0.025
+offset_left = 37.0
+offset_top = 6.0
+offset_right = 192.0
+offset_bottom = 33.0
+scale = Vector2(0.605, 0.605)
+theme_override_colors/font_color = Color(0.25098, 0.427451, 0.219608, 1)
+theme_override_fonts/font = ExtResource("21_srn6x")
+text = "SDG 4: QUALITY EDUCATION"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Info2"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0499999
+anchor_top = -0.175
+anchor_right = 6.925
+anchor_bottom = 0.95
+offset_left = 27.0
+offset_top = 26.0
+offset_right = 182.0
+offset_bottom = 53.0
+scale = Vector2(0.265, 0.265)
+theme_override_colors/font_color = Color(0.768627, 0.105882, 0.176471, 1)
+theme_override_fonts/font = ExtResource("21_srn6x")
+text = "This focuses on ensuring an inclusive and equitable quality education and promoting lifelong learning opportunities for everyone."
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Info2"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0249999
+anchor_top = -0.125
+anchor_right = 6.775
+anchor_bottom = 1.0
+offset_left = 27.0
+offset_top = 40.0
+offset_right = 182.0
+offset_bottom = 67.0
+scale = Vector2(0.26, 0.26)
+theme_override_colors/font_color = Color(0.768627, 0.105882, 0.176471, 1)
+theme_override_fonts/font = ExtResource("21_srn6x")
+text = "You can help by donating used books, promoting and taking free online courses, mentoring young people, and participating in a school supply drive."
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="RichTextLabel" parent="Info2"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.275
+anchor_top = 0.1
+anchor_right = 6.5
+anchor_bottom = 0.1
+offset_left = 22.0
+offset_top = 52.0
+offset_right = 177.0
+offset_bottom = 79.0
+scale = Vector2(0.26, 0.26)
+theme_override_colors/default_color = Color(0.768627, 0.105882, 0.176471, 1)
+theme_override_fonts/normal_font = ExtResource("21_srn6x")
+bbcode_enabled = true
+text = "For more information, Visit the [url=\"https://www.globalgoals.org/goals/4-quality-education/\"]Global Goals website[/url]."
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Info2"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.509804)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 3.0
+offset_right = 135.0
+offset_bottom = 69.0
+
+[node name="4" type="Sprite2D" parent="."]
+modulate = Color(0.054902, 0.0666667, 0.0862745, 1)
+position = Vector2(85, 10)
+scale = Vector2(0.0242947, 0.0242947)
+texture = ExtResource("24_nrfid")
+
+[node name="Area2D" type="Area2D" parent="4"]
+script = ExtResource("25_cd522")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="4/Area2D"]
+scale = Vector2(50.9418, 50.9418)
+shape = SubResource("RectangleShape2D_bdwbv")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -137,5 +137,9 @@ func handle_dialogue_option(option):
 				npc.set_dialogue_state("score_3")
 				show_dialogue(npc)
 		Global.minigame_2_room_1_score = 0
+	
+	elif next_state == "FINISH_MINIGAME_2":
+		pass
+	
 	else:
 		show_dialogue(npc)

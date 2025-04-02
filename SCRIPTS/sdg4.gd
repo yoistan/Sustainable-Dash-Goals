@@ -24,10 +24,10 @@ func _input_event(_viewport, event, _shape_idx):
 			dialogue_box.show()
 			info.visible = true
 			anim_player.play("Show_SDG4")
-			await anim_player.animation_finished  # Wait until the "Show" animation finishes
+			await anim_player.animation_finished # Wait until the "Show" animation finishes
 		else:
 			anim_player.play("Hide_SDG4")
-			await anim_player.animation_finished  # Wait until the "Hide" animation finishes
+			await anim_player.animation_finished # Wait until the "Hide" animation finishes
 			info.visible = false
 			dialogue_box.hide()
 

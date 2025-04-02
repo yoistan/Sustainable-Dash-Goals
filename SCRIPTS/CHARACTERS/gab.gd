@@ -12,7 +12,15 @@ var npc_name = "Gab"
 var current_state = "start"
 var current_branch_index = 0
 
+# branches
+var start_quest_branch = 0
+var ongoing_quest_branch = 1
+var finishing_quest_branch = 2
+var default_branch = 3
+
 func _ready():
+	if Global.minigame_2_done:
+		current_branch_index = finishing_quest_branch 
 	# load dialogue data
 	dialogue_resource.load_from_json("res://RESOURCES/DIALOGUE/dialogue_data.json")
 	# initialize NPC reference

@@ -1,4 +1,4 @@
 extends AnimationPlayer
 
 func _ready() -> void:
-	play("SDG 13")
+	play("SDG 4")

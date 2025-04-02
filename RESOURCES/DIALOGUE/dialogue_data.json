@@ -151,7 +151,7 @@
 					{
 						"state": "about_donations",
 						"speaking": "Gab",
-						"text": "Speaking of donations, I was going to go room-to-room on this floor to collect some books, but then no one would be here in case someone wants to donate here directly…",
+						"text": "Speaking of donations, I was going to collect some books at R308, but then no one would be here in case someone wants to donate here directly…",
 						"options": {
 							"Next": "dash_reply_4"
 						}
@@ -166,8 +166,8 @@
 					},
 					{
 						"state": "instructions",
-						"speaking": "Gab",
-						"text": "Really? You’ll do that? Thank you! You just need to visit 4 rooms on this floor: R308, R306, R304, and R302.",
+						"speaking": "Gab", 
+						"text": "Really? You’ll do that? Thank you! You just need to visit R308 and ask Sophia for the books her section donated.",
 						"options": {
 							"On it!": "START_MINIGAME_2"
 						}
@@ -180,11 +180,57 @@
 					{
 						"state": "start",
 						"speaking": "Gab",
-						"text": "The rooms are on the right.",
+						"text": "The room is on the right.",
 						"options": {
 							"Okay": "exit"
 						}
 					}
+				]
+			},
+			{
+				"branch_id": "NPC_Gab_after_minigame",
+				"dialogues": [
+					{
+						"state": "start",
+						"speaking": "Gab",
+						"text": "Hey! You're back with the books! Took you a while.",
+						"options": {
+							"Next": "dash_reply_1"
+						}
+					},
+					{
+						"state": "dash_reply_1",
+						"speaking": "Dash",
+						"text": "Yeah! I was suddenly tested on my ICT knowledge. It was -",
+						"options": {
+							"Easy": "gab_reply_easy",
+							"Hard": "gab_reply_hard"
+						}
+					},
+					{
+						"state": "gab_reply_easy",
+						"speaking": "Gab",
+						"text": "Really? That's great! I'm sure you'll do great in an ICT quiz bee.",
+						"options": {
+							"Yeah!": ""
+						}
+					},
+					{
+						"state": "gab_reply_hard",
+						"speaking": "Gab",
+						"text": "Really? Well, you can't learn if you don't mistakes. You'll get better!",
+						"options": {
+							"You're right.": ""
+						}
+					},
+					{
+						"state": "closing",
+						"speaking": "Gab",
+						"text": "Anyway, thanks for bringing the books! I was able to collect around 20 more books while you were gone. See you, Dash!",
+						"options": {
+							"You're welcome!": "FINISH_MINIGAME_2"
+						}
+					},
 				]
 			},
 			{

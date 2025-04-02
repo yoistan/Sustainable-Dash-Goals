@@ -3,14 +3,9 @@
 extends Node2D
 
 @onready var player_camera = load("res://SCENES/CHARACTERS/player_camera.tscn").instantiate()
+@onready var dash = $InGame/Dash
 
 func _ready():
 	Global.current_scene = Global.area_2_hallway_name
 	$InGame/Dash.add_child(player_camera)
 	
-
-func _on_go_back_body_entered(body):
-	print("entered")
-	if body.is_in_group("player"):
-		print("is a player")
-		$SceneTransition.fade_out_and_switch_to("res://SCENES/AREAS/area_2_Rizal_Lobby.tscn")

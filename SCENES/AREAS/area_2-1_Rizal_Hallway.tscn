@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bhqwubjf3kxtn"]
+[gd_scene load_steps=8 format=3 uid="uid://bhqwubjf3kxtn"]
 
 [ext_resource type="PackedScene" uid="uid://dkxygka7r5bfx" path="res://SCENES/BACKGROUNDS/area_2-1_bg_Rizal_Hallway.tscn" id="1_a2ihi"]
 [ext_resource type="Script" uid="uid://ts07yky6y2ca" path="res://SCRIPTS/AREAS/area_2_1_rizal_hallway.gd" id="1_vjoi2"]
@@ -7,9 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://gtu3ewkewaj3" path="res://SCENES/touch_controls.tscn" id="5_qdddx"]
 [ext_resource type="PackedScene" uid="uid://cmklnemra7p7j" path="res://SCENES/CUTSCENES/scene_transition.tscn" id="6_g4fm6"]
 [ext_resource type="PackedScene" uid="uid://calsyglk681kx" path="res://SCENES/CUTSCENES/area_introduction.tscn" id="7_nevxn"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nevxn"]
-size = Vector2(27.5, 78)
 
 [node name="Area2-1RizalHallway" type="Node2D"]
 script = ExtResource("1_vjoi2")
@@ -27,15 +24,7 @@ scale = Vector2(0.5, 0.5)
 
 [node name="TouchControls" parent="." instance=ExtResource("5_qdddx")]
 
-[node name="go_back" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="go_back"]
-position = Vector2(-2.75, 31)
-shape = SubResource("RectangleShape2D_nevxn")
-
 [node name="SceneTransition" parent="." instance=ExtResource("6_g4fm6")]
 visible = false
 
 [node name="AreaIntroduction" parent="." instance=ExtResource("7_nevxn")]
-
-[connection signal="body_entered" from="go_back" to="." method="_on_go_back_body_entered"]
