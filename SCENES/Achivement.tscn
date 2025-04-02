@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://c647h0ckfov8l" path="res://SDGs/sdg10.png" id="10_geb05"]
 [ext_resource type="Texture2D" uid="uid://7r6vb3oocywq" path="res://SDGs/sdg11.png" id="11_whwee"]
 [ext_resource type="Texture2D" uid="uid://bs4hdj26bxngc" path="res://SDGs/sdg12.png" id="12_wrboe"]
-[ext_resource type="Texture2D" uid="uid://bajpyo6orti74" path="res://SDGs/Sustainable_Development_Goal_13Climate.png" id="13_cs6sq"]
+[ext_resource type="Texture2D" uid="uid://bajpyo6orti74" path="res://SDGs/sdg13.png" id="13_cs6sq"]
 [ext_resource type="Texture2D" uid="uid://diwotrwp3l4q7" path="res://SDGs/sdg14.png" id="14_b4m12"]
 [ext_resource type="Texture2D" uid="uid://ba1jl66pyvn0f" path="res://SDGs/sdg15.png" id="15_cthaq"]
 [ext_resource type="Texture2D" uid="uid://cfq0ku0swda2g" path="res://SDGs/sdg16.png" id="16_x2y5v"]

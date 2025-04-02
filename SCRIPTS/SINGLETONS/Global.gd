@@ -2,20 +2,26 @@
 
 extends Node
 
+var game_completed : bool = false
+
+var first_play : bool = true # goes false when introduction_cutscene has been played once
+
 var player : Node = null
 var touch_controls : Node = null
 var minigame_1_done : bool = false
 var current_scene : String
 var last_scene : String
 
+var sdg_to_discuss : int
+
 # MINIGAME 2 STATUS
-var minigame_2_started : bool = false
-var minigame_2_room_1_done : bool = false
+var minigame_2_started : bool = false # branch 1: ongoing
+var minigame_2_room_1_done : bool = false # branch 2: finishing
+var minigame_2_done : bool = false # branch 3: default
 var minigame_2_room_1_score : int = 0
-var minigame_2_room_2_done : bool = false
-var minigame_2_room_3_done : bool = false
-var minigame_2_room_4_done : bool = false
-var minigame_2_done : bool = false
+#var minigame_2_room_2_done : bool = false
+#var minigame_2_room_3_done : bool = false
+#var minigame_2_room_4_done : bool = false
 
 # file name of areas for reference
 var area_1_name : String = "area_1_Outside_Rizal"

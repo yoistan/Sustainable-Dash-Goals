@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://brcmcxe2124uv"]
+[gd_scene load_steps=23 format=3 uid="uid://brcmcxe2124uv"]
 
 [ext_resource type="Script" uid="uid://bc2cka0xrngdb" path="res://SCRIPTS/title_screen.gd" id="1_7luok"]
 [ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="1_8ukxt"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://cmklnemra7p7j" path="res://SCENES/CUTSCENES/scene_transition.tscn" id="4_rbu6d"]
 [ext_resource type="StyleBox" uid="uid://b5sfp5ap26ljf" path="res://THEMES/settings_buttion.tres" id="5_uhs5y"]
 [ext_resource type="StyleBox" uid="uid://dhkp6uub5p2bw" path="res://THEMES/quit_button.tres" id="6_uhs5y"]
+[ext_resource type="Theme" uid="uid://47r1e1w4epsx" path="res://THEMES/button.tres" id="9_cn0fw"]
+[ext_resource type="PackedScene" uid="uid://u6xsxdmuqfs5" path="res://SCENES/meet_the_developers.tscn" id="10_608iu"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fjp3f"]
 
@@ -97,7 +99,21 @@ theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_8ukxt")
 
 [node name="SceneTransition" parent="." instance=ExtResource("4_rbu6d")]
+visible = false
+
+[node name="meetTheDevelopers" type="Button" parent="."]
+offset_left = 112.0
+offset_top = 80.0
+offset_right = 162.0
+offset_bottom = 92.0
+theme = ExtResource("9_cn0fw")
+theme_override_font_sizes/font_size = 5
+text = "Meet the developers"
+
+[node name="MeetTheDevelopers" parent="." instance=ExtResource("10_608iu")]
+visible = false
 
 [connection signal="pressed" from="playButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="settingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="quitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="meetTheDevelopers" to="." method="_on_meet_the_developers_pressed"]

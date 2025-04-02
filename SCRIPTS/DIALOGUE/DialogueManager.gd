@@ -5,8 +5,6 @@ extends Node2D
 @onready var dialogue_ui = $DialogueUi
 
 var npc : Node = null
-var minigame_1_done = false
-var minigame_2_done = false
 var next_state_after_animation
 
 func _ready():
@@ -42,9 +40,16 @@ func handle_dialogue_option(option):
 		if npc.current_branch_index < npc.dialogue_resource.get_npc_dialogue(npc.npc_id).size() - 1:
 			npc.set_dialogue_branch(npc.current_branch_index + 1)
 		hide_dialogue()
+
 	elif next_state == "exit":
 		npc.set_dialogue_state("start")
 		hide_dialogue()
+
+	elif next_state == "TO_OUTSIDE_RIZAL":
+		npc.set_dialogue_state("start")
+		Global.first_play = false
+		$SceneTransition.fade_out_and_switch_to("res://SCENES/AREAS/area_1_Outside_Rizal.tscn")
+
 	elif next_state == "START_MINIGAME_1":
 		next_state_after_animation = next_state
 		npc.set_dialogue_state("start")
@@ -52,21 +57,22 @@ func handle_dialogue_option(option):
 		Global.last_scene = Global.area_1_name
 		npc.set_dialogue_branch(npc.current_branch_index + 1) # move to default branch
 		$SceneTransition.fade_out_and_switch_to("res://SCENES/MINIGAMES/MINIGAME 1/instructions_1.tscn")
+	
 	elif next_state == "START_MINIGAME_2":
 		npc.set_dialogue_state("start")
 		hide_dialogue()
-		npc.set_dialogue_branch(npc.current_branch_index + 1) # move to ongoing quest branch
+		Global.minigame_2_started = true # move to "ongoing quest" quest branch
+	
 	elif next_state == "GO_OUT_ROOM_1":
 		next_state_after_animation = next_state
 		npc.set_dialogue_state("start")
-		npc.set_dialogue_branch(npc.current_branch_index + 1) # move to ongoing quest branch
 		Global.last_scene = Global.area_2_hallway_room_1
 		dialogue_ui.ui.visible = false
-		$SceneTransition.fade_out_and_switch_to("res://SCENES/AREAS/area_2-1_Rizal_Hallway.tscn")
 		Audio.stop_minigame_2_music()
 		if !Audio.area_2_music.is_playing():
 			Audio.play_area_2_music()
 		Global.minigame_2_room_1_done = true
+		$SceneTransition.fade_out_and_switch_to("res://SCENES/AREAS/area_2-1_Rizal_Hallway.tscn")
 	elif next_state == "GO_OUT_ROOM_2":
 		npc.set_dialogue_state("start")
 		npc.set_dialogue_branch(npc.current_branch_index + 1) # move to ongoing quest branch
@@ -138,8 +144,31 @@ func handle_dialogue_option(option):
 				show_dialogue(npc)
 		Global.minigame_2_room_1_score = 0
 	
-	elif next_state == "FINISH_MINIGAME_2":
-		pass
+	elif next_state == "FINISH_MINIGAME_2": 
+		Global.minigame_2_done = true
+		npc.set_dialogue_state("start")
+		hide_dialogue()
 	
+	## ABOUT THE SDGS
+	elif next_state == "ABOUT_SDG_13":
+		Global.sdg_to_discuss = 13
+		$SceneTransition.fade_out_and_switch_to("res://SCENES/CUTSCENES/Whizzy_SDG_cutscene.tscn")
+	elif next_state == "VISIT_SDG_13_PAGE":
+		OS.shell_open("https://www.globalgoals.org/goals/13-climate-action/")
+	elif next_state == "SDG_13_EXPLANATION_END":
+		Global.sdg_to_discuss = 0
+		$SceneTransition.fade_out_and_switch_to("res://SCENES/AREAS/area_1_Outside_Rizal.tscn")
+	
+	elif next_state == "ABOUT_SDG_4":
+		Global.sdg_to_discuss = 4
+		$SceneTransition.fade_out_and_switch_to("res://SCENES/CUTSCENES/Whizzy_SDG_cutscene.tscn")
+	elif next_state == "VISIT_SDG_4_PAGE":
+		OS.shell_open("https://www.globalgoals.org/goals/4-quality-education/")
+	elif next_state == "SDG_4_END":
+		Global.sdg_to_discuss = 0
+		$SceneTransition.fade_out_and_switch_to("res://SCENES/AREAS/area_2_Rizal_Lobby.tscn")
+		Global.game_completed = true
 	else:
 		show_dialogue(npc)
+	
+	print(next_state)

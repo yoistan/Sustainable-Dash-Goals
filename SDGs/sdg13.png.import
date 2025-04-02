@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bajpyo6orti74"
-path="res://.godot/imported/Sustainable_Development_Goal_13Climate.png-63cf5d32c7c2a3d8fe99c2331cce101a.ctex"
+path="res://.godot/imported/sdg13.png-cee7d4419688359e6cee32ceab8c3f39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SDGs/Sustainable_Development_Goal_13Climate.png"
-dest_files=["res://.godot/imported/Sustainable_Development_Goal_13Climate.png-63cf5d32c7c2a3d8fe99c2331cce101a.ctex"]
+source_file="res://SDGs/sdg13.png"
+dest_files=["res://.godot/imported/sdg13.png-cee7d4419688359e6cee32ceab8c3f39.ctex"]
 
 [params]
 

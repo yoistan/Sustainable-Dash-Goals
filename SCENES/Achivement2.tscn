@@ -21,7 +21,7 @@
 [ext_resource type="Theme" uid="uid://47r1e1w4epsx" path="res://THEMES/button.tres" id="19_rktsk"]
 [ext_resource type="Texture2D" uid="uid://0w82wivcyksl" path="res://ASSETS/DIALOGUE BOX/dialogue box.png" id="20_xacb3"]
 [ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="21_srn6x"]
-[ext_resource type="Texture2D" uid="uid://bajpyo6orti74" path="res://SDGs/Sustainable_Development_Goal_13Climate.png" id="22_5rt7x"]
+[ext_resource type="Texture2D" uid="uid://bajpyo6orti74" path="res://SDGs/sdg13.png" id="22_5rt7x"]
 [ext_resource type="Script" uid="uid://euemwe6t4a0t" path="res://SCENES/MINIGAMES/MINIGAME 1/area_2d.gd" id="23_x57j1"]
 [ext_resource type="Texture2D" uid="uid://b66871rgraf1d" path="res://SDGs/sdg4.png" id="24_nrfid"]
 [ext_resource type="Script" uid="uid://coep8mxjcppgh" path="res://scripts/sdg4.gd" id="25_cd522"]

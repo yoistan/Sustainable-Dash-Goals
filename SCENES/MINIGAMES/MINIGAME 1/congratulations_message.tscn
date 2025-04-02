@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://6aaq15svbwic"]
+[gd_scene load_steps=10 format=3 uid="uid://6aaq15svbwic"]
 
 [ext_resource type="Script" uid="uid://cb1wummmuoapg" path="res://SCENES/MINIGAMES/MINIGAME 1/congratulations_message.gd" id="1_24vq0"]
 [ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="2_l6gio"]
 [ext_resource type="Texture2D" uid="uid://bh2cxoub7kahr" path="res://ASSETS/Game1/487563015_998253318943820_9041308416311652833_n.jpg" id="2_p5hdd"]
 [ext_resource type="Texture2D" uid="uid://ds1fw4rrai54n" path="res://ASSETS/Game1/OJT-Dash.png" id="3_7n2gh"]
 [ext_resource type="Script" uid="uid://vl2dvjt5o7fg" path="res://SCENES/MINIGAMES/MINIGAME 1/Type.gd" id="3_l6gio"]
+[ext_resource type="PackedScene" uid="uid://cmklnemra7p7j" path="res://SCENES/CUTSCENES/scene_transition.tscn" id="6_7n2gh"]
 
 [sub_resource type="Animation" id="Animation_4urvl"]
 length = 5.0
@@ -113,3 +114,5 @@ self_modulate = Color(0.00422883, 0.00346357, 0.00197965, 1)
 offset_right = 160.0
 offset_bottom = 90.0
 color = Color(0, 0, 0, 1)
+
+[node name="SceneTransition" parent="." instance=ExtResource("6_7n2gh")]

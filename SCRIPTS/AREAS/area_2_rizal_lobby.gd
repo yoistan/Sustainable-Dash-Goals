@@ -15,4 +15,5 @@ func _ready():
 	
 	$InGame/Dash.add_child(player_camera)
 	Audio.stop_music2()
-	Audio.play_area_2_music()
+	if not Audio.area_2_music.is_playing():
+		Audio.play_area_2_music()

@@ -1,0 +1,171 @@
+[gd_scene load_steps=10 format=3 uid="uid://u6xsxdmuqfs5"]
+
+[ext_resource type="StyleBox" uid="uid://dvvo20w285goa" path="res://THEMES/panel_theme.tres" id="1_7nv4x"]
+[ext_resource type="Script" uid="uid://bdsxw88xml3nj" path="res://SCRIPTS/meet_the_developers.gd" id="1_t7ysj"]
+[ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="2_t7ysj"]
+[ext_resource type="Theme" uid="uid://47r1e1w4epsx" path="res://THEMES/button.tres" id="3_d8gdf"]
+[ext_resource type="Texture2D" uid="uid://g5x71td5s0wa" path="res://ASSETS/CHARACTERS/NPCS/Gabriel.png" id="4_o8fph"]
+[ext_resource type="Texture2D" uid="uid://djewybtqggsgw" path="res://ASSETS/CHARACTERS/NPCS/Laura.png" id="5_kggft"]
+[ext_resource type="Texture2D" uid="uid://bv6sesyyr166d" path="res://ASSETS/CHARACTERS/NPCS/Pants.png" id="6_t0xnh"]
+[ext_resource type="Texture2D" uid="uid://cawod1aci7wi5" path="res://ASSETS/CHARACTERS/NPCS/Justin.png" id="7_3tvmv"]
+
+[sub_resource type="Theme" id="Theme_152ex"]
+Panel/styles/panel = ExtResource("1_7nv4x")
+
+[node name="MeetTheDevelopers" type="CanvasLayer"]
+script = ExtResource("1_t7ysj")
+
+[node name="Panel" type="Panel" parent="."]
+texture_filter = 1
+offset_right = 160.0
+offset_bottom = 90.0
+
+[node name="ColorRect" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -87.0
+offset_top = -50.0
+offset_right = 90.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_152ex")
+
+[node name="Node" type="Control" parent="Panel"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -0.999996
+offset_top = 44.0
+offset_right = -0.999996
+offset_bottom = 44.0
+scale = Vector2(0.0519306, 0.0519306)
+
+[node name="Gabriel" type="Sprite2D" parent="Panel/Node"]
+position = Vector2(1232.41, 97)
+texture = ExtResource("4_o8fph")
+
+[node name="Label" type="Label" parent="Panel/Node/Gabriel"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -476.407
+offset_top = -520.642
+offset_right = 48.5931
+offset_bottom = -393.642
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_t7ysj")
+theme_override_font_sizes/font_size = 60
+text = "Johndave Gabriel M. Leocadio
+Artist"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Laura" type="Sprite2D" parent="Panel/Node"]
+position = Vector2(462.155, 154.052)
+texture = ExtResource("5_kggft")
+
+[node name="Label" type="Label" parent="Panel/Node/Laura"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -427.5
+offset_top = -577.642
+offset_right = -2.5
+offset_bottom = -450.642
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_t7ysj")
+theme_override_font_sizes/font_size = 60
+text = "Laura Sophia B. Atienza
+Programmer"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Pants" type="Sprite2D" parent="Panel/Node"]
+position = Vector2(1983.42, 112)
+texture = ExtResource("6_t0xnh")
+
+[node name="Label" type="Label" parent="Panel/Node/Pants"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -387.0
+offset_top = -535.642
+offset_right = -43.0
+offset_bottom = -408.642
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_t7ysj")
+theme_override_font_sizes/font_size = 60
+text = "Mickael T. Pantaleon
+Programmer"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Justin" type="Sprite2D" parent="Panel/Node"]
+position = Vector2(2695.91, 109)
+texture = ExtResource("7_3tvmv")
+
+[node name="Label" type="Label" parent="Panel/Node/Justin"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -416.5
+offset_top = -532.642
+offset_right = -13.5
+offset_bottom = -405.642
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_t7ysj")
+theme_override_font_sizes/font_size = 60
+text = "Justin Lance A. Zarate
+Artist"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.0
+offset_top = -43.0
+offset_right = 52.0
+offset_bottom = -26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_152ex")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 4.0
+offset_right = 151.0
+offset_bottom = 18.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_t7ysj")
+theme_override_font_sizes/font_size = 10
+text = "Meet the devs!"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = -23.0
+offset_right = 72.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_d8gdf")
+theme_override_font_sizes/font_size = 8
+text = "Continue"
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

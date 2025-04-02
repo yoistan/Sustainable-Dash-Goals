@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5c1alvrhisdo"]
+
+[ext_resource type="Script" uid="uid://dbmk4hf6pgqbw" path="res://SCRIPTS/CUTSCENES/introduction_cutscene.gd" id="1_4ygtu"]
+[ext_resource type="PackedScene" uid="uid://c1lbtikfidyi8" path="res://SCENES/BACKGROUNDS/area_1_bg_Outside_Rizal.tscn" id="1_m7me3"]
+[ext_resource type="PackedScene" uid="uid://dmuduumyiu88m" path="res://SCENES/CHARACTERS/whizzy.tscn" id="2_6v4tv"]
+[ext_resource type="PackedScene" uid="uid://cmklnemra7p7j" path="res://SCENES/CUTSCENES/scene_transition.tscn" id="4_cmi66"]
+
+[node name="IntroductionCutscene" type="Node2D"]
+script = ExtResource("1_4ygtu")
+
+[node name="Area1BgOutsideRizal" parent="." instance=ExtResource("1_m7me3")]
+
+[node name="Whizzy" parent="." instance=ExtResource("2_6v4tv")]
+position = Vector2(-54, 52)
+
+[node name="SceneTransition" parent="." instance=ExtResource("4_cmi66")]

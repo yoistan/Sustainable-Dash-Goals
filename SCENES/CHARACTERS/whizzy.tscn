@@ -1,6 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmuduumyiu88m"]
+[gd_scene load_steps=7 format=3 uid="uid://dmuduumyiu88m"]
 
+[ext_resource type="Script" uid="uid://cs7542pjiy5mr" path="res://SCRIPTS/CHARACTERS/whizzy.gd" id="1_us2ye"]
 [ext_resource type="Texture2D" uid="uid://c23hghed3nr3n" path="res://ASSETS/CHARACTERS/NPCS/Whizzy.png" id="1_vfyoi"]
+[ext_resource type="Script" uid="uid://ddjpebo5figom" path="res://RESOURCES/DIALOGUE/Dialogue.gd" id="2_5i8m5"]
+[ext_resource type="PackedScene" uid="uid://c0k4crxwnd6xv" path="res://SCENES/DIALOGUE/DialogueManager.tscn" id="2_umkdp"]
+
+[sub_resource type="Resource" id="Resource_twe52"]
+script = ExtResource("2_5i8m5")
+dialogues = {}
+metadata/_custom_type_script = "uid://ddjpebo5figom"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_umkdp"]
 radius = 21.0
@@ -8,14 +16,8 @@ height = 78.0
 
 [node name="Whizzy" type="CharacterBody2D" groups=["npc"]]
 collision_layer = 4
-
-[node name="Label" type="Label" parent="."]
-offset_left = -13.0
-offset_top = -52.0
-offset_right = 39.0
-offset_bottom = -29.0
-scale = Vector2(0.5, 0.5)
-text = "whizzy"
+script = ExtResource("1_us2ye")
+dialogue_resource = SubResource("Resource_twe52")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1, -3)
@@ -24,3 +26,5 @@ texture = ExtResource("1_vfyoi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_umkdp")
+
+[node name="DialogueManager" parent="." instance=ExtResource("2_umkdp")]

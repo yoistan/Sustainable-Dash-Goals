@@ -1,4 +1,153 @@
 {
+	"NPC_Whizzy": {
+		"trees": [
+			{
+				"branch_id": "NPC_Whizzy_introduction",
+				"dialogues": [
+					{
+						"state": "start",
+						"speaking": "Whizzy", 
+						"text": "Good morning, Dash! Got any plans today?",
+						"options": {
+							"Next": "morning"
+						}
+					},
+					{
+						"state": "morning",
+						"speaking": "Dash", 
+						"text": "Good morning, Whizzy! I do, I plan to lock in at the CLIR.",
+						"options": {
+							"Next": "lock_in_what"
+						}
+					},
+					{
+						"state": "lock_in_what",
+						"speaking": "Whizzy", 
+						"text": "(Whizzy looks confused) Lock in?",
+						"options": {
+							"Next": "lock_in_yes"
+						}
+					},
+					{
+						"state": "lock_in_yes",
+						"speaking": "Dash", 
+						"text": "It means to focus on something. In this case, I'll be locking in at the CLIR for the upcoming exams.",
+						"options": {
+							"Next": "oh_lock_in"
+						}
+					},
+					{
+						"state": "oh_lock_in",
+						"speaking": "Whizzy", 
+						"text": "Ohh! Yes, I understand it now. That's new to me! Well then, I'll also be locking in on studying the arts of Wizardry. See you and good luck, Dash!",
+						"options": {
+							"Next": "bye"
+						}
+					},
+					{
+						"state": "bye",
+						"speaking": "Dash", 
+						"text": "Thanks Whizzy, you too!",
+						"options": {
+							"Next": "TO_OUTSIDE_RIZAL"
+						}
+					},
+				],
+			},
+			{
+				"branch_id": "NPC_Whizzy_sdg_4",
+				"dialogues": [
+					{
+						"state": "start",
+						"speaking": "Whizzy", 
+						"text": "Hello again, Dash! I'm here to talk about Sustainable Development Goal #4: Quality Education!",
+						"options": {
+							"Next": "focus_question"
+						}
+					},
+					{
+						"state": "focus_question",
+						"speaking": "Dash", 
+						"text": "Hi Whizzy! What is SDG 4 all about?",
+						"options": {
+							"Next": "focus"
+						}
+					},
+					{
+						"state": "focus",
+						"speaking": "Whizzy", 
+						"text": "SDG 4 focuses on ensuring an inclusive and equitable quality education and promoting lifelong learning opportunities for everyone.",
+						"options": {
+							"Next": "how_to_help"
+						}
+					},
+					{
+						"state": "how_to_help",
+						"speaking": "Whizzy", 
+						"text": "As students, you can contribute to this goal by donating used books, promoting and taking free online courses, mentoring young people, and participating in school supply drives, to name a few.",
+						"options": {
+							"Next": "learn_more"
+						}
+					},
+					{
+						"state": "learn_more",
+						"speaking": "Whizzy", 
+						"text": "If you would like more information, you can check out the official Global Goals' webpage on this goal!",
+						"options": {
+							"Visit the webpage": "VISIT_SDG_4_PAGE",
+							"Thanks!": "SDG_4_END"
+						}
+					}
+				]
+			},
+			{
+				"branch_id": "NPC_Whizzy_sdg_13",
+				"dialogues": [
+					{
+						"state": "start",
+						"speaking": "Whizzy", 
+						"text": "Hello again, Dash! I'm here to talk about Sustainable Development Goal #13: Climate Action!",
+						"options": {
+							"Next": "focus_question"
+						}
+					},
+					{
+						"state": "focus_question",
+						"speaking": "Dash", 
+						"text": "Hi Whizzy! What is SDG 13 all about?",
+						"options": {
+							"Next": "focus"
+						}
+					},
+					{
+						"state": "focus",
+						"speaking": "Whizzy", 
+						"text": "SDG 13 focuses on combating climate change by reducing emissions, enhancing resilience, and promoting climate policies globally.",
+						"options": {
+							"Next": "how_to_help"
+						}
+					},
+					{
+						"state": "how_to_help",
+						"speaking": "Whizzy", 
+						"text": "As students, you can help by conserving energy, reducing waste, using eco-friendly transportation, spreading awareness, and supporting climate initiatives, to name a few.",
+						"options": {
+							"Next": "learn_more"
+						}
+					},
+					{
+						"state": "learn_more",
+						"speaking": "Whizzy", 
+						"text": "If you would like more information, you can check out the official Global Goals' webpage on this goal!",
+						"options": {
+							"Visit the webpage": "VISIT_SDG_13_PAGE",
+							"Thanks!": "SDG_13_EXPLANATION_END"
+						}
+					}
+				]
+			}
+		],
+	},
 	"NPC_Laura": {
 		"trees": [
 			{
@@ -9,7 +158,7 @@
 						"speaking": "Laura", 
 						"text": "(Laura talks to herself) Hmm, what should I do with all this?",
 						"options": {
-							" Next ": "dash_reply_1"
+							"Next": "dash_reply_1"
 						}
 					},
 					{
@@ -17,7 +166,7 @@
 						"speaking": "Dash", 
 						"text": "Hi Laura! What are those?",
 						"options": {
-							" Next ": "in_progress"
+							"Next": "in_progress"
 						}
 					},
 					{
@@ -25,7 +174,7 @@
 						"speaking": "Laura", 
 						"text": "Oh, hi Dash! Yes, these are some leftover props from the stage play but no one claimed them. I’m thinking of organizing them based on whether the prop item can be segregated, recycled, or has to be thrown away.",
 						"options": {
-							" Next ": "dash_reply_2"
+							"Next": "dash_reply_2"
 						}
 					},
 					{
@@ -33,7 +182,7 @@
 						"speaking": "Dash", 
 						"text": "Why not just throw everything away?",
 						"options": {
-							" Next ": "start_quest"
+							"Next": "start_quest"
 						}
 					},
 					{
@@ -41,7 +190,7 @@
 						"speaking": "Laura", 
 						"text": "That’ll only end up harming our environment if you don’t properly dispose of your waste items. Besides, doing this helps you practice SDG 13 as well as reducing the impact of climate change!",
 						"options": {
-							" Next ": "dash_reply_3"
+							"Next": "dash_reply_3"
 						}
 					},
 					{
@@ -49,7 +198,7 @@
 						"speaking": "Dash", 
 						"text": "That makes sense. Let's segregate them!",
 						"options": {
-							" Next ": "instructions"
+							"Next": "instructions"
 						}
 					},
 					{
@@ -70,7 +219,17 @@
 						"speaking": "Laura", 
 						"text": "Hi again! Thanks for helping me. I got the hang of it now!",
 						"options": {
-							"No problem!": "exit"
+							"No problem!": "exit",
+							"About SDG 13": "learn_more"
+						}
+					},
+					{
+						"state": "learn_more",
+						"speaking": "Laura", 
+						"text": "Do you want to learn more about SDG 13: Climate Action?",
+						"options": {
+							"Yes": "ABOUT_SDG_13",
+							"No": "exit"
 						}
 					}
 				]
@@ -195,32 +354,32 @@
 						"speaking": "Gab",
 						"text": "Hey! You're back with the books! Took you a while.",
 						"options": {
-							"Next": "dash_reply_1"
+							"Next": "easy_or_hard"
 						}
 					},
 					{
-						"state": "dash_reply_1",
+						"state": "easy_or_hard",
 						"speaking": "Dash",
-						"text": "Yeah! I was suddenly tested on my ICT knowledge. It was -",
+						"text": "Yeah! I was suddenly tested on my ICT knowledge. It was...",
 						"options": {
-							"Easy": "gab_reply_easy",
-							"Hard": "gab_reply_hard"
+							"Easy": "easy",
+							"Hard": "hard"
 						}
 					},
 					{
-						"state": "gab_reply_easy",
+						"state": "easy",
 						"speaking": "Gab",
 						"text": "Really? That's great! I'm sure you'll do great in an ICT quiz bee.",
 						"options": {
-							"Yeah!": ""
+							"Yeah!": "closing"
 						}
 					},
 					{
-						"state": "gab_reply_hard",
+						"state": "hard",
 						"speaking": "Gab",
-						"text": "Really? Well, you can't learn if you don't mistakes. You'll get better!",
+						"text": "Really? Well, you can't learn if you don't make mistakes. You'll get better!",
 						"options": {
-							"You're right.": ""
+							"You're right.": "closing"
 						}
 					},
 					{
@@ -241,7 +400,17 @@
 						"speaking": "Gab",
 						"text": "Hey! Thanks for helping me. These donations will surely be of help.",
 						"options": {
-							"No problem!": "exit"
+							"No problem!": "exit",
+							"About SDG 4": "learn_more"
+						}
+					},
+					{
+						"state": "learn_more",
+						"speaking": "Gab",
+						"text": "Do you want to learn more about SDG 4: Quality Education?",
+						"options": {
+							"Yes": "ABOUT_SDG_4",
+							"No": "exit"
 						}
 					}
 				]
@@ -288,7 +457,7 @@
 					{
 						"state": "what_if_wrong",
 						"speaking": "Sophia",
-						"text": "I’ll ask you another until you get it right! Don’t worry, they won’t be that hard.",
+						"text": "Don’t worry, they won’t be that hard. I have 3 questions in total. You can do it!",
 						"options": {
 							"I'm ready!": "start_recitation"
 						}

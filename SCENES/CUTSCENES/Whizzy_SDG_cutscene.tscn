@@ -1,0 +1,28 @@
+[gd_scene load_steps=7 format=3 uid="uid://bd502inqmm2fl"]
+
+[ext_resource type="Script" uid="uid://bi0t12t05k0sv" path="res://SCRIPTS/CUTSCENES/whizzy_sdg_cutscene.gd" id="1_3m6jo"]
+[ext_resource type="PackedScene" uid="uid://cg06tyesx8kri" path="res://SCENES/BACKGROUNDS/smithereens_background.tscn" id="1_8mj36"]
+[ext_resource type="PackedScene" uid="uid://dmuduumyiu88m" path="res://SCENES/CHARACTERS/whizzy.tscn" id="3_61ktl"]
+[ext_resource type="Texture2D" uid="uid://b66871rgraf1d" path="res://SDGs/sdg4.png" id="4_61ktl"]
+[ext_resource type="Texture2D" uid="uid://bajpyo6orti74" path="res://SDGs/sdg13.png" id="5_xu850"]
+[ext_resource type="PackedScene" uid="uid://cmklnemra7p7j" path="res://SCENES/CUTSCENES/scene_transition.tscn" id="6_0urh4"]
+
+[node name="WhizzySdgCutscene" type="Node2D"]
+script = ExtResource("1_3m6jo")
+
+[node name="SmithereensBackground" parent="." instance=ExtResource("1_8mj36")]
+
+[node name="Whizzy" parent="." instance=ExtResource("3_61ktl")]
+position = Vector2(215, 48)
+
+[node name="sdg4" type="Sprite2D" parent="."]
+position = Vector2(80, 16)
+scale = Vector2(0.0284511, 0.0284511)
+texture = ExtResource("4_61ktl")
+
+[node name="sdg13" type="Sprite2D" parent="."]
+position = Vector2(80, 16)
+scale = Vector2(0.0355177, 0.0355177)
+texture = ExtResource("5_xu850")
+
+[node name="SceneTransition" parent="." instance=ExtResource("6_0urh4")]

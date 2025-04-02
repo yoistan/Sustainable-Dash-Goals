@@ -18,6 +18,7 @@ const JUSTIN = preload("res://ASSETS/CHARACTERS/NPCS/Justin.png")
 const MICKAEL = preload("res://ASSETS/CHARACTERS/NPCS/Mickael.png")
 const PANTS = preload("res://ASSETS/CHARACTERS/NPCS/Pants.png")
 const SOPHIA = preload("res://ASSETS/CHARACTERS/NPCS/Sophia.png")
+const WHIZZY = preload("res://ASSETS/CHARACTERS/NPCS/Whizzy.png")
 
 # button themes
 const DIALOGUE_BUTTON_THEME = preload("res://THEMES/dialogue_button_theme.tres")
@@ -94,3 +95,5 @@ func set_sprite(npc):
 			npc_sprite.texture = SOPHIA
 		"Gabriel":
 			npc_sprite.texture = GABRIEL
+		"Whizzy":
+			npc_sprite.texture = WHIZZY
