@@ -5,17 +5,20 @@ extends StaticBody2D
 var rizal_room : int
 var label_parents = []
 
+@onready var scene_transition = $"../../SceneTransition"
+
+
 func _input(event):
 	if event.is_action_pressed("interact"): 
 		match rizal_room:
 			308:
-				get_tree().change_scene_to_file("res://SCENES/AREAS/area_2-1_room_1.tscn")
+				scene_transition.fade_out_and_switch_to("res://SCENES/AREAS/area_2-1_room_1.tscn")
 			306:
-				get_tree().change_scene_to_file("res://SCENES/AREAS/area_2-1_room_2.tscn")
+				scene_transition.fade_out_and_switch_to("res://SCENES/AREAS/area_2-1_room_2.tscn")
 			304:
-				get_tree().change_scene_to_file("res://SCENES/AREAS/area_2-1_room_3.tscn")
+				scene_transition.fade_out_and_switch_to("res://SCENES/AREAS/area_2-1_room_3.tscn")
 			302:
-				get_tree().change_scene_to_file("res://SCENES/AREAS/area_2-1_room_4.tscn")
+				scene_transition.fade_out_and_switch_to("res://SCENES/AREAS/area_2-1_room_4.tscn")
 
 # ENTERS
 

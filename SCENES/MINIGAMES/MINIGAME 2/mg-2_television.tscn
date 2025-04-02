@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://bu8u2qyf2m1td"]
+[gd_scene load_steps=2 format=3 uid="uid://bu8u2qyf2m1td"]
+
+[ext_resource type="Script" uid="uid://da2q132fntqmq" path="res://SCRIPTS/mg_2_television.gd" id="1_apwu3"]
 
 [node name="Mg-2Television" type="Node2D"]
+script = ExtResource("1_apwu3")
 
 [node name="TVFrame" type="ColorRect" parent="."]
 anchors_preset = 8

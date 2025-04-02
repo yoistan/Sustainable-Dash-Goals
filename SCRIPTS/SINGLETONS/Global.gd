@@ -5,10 +5,17 @@ extends Node
 var player : Node = null
 var touch_controls : Node = null
 var minigame_1_done : bool = false
-var minigame_2_started : bool = false
-var minigame_2_done : bool = false
 var current_scene : String
 var last_scene : String
+
+# MINIGAME 2 STATUS
+var minigame_2_started : bool = false
+var minigame_2_room_1_done : bool = false
+var minigame_2_room_1_score : int = 0
+var minigame_2_room_2_done : bool = false
+var minigame_2_room_3_done : bool = false
+var minigame_2_room_4_done : bool = false
+var minigame_2_done : bool = false
 
 # file name of areas for reference
 var area_1_name : String = "area_1_Outside_Rizal"

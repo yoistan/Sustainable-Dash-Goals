@@ -56,30 +56,86 @@ func handle_dialogue_option(option):
 		npc.set_dialogue_state("start")
 		hide_dialogue()
 		npc.set_dialogue_branch(npc.current_branch_index + 1) # move to ongoing quest branch
-	elif next_state == "go_out_room_1":
+	elif next_state == "GO_OUT_ROOM_1":
 		next_state_after_animation = next_state
 		npc.set_dialogue_state("start")
 		npc.set_dialogue_branch(npc.current_branch_index + 1) # move to ongoing quest branch
 		Global.last_scene = Global.area_2_hallway_room_1
 		dialogue_ui.ui.visible = false
 		$SceneTransition.fade_out_and_switch_to("res://SCENES/AREAS/area_2-1_Rizal_Hallway.tscn")
-	elif next_state == "go_out_room_2":
+		Audio.stop_minigame_2_music()
+		if !Audio.area_2_music.is_playing():
+			Audio.play_area_2_music()
+		Global.minigame_2_room_1_done = true
+	elif next_state == "GO_OUT_ROOM_2":
 		npc.set_dialogue_state("start")
 		npc.set_dialogue_branch(npc.current_branch_index + 1) # move to ongoing quest branch
 		Global.last_scene = Global.area_2_hallway_room_2
 		get_tree().call_deferred("change_scene_to_file", "res://SCENES/AREAS/area_2-1_Rizal_Hallway.tscn")
 		dialogue_ui.ui.visible = false
-	elif next_state == "go_out_room_3":
+		Audio.stop_minigame_2_music()
+		Audio.play_area_2_music()
+	elif next_state == "GO_OUT_ROOM_3":
 		npc.set_dialogue_state("start")
 		npc.set_dialogue_branch(npc.current_branch_index + 1) # move to ongoing quest branch
 		Global.last_scene = Global.area_2_hallway_room_3
 		get_tree().call_deferred("change_scene_to_file", "res://SCENES/AREAS/area_2-1_Rizal_Hallway.tscn")
 		dialogue_ui.ui.visible = false
-	elif next_state == "go_out_room_4":
+		Audio.stop_minigame_2_music()
+		Audio.play_area_2_music()
+	elif next_state == "GO_OUT_ROOM_4":
 		npc.set_dialogue_state("start")
 		npc.set_dialogue_branch(npc.current_branch_index + 1) # move to ongoing quest branch
 		Global.last_scene = Global.area_2_hallway_room_4
 		get_tree().call_deferred("change_scene_to_file", "res://SCENES/AREAS/area_2-1_Rizal_Hallway.tscn")
 		dialogue_ui.ui.visible = false
+		Audio.stop_minigame_2_music()
+		Audio.play_area_2_music()
+	elif next_state == "FLASH_RECITATION_START":
+		Audio.stop_area_2_music()
+		Audio.play_minigame_2_music()
+		
+		# set the dialogue state depending on the branch
+		if npc.current_branch_index != 0: # if it is a returning player
+			npc.set_dialogue_state("start_recitation")
+		else: # if it is the first time
+			npc.set_dialogue_state("what_if_wrong")
+		
+		show_dialogue(npc)
+	
+	# MINIGAME 2 ROOM 1 SCORING
+	elif next_state == "1_Q1_correct":
+		Global.minigame_2_room_1_score += 1
+		npc.set_dialogue_state("1_Q1_correct")
+		show_dialogue(npc)
+		print(Global.minigame_2_room_1_score)
+		
+	elif next_state == "1_Q2_correct":
+		Global.minigame_2_room_1_score += 1
+		npc.set_dialogue_state("1_Q2_correct")
+		show_dialogue(npc)
+		print(Global.minigame_2_room_1_score)
+		
+	elif next_state == "1_Q3_correct":
+		Global.minigame_2_room_1_score += 1
+		npc.set_dialogue_state("1_Q3_correct")
+		show_dialogue(npc)
+		print(Global.minigame_2_room_1_score)
+		
+	elif next_state == "SCORE_REVEAL":
+		match Global.minigame_2_room_1_score:
+			0:
+				npc.set_dialogue_state("score_0")
+				show_dialogue(npc)
+			1:
+				npc.set_dialogue_state("score_1")
+				show_dialogue(npc)
+			2:
+				npc.set_dialogue_state("score_2")
+				show_dialogue(npc)
+			3:
+				npc.set_dialogue_state("score_3")
+				show_dialogue(npc)
+		Global.minigame_2_room_1_score = 0
 	else:
 		show_dialogue(npc)

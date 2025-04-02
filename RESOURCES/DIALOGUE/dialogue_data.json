@@ -9,7 +9,7 @@
 						"speaking": "Laura", 
 						"text": "(Laura talks to herself) Hmm, what should I do with all this?",
 						"options": {
-							"   Next   ": "dash_reply_1"
+							" Next ": "dash_reply_1"
 						}
 					},
 					{
@@ -17,7 +17,7 @@
 						"speaking": "Dash", 
 						"text": "Hi Laura! What are those?",
 						"options": {
-							"   Next   ": "in_progress"
+							" Next ": "in_progress"
 						}
 					},
 					{
@@ -25,7 +25,7 @@
 						"speaking": "Laura", 
 						"text": "Oh, hi Dash! Yes, these are some leftover props from the stage play but no one claimed them. I’m thinking of organizing them based on whether the prop item can be segregated, recycled, or has to be thrown away.",
 						"options": {
-							"   Next   ": "dash_reply_2"
+							" Next ": "dash_reply_2"
 						}
 					},
 					{
@@ -33,7 +33,7 @@
 						"speaking": "Dash", 
 						"text": "Why not just throw everything away?",
 						"options": {
-							"   Next   ": "start_quest"
+							" Next ": "start_quest"
 						}
 					},
 					{
@@ -41,7 +41,7 @@
 						"speaking": "Laura", 
 						"text": "That’ll only end up harming our environment if you don’t properly dispose of your waste items. Besides, doing this helps you practice SDG 13 as well as reducing the impact of climate change!",
 						"options": {
-							"   Next   ": "dash_reply_3"
+							" Next ": "dash_reply_3"
 						}
 					},
 					{
@@ -49,7 +49,7 @@
 						"speaking": "Dash", 
 						"text": "That makes sense. Let's segregate them!",
 						"options": {
-							"   Next   ": "instructions"
+							" Next ": "instructions"
 						}
 					},
 					{
@@ -70,7 +70,7 @@
 						"speaking": "Laura", 
 						"text": "Hi again! Thanks for helping me. I got the hang of it now!",
 						"options": {
-							"  No problem!  ": "exit"
+							"No problem!": "exit"
 						}
 					}
 				]
@@ -88,7 +88,7 @@
 						"speaking": "Gab", 
 						"text": "Eight... ten... twelve Filipino books...",
 						"options": {
-							"  Next  ": "dash_reply_1"
+							"Next": "dash_reply_1"
 						}
 					},
 					{
@@ -96,7 +96,7 @@
 						"speaking": "Dash", 
 						"text": "Good day Gab! What's going on?",
 						"options": {
-							"  Next  ": "in_progress"
+							"Next": "in_progress"
 						}
 					},
 					{
@@ -121,7 +121,7 @@
 						"speaking": "Gab",
 						"text": "Woah, Magic 101? Thanks for your contribution! Would love to read it while I'm here. I won't bring it home, of course!",
 						"options": {
-							"  Next  ": "dash_reply_2"
+							"Next": "dash_reply_2"
 						}
 					},
 					{
@@ -129,7 +129,7 @@
 						"speaking": "Dash",
 						"text": "No problem!",
 						"options": {
-							"  Next  ": "about_donations"
+							"Next": "about_donations"
 						}
 					},
 					{
@@ -137,7 +137,7 @@
 						"speaking": "Gab",
 						"text": "That’s okay. The book drive will run until Friday, then we’ll deliver them by next week.",
 						"options": {
-							"  Next  ": "dash_reply_3"
+							"Next": "dash_reply_3"
 						}
 					},
 					{
@@ -145,7 +145,7 @@
 						"speaking": "Dash",
 						"text": "Oh, awesome!",
 						"options": {
-							"  Next  ": "about_donations"
+							"Next": "about_donations"
 						}
 					},
 					{
@@ -153,7 +153,7 @@
 						"speaking": "Gab",
 						"text": "Speaking of donations, I was going to go room-to-room on this floor to collect some books, but then no one would be here in case someone wants to donate here directly…",
 						"options": {
-							"  Next  ": "dash_reply_4"
+							"Next": "dash_reply_4"
 						}
 					},
 					{
@@ -161,7 +161,7 @@
 						"speaking": "Dash",
 						"text": "I can help!",
 						"options": {
-							"  Next  ": "instructions"
+							"Next": "instructions"
 						}
 					},
 					{
@@ -169,7 +169,7 @@
 						"speaking": "Gab",
 						"text": "Really? You’ll do that? Thank you! You just need to visit 4 rooms on this floor: R308, R306, R304, and R302.",
 						"options": {
-							"  On it!  ": "START_MINIGAME_2"
+							"On it!": "START_MINIGAME_2"
 						}
 					}
 				]
@@ -182,7 +182,7 @@
 						"speaking": "Gab",
 						"text": "The rooms are on the right.",
 						"options": {
-							"  Okay  ": "exit"
+							"Okay": "exit"
 						}
 					}
 				]
@@ -195,7 +195,7 @@
 						"speaking": "Gab",
 						"text": "Hey! Thanks for helping me. These donations will surely be of help.",
 						"options": {
-							"  No problem!  ": "exit"
+							"No problem!": "exit"
 						}
 					}
 				]
@@ -212,7 +212,7 @@
 						"speaking": "Sophia",
 						"text": "Hi Dash! I’m Sophia, the class representative of I120a. Here are all the donated books from my section.",
 						"options": {
-							"  Next  ": "dash_reply_1"
+							"Next": "dash_reply_1"
 						}
 					},
 					{
@@ -220,24 +220,23 @@
 						"speaking": "Dash",
 						"text": "Thanks! I'll take these to Gab now.",
 						"options": {
-							"  Next  ": "in_progress"
+							"Next": "in_progress"
 						}
 					},
 					{
 						"state": "in_progress",
 						"speaking": "Sophia",
-						"text": "Not so fast! Before I allow you these books, ",
+						"text": "Not so fast! Before I allow you these books, I need to ask you a question about ICT. Welcome to Flash Recitation!",
 						"options": {
-							"Flash Rectiation!?": "instructions"
+							"Flash Rectiation!?": "FLASH_RECITATION_START"
 						}
 					},
 					{
-						"state": "instructions",
+						"state": "FLASH_RECITATION_START",
 						"speaking": "Sophia",
 						"text": "Yep! Just answer one question related to ICT correctly and I’ll lend you these books.",
 						"options": {
-							"And if I get it wrong?": "what_if_wrong",
-							"I'm ready!": "start_recitation"
+							"And if I get it wrong?": "what_if_wrong"
 						}
 					},
 					{
@@ -253,7 +252,7 @@
 						"speaking": "Sophia",
 						"text": "Question 1: What variable type stores true or false?",
 						"options": {
-							"Boolean": "Q1_correct",
+							"Boolean": "correct",
 							"String": "Q1_incorrect"
 						}
 					},
@@ -266,11 +265,11 @@
 						}
 					},
 					{
-						"state": "Q1_correct",
+						"state": "correct",
 						"speaking": "Sophia",
-						"text": "Correct! As promised, here are your books!",
+						"text": "Correct! As promised, here are your books! If you'd like, you can come back to answer all my ICT questions to test your knowledge.",
 						"options": {
-							"Nice!": "go_out"
+							"Nice!": "GO_OUT_ROOM_1"
 						}
 					},
 					{
@@ -279,7 +278,7 @@
 						"text": "Question 2: What tool can you use to create geometric shapes in Adobe Animate?",
 						"options": {
 							"Lasso tool": "Q2_incorrect",
-							"Shape tool": "Q2_correct"
+							"Shape tool": "correct"
 						}
 					},
 					{
@@ -291,11 +290,28 @@
 						}
 					},
 					{
-						"state": "Q2_correct",
+						"state": "Q3",
 						"speaking": "Sophia",
-						"text": "Correct! As promised, here are your books.",
+						"text": "Question 3: What is the process of constructing a series of bones or a skeleton for your 2D or 3D model?",
 						"options": {
-							"Nice!": "go_out"
+							"Tweening": "Q3_incorrect",
+							"Rigging": "correct"
+						}
+					},
+					{
+						"state": "Q3_incorrect",
+						"speaking": "Sophia",
+						"text": "Close! It's rigging. Rigging is the process of constructing a skeleton that you can easily move to animate your character, while tweening is the process of creating intermediate frames between keyframes to smoothly animate objects!",
+						"options": {
+							"Next question": "out_of_questions"
+						}
+					},
+					{
+						"state": "out_of_questions",
+						"speaking": "Sophia",
+						"text": "Hmm... I can't think of any more questions. Let me ask you my first question again and let's see if you remembered the terms!",
+						"options": {
+							"I got this!": "start_recitation"
 						}
 					}
 				]
@@ -308,17 +324,131 @@
 						"speaking": "Sophia",
 						"text": "Welcome back! Here to test your knowledge on ICT again?",
 						"options": {
-							"Play": "play",
-							"Wrong room!": "exit"
+							"Yes!": "FLASH_RECITATION_START",
+							"Wrong room!": "GO_OUT_ROOM_1"
 						}
 					},
 					{
-						"state": "question_1",
+						"state": "FLASH_RECITATION_START",
 						"speaking": "Sophia",
-						"text": "In animation, what are the frames that define the start and end of an action or motion called?",
+						"text": "Okay! Just like last time, I have 3 ICT-related questions for you.",
 						"options": {
-							"Keyframes": "Q1_correct",
-							"Main frames": "Q1_incorrect"
+							"I'm ready!": "start_recitation"
+						}
+					},
+					{
+						"state": "start_recitation",
+						"speaking": "Sophia",
+						"text": "Question 1: What variable type stores true or false?",
+						"options": {
+							"Boolean": "1_Q1_correct",
+							"String": "Q1_incorrect"
+						}
+					},
+					{
+						"state": "Q1_incorrect",
+						"speaking": "Sophia",
+						"text": "Close! It's boolean. A boolean's value can either be true or false. A string, on the other hand, stores text values.",
+						"options": {
+							"Next question": "Q2"
+						}
+					},
+					{
+						"state": "1_Q1_correct",
+						"speaking": "Sophia",
+						"text": "Correct! That's 1 point.",
+						"options": {
+							"Next question": "Q2"
+						}
+					},
+					{
+						"state": "1_Q2_correct",
+						"speaking": "Sophia",
+						"text": "Correct! That's 1 point.",
+						"options": {
+							"Next question": "Q3"
+						}
+					},
+					{
+						"state": "1_Q3_correct",
+						"speaking": "Sophia",
+						"text": "Correct! That's 1 point.",
+						"options": {
+							"Complete Flash Recitation": "finished"
+						}
+					},
+					{
+						"state": "Q2",
+						"speaking": "Sophia",
+						"text": "Question 2: What tool can you use to create geometric shapes in Adobe Animate?",
+						"options": {
+							"Lasso tool": "Q2_incorrect",
+							"Shape tool": "1_Q2_correct"
+						}
+					},
+					{
+						"state": "Q2_incorrect",
+						"speaking": "Sophia",
+						"text": "Close! It's Shape tool. The shape tool is for making simple geometric shapes, while the lasso tool is used for selecting elements.",
+						"options": {
+							"Next question": "Q3"
+						}
+					},
+					{
+						"state": "Q3",
+						"speaking": "Sophia",
+						"text": "Question 3: What is the process of constructing a series of bones or a skeleton for your 2D or 3D model?",
+						"options": {
+							"Tweening": "Q3_incorrect",
+							"Rigging": "1_Q3_correct"
+						}
+					},
+					{
+						"state": "Q3_incorrect",
+						"speaking": "Sophia",
+						"text": "Close! It's rigging. Rigging is the process of constructing a skeleton that you can easily move to animate your character, while tweening is the process of creating intermediate frames between keyframes to smoothly animate objects!",
+						"options": {
+							"Complete Flash Recitation": "finished"
+						}
+					},
+					{
+						"state": "finished",
+						"speaking": "Sophia",
+						"text": "You finished all 3 questions! Let's see... you got...",
+						"options": {
+							"I got...": "SCORE_REVEAL"
+						}
+					},
+					{
+						"state": "score_3",
+						"speaking": "Sophia",
+						"text": "You got a perfect score of 3/3! Congratulations!",
+						"options": {
+							"Nice!": "GO_OUT_ROOM_1"
+						}
+					},
+					{
+						"state": "score_2",
+						"speaking": "Sophia",
+						"text": "You got 2 out of 3 questions correct! Awesome!",
+						"options": {
+							"Nice!": "GO_OUT_ROOM_1"
+						}
+					},
+					{
+						"state": "score_1",
+						"speaking": "Sophia",
+						"text": "You got 1 out of 3 questions correct! Better luck next time~",
+						"options": {
+							"Leave room": "GO_OUT_ROOM_1"
+						}
+					},
+					{
+						"state": "score_0",
+						"speaking": "Sophia",
+						"text": "You got 0 out of 3 questions correct! Better luck next time~",
+						"options": {
+							"Leave room": "GO_OUT_ROOM_1"
 						}
 					}
 				]

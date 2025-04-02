@@ -3,4 +3,5 @@
 extends Node2D
 
 func _ready():
+	$SceneTransition.fade_in()
 	$Sophia.start_dialogue()
