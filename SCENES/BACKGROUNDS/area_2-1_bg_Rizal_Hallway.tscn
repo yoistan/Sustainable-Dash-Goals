@@ -89,7 +89,7 @@ shape = SubResource("RectangleShape2D_bpb2m")
 
 [node name="ROOM_1" type="Node" parent="."]
 
-[node name="enter_room_1" type="Area2D" parent="ROOM_1"]
+[node name="enter_room_1" type="Area2D" parent="ROOM_1" groups=["room"]]
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ROOM_1/enter_room_1"]
@@ -102,7 +102,7 @@ shape = SubResource("RectangleShape2D_ruovh")
 
 [node name="ROOM_2" type="Node" parent="."]
 
-[node name="enter_room_2" type="Area2D" parent="ROOM_2"]
+[node name="enter_room_2" type="Area2D" parent="ROOM_2" groups=["room"]]
 position = Vector2(232, 0)
 collision_mask = 2
 
@@ -116,7 +116,7 @@ shape = SubResource("RectangleShape2D_ruovh")
 
 [node name="ROOM_3" type="Node" parent="."]
 
-[node name="enter_room_3" type="Area2D" parent="ROOM_3"]
+[node name="enter_room_3" type="Area2D" parent="ROOM_3" groups=["room"]]
 position = Vector2(472, 0)
 collision_mask = 2
 
@@ -128,7 +128,7 @@ shape = SubResource("RectangleShape2D_ruovh")
 position = Vector2(-126, 38)
 shape = SubResource("RectangleShape2D_ruovh")
 
-[node name="ROOM_4" type="Node" parent="."]
+[node name="ROOM_4" type="Node" parent="." groups=["room"]]
 
 [node name="enter_room_4" type="Area2D" parent="ROOM_4"]
 position = Vector2(704, 0)

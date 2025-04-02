@@ -1,0 +1,122 @@
+[gd_scene load_steps=7 format=3 uid="uid://calsyglk681kx"]
+
+[ext_resource type="Script" uid="uid://cxwh8m2l0luu2" path="res://SCRIPTS/CUTSCENES/area_introduction.gd" id="1_n7nvg"]
+[ext_resource type="Theme" uid="uid://c6fdgoktd1wy1" path="res://THEMES/area_intro_theme.tres" id="1_oiyn0"]
+
+[sub_resource type="Animation" id="Animation_n7nvg"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_oiyn0"]
+resource_name = "area_intro"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1, 3.5, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel/ColorRect:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 1, 3.5, 4),
+"transitions": PackedFloat32Array(0.5, 1, 1.5, 1),
+"update": 0,
+"values": [Vector2(0, 0.5), Vector2(128, 0.5), Vector2(128, 0.5), Vector2(0, 0.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel/ColorRect:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5, 1, 3.5, 4),
+"transitions": PackedFloat32Array(0.5, 1, 1.5, 1),
+"update": 0,
+"values": [Vector2(80, 44.75), Vector2(16, 45), Vector2(16, 45), Vector2(80, 44.75)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Panel/Label:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-7.5, 23)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_d6108"]
+_data = {
+&"RESET": SubResource("Animation_n7nvg"),
+&"area_intro": SubResource("Animation_oiyn0")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n7nvg"]
+
+[node name="AreaIntroduction" type="CanvasLayer"]
+script = ExtResource("1_n7nvg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_d6108")
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -45.0
+offset_right = 80.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_n7nvg")
+
+[node name="ColorRect" type="ColorRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -0.25
+offset_bottom = 0.25
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -87.5
+offset_top = -22.0
+offset_right = 87.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_oiyn0")
+text = "AREA"
+horizontal_alignment = 1
+clip_text = true
+visible_characters = 0
+visible_ratio = 0.0

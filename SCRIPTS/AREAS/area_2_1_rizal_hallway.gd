@@ -9,5 +9,8 @@ func _ready():
 	$InGame/Dash.add_child(player_camera)
 	
 
-func _on_go_back_body_entered(_body):
-	$SceneTransition.fade_out_and_switch_to("res://SCENES/AREAS/area_2_Rizal_Lobby.tscn")
+func _on_go_back_body_entered(body):
+	print("entered")
+	if body.is_in_group("player"):
+		print("is a player")
+		$SceneTransition.fade_out_and_switch_to("res://SCENES/AREAS/area_2_Rizal_Lobby.tscn")

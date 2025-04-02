@@ -28,10 +28,10 @@ func _on_settings_button_pressed():
 	else:
 		print("Error: settings.tscn failed to load.")
 
-
-
-
 func _on_main_menu_pressed():
 	toggle_pause()
+	Audio.stop_music2()
+	Audio.stop_area_2_music()
+	Audio.stop_minigame_2_music()
 	get_tree().change_scene_to_file("res://SCENES/main.tscn")
 	

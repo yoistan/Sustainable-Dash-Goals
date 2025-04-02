@@ -66,6 +66,7 @@ func add_label(parent):
 	label.text = "Enter R" + str(rizal_room)
 	label.set_theme(DIALOGUE_TEXT_THEME)
 	label.set_horizontal_alignment(HORIZONTAL_ALIGNMENT_CENTER)
+	label.add_theme_color_override("font_color", Color.BLACK)
 	label.set_anchors_preset(Control.PRESET_CENTER_BOTTOM)
 	label.set_position(Vector2(-10, -30.0))
 	

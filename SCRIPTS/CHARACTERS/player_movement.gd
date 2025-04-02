@@ -18,6 +18,7 @@ func _ready():
 	Global.player = self
 
 func _process(delta): # hides and unhides the button to interact if there is an interactable object in front of the player
+	Global.touch_controls.hide_interact_button() # by default
 	var target = ray_cast_2d.get_collider()
 	if target != null: # if there is a target 
 		if Global.touch_controls != null:
