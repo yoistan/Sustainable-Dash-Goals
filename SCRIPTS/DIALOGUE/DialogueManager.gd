@@ -155,6 +155,8 @@ func handle_dialogue_option(option):
 		$SceneTransition.fade_out_and_switch_to("res://SCENES/CUTSCENES/Whizzy_SDG_cutscene.tscn")
 	elif next_state == "VISIT_SDG_13_PAGE":
 		OS.shell_open("https://www.globalgoals.org/goals/13-climate-action/")
+		npc.set_dialogue_state("learn_more")
+		show_dialogue(npc)
 	elif next_state == "SDG_13_EXPLANATION_END":
 		Global.sdg_to_discuss = 0
 		$SceneTransition.fade_out_and_switch_to("res://SCENES/AREAS/area_1_Outside_Rizal.tscn")
@@ -164,6 +166,8 @@ func handle_dialogue_option(option):
 		$SceneTransition.fade_out_and_switch_to("res://SCENES/CUTSCENES/Whizzy_SDG_cutscene.tscn")
 	elif next_state == "VISIT_SDG_4_PAGE":
 		OS.shell_open("https://www.globalgoals.org/goals/4-quality-education/")
+		npc.set_dialogue_state("learn_more")
+		show_dialogue(npc)
 	elif next_state == "SDG_4_END":
 		Global.sdg_to_discuss = 0
 		$SceneTransition.fade_out_and_switch_to("res://SCENES/AREAS/area_2_Rizal_Lobby.tscn")
