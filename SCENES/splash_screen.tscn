@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cte08cq33v1nn"]
+
+[ext_resource type="Script" uid="uid://du4ubffvy3ntf" path="res://SCENES/splash_screen.gd" id="1_ujvl5"]
+[ext_resource type="VideoStream" path="res://ASSETS/splash-screen.ogv" id="2_1qwci"]
+[ext_resource type="PackedScene" uid="uid://cmklnemra7p7j" path="res://SCENES/CUTSCENES/scene_transition.tscn" id="2_rq54i"]
+
+[node name="SplashScreen" type="Node2D"]
+script = ExtResource("1_ujvl5")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -3.0
+offset_top = -4.0
+offset_right = 165.0
+offset_bottom = 95.0
+color = Color(0, 0, 0, 1)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 2132.0
+offset_bottom = 1200.0
+scale = Vector2(0.0750228, 0.0750228)
+stream = ExtResource("2_1qwci")
+autoplay = true
+
+[node name="SceneTransition" parent="." instance=ExtResource("2_rq54i")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(80, 45)
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

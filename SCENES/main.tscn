@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://cgagigbngr6d8"]
 
-[ext_resource type="PackedScene" uid="uid://brcmcxe2124uv" path="res://SCENES/title_screen.tscn" id="1_xh1h4"]
+[ext_resource type="PackedScene" uid="uid://cte08cq33v1nn" path="res://SCENES/splash_screen.tscn" id="1_xh1h4"]
 
 [node name="Main" type="Node2D"]
 
-[node name="TitleScreen" parent="." instance=ExtResource("1_xh1h4")]
+[node name="SplashScreen" parent="." instance=ExtResource("1_xh1h4")]

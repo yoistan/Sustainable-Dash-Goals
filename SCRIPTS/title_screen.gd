@@ -1,6 +1,7 @@
 extends Node
 
 func _ready() -> void:
+	$SceneTransition.fade_in()
 	Audio.play_music1()
 	Audio.stop_music2()
 
