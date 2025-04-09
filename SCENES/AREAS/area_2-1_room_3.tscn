@@ -1,3 +1,16 @@
-[gd_scene format=3 uid="uid://345vh0bwgchm"]
+[gd_scene load_steps=5 format=3 uid="uid://345vh0bwgchm"]
+
+[ext_resource type="Script" uid="uid://cyovqbydlh4cr" path="res://SCRIPTS/AREAS/area_2_1_room_3.gd" id="1_64n87"]
+[ext_resource type="PackedScene" uid="uid://cvtctfogo2r27" path="res://SCENES/BACKGROUNDS/area_2-1_bg_room.tscn" id="2_nudh6"]
+[ext_resource type="PackedScene" uid="uid://cmklnemra7p7j" path="res://SCENES/CUTSCENES/scene_transition.tscn" id="3_4efp1"]
+[ext_resource type="PackedScene" uid="uid://b51i7koujhwxb" path="res://SCENES/CHARACTERS/sophia.tscn" id="3_nudh6"]
 
 [node name="Area2-1Room3" type="Node2D"]
+script = ExtResource("1_64n87")
+
+[node name="Area2-1BgRoom" parent="." instance=ExtResource("2_nudh6")]
+
+[node name="Sophia" parent="." instance=ExtResource("3_nudh6")]
+position = Vector2(208, 49)
+
+[node name="SceneTransition" parent="." instance=ExtResource("3_4efp1")]

@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://bb4p18p70hblf"]
+
+[ext_resource type="Script" uid="uid://bsjg3bei8gvh0" path="res://SCRIPTS/CHARACTERS/mickael.gd" id="1_rn7dd"]
+[ext_resource type="Script" uid="uid://ddjpebo5figom" path="res://RESOURCES/DIALOGUE/Dialogue.gd" id="2_1sj55"]
+[ext_resource type="PackedScene" uid="uid://c0k4crxwnd6xv" path="res://SCENES/DIALOGUE/DialogueManager.tscn" id="3_1sj55"]
+[ext_resource type="Texture2D" uid="uid://6fnn4cjukkyh" path="res://ASSETS/CHARACTERS/NPCS/Mickael.png" id="3_3w2y1"]
+
+[sub_resource type="Resource" id="Resource_nknc7"]
+script = ExtResource("2_1sj55")
+dialogues = {}
+metadata/_custom_type_script = "uid://ddjpebo5figom"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rosio"]
+radius = 21.0
+height = 78.0
+
+[node name="Mickael" type="CharacterBody2D" groups=["npc"]]
+script = ExtResource("1_rn7dd")
+dialogue_resource = SubResource("Resource_nknc7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -3)
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("3_3w2y1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_rosio")
+
+[node name="DialogueManager" parent="." instance=ExtResource("3_1sj55")]

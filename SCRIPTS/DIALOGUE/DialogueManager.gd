@@ -73,30 +73,40 @@ func handle_dialogue_option(option):
 			Audio.play_area_2_music()
 		Global.minigame_2_room_1_done = true
 		$SceneTransition.fade_out_and_switch_to("res://SCENES/AREAS/area_2-1_Rizal_Hallway.tscn")
+		
 	elif next_state == "GO_OUT_ROOM_2":
+		next_state_after_animation = next_state
 		npc.set_dialogue_state("start")
-		npc.set_dialogue_branch(npc.current_branch_index + 1) # move to ongoing quest branch
 		Global.last_scene = Global.area_2_hallway_room_2
-		get_tree().call_deferred("change_scene_to_file", "res://SCENES/AREAS/area_2-1_Rizal_Hallway.tscn")
 		dialogue_ui.ui.visible = false
 		Audio.stop_minigame_2_music()
-		Audio.play_area_2_music()
+		if !Audio.area_2_music.is_playing():
+			Audio.play_area_2_music()
+		Global.minigame_2_room_2_done = true
+		$SceneTransition.fade_out_and_switch_to("res://SCENES/AREAS/area_2-1_Rizal_Hallway.tscn")
+		
 	elif next_state == "GO_OUT_ROOM_3":
+		next_state_after_animation = next_state
 		npc.set_dialogue_state("start")
-		npc.set_dialogue_branch(npc.current_branch_index + 1) # move to ongoing quest branch
 		Global.last_scene = Global.area_2_hallway_room_3
-		get_tree().call_deferred("change_scene_to_file", "res://SCENES/AREAS/area_2-1_Rizal_Hallway.tscn")
 		dialogue_ui.ui.visible = false
 		Audio.stop_minigame_2_music()
-		Audio.play_area_2_music()
+		if !Audio.area_2_music.is_playing():
+			Audio.play_area_2_music()
+		Global.minigame_2_room_3_done = true
+		$SceneTransition.fade_out_and_switch_to("res://SCENES/AREAS/area_2-1_Rizal_Hallway.tscn")
+		
 	elif next_state == "GO_OUT_ROOM_4":
+		next_state_after_animation = next_state
 		npc.set_dialogue_state("start")
-		npc.set_dialogue_branch(npc.current_branch_index + 1) # move to ongoing quest branch
 		Global.last_scene = Global.area_2_hallway_room_4
-		get_tree().call_deferred("change_scene_to_file", "res://SCENES/AREAS/area_2-1_Rizal_Hallway.tscn")
 		dialogue_ui.ui.visible = false
 		Audio.stop_minigame_2_music()
-		Audio.play_area_2_music()
+		if !Audio.area_2_music.is_playing():
+			Audio.play_area_2_music()
+		Global.minigame_2_room_4_done = true
+		$SceneTransition.fade_out_and_switch_to("res://SCENES/AREAS/area_2-1_Rizal_Hallway.tscn")
+
 	elif next_state == "FLASH_RECITATION_START":
 		Audio.stop_area_2_music()
 		Audio.play_minigame_2_music()
@@ -143,6 +153,111 @@ func handle_dialogue_option(option):
 				npc.set_dialogue_state("score_3")
 				show_dialogue(npc)
 		Global.minigame_2_room_1_score = 0
+	
+	# MINIGAME 2 ROOM 2 SCORING
+	elif next_state == "2_Q1_correct":
+		Global.minigame_2_room_2_score += 1
+		npc.set_dialogue_state("2_Q1_correct")
+		show_dialogue(npc)
+		print(Global.minigame_2_room_2_score)
+		
+	elif next_state == "2_Q2_correct":
+		Global.minigame_2_room_2_score += 1
+		npc.set_dialogue_state("2_Q2_correct")
+		show_dialogue(npc)
+		print(Global.minigame_2_room_2_score)
+		
+	elif next_state == "2_Q3_correct":
+		Global.minigame_2_room_2_score += 1
+		npc.set_dialogue_state("2_Q3_correct")
+		show_dialogue(npc)
+		print(Global.minigame_2_room_2_score)
+		
+	elif next_state == "R2_SCORE_REVEAL":
+		match Global.minigame_2_room_2_score:
+			0:
+				npc.set_dialogue_state("score_0")
+				show_dialogue(npc)
+			1:
+				npc.set_dialogue_state("score_1")
+				show_dialogue(npc)
+			2:
+				npc.set_dialogue_state("score_2")
+				show_dialogue(npc)
+			3:
+				npc.set_dialogue_state("score_3")
+				show_dialogue(npc)
+		Global.minigame_2_room_2_score = 0
+	
+	# MINIGAME 2 ROOM 3 SCORING
+	elif next_state == "3_Q1_correct":
+		Global.minigame_2_room_3_score += 1
+		npc.set_dialogue_state("3_Q1_correct")
+		show_dialogue(npc)
+		print(Global.minigame_2_room_3_score)
+		
+	elif next_state == "3_Q2_correct":
+		Global.minigame_2_room_3_score += 1
+		npc.set_dialogue_state("3_Q2_correct")
+		show_dialogue(npc)
+		print(Global.minigame_2_room_3_score)
+		
+	elif next_state == "3_Q3_correct":
+		Global.minigame_2_room_3_score += 1
+		npc.set_dialogue_state("3_Q3_correct")
+		show_dialogue(npc)
+		print(Global.minigame_2_room_3_score)
+		
+	elif next_state == "R3_SCORE_REVEAL":
+		match Global.minigame_2_room_3_score:
+			0:
+				npc.set_dialogue_state("score_0")
+				show_dialogue(npc)
+			1:
+				npc.set_dialogue_state("score_1")
+				show_dialogue(npc)
+			2:
+				npc.set_dialogue_state("score_2")
+				show_dialogue(npc)
+			3:
+				npc.set_dialogue_state("score_3")
+				show_dialogue(npc)
+		Global.minigame_2_room_3_score = 0
+	
+	# MINIGAME 2 ROOM 3 SCORING
+	elif next_state == "4_Q1_correct":
+		Global.minigame_2_room_4_score += 1
+		npc.set_dialogue_state("4_Q1_correct")
+		show_dialogue(npc)
+		print(Global.minigame_2_room_4_score)
+		
+	elif next_state == "4_Q2_correct":
+		Global.minigame_2_room_4_score += 1
+		npc.set_dialogue_state("4_Q2_correct")
+		show_dialogue(npc)
+		print(Global.minigame_2_room_4_score)
+		
+	elif next_state == "4_Q3_correct":
+		Global.minigame_2_room_4_score += 1
+		npc.set_dialogue_state("4_Q3_correct")
+		show_dialogue(npc)
+		print(Global.minigame_2_room_4_score)
+		
+	elif next_state == "R4_SCORE_REVEAL":
+		match Global.minigame_2_room_4_score:
+			0:
+				npc.set_dialogue_state("score_0")
+				show_dialogue(npc)
+			1:
+				npc.set_dialogue_state("score_1")
+				show_dialogue(npc)
+			2:
+				npc.set_dialogue_state("score_2")
+				show_dialogue(npc)
+			3:
+				npc.set_dialogue_state("score_3")
+				show_dialogue(npc)
+		Global.minigame_2_room_4_score = 0
 	
 	elif next_state == "FINISH_MINIGAME_2": 
 		Global.minigame_2_done = true

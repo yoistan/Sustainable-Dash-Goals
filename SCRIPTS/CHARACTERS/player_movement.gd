@@ -18,7 +18,7 @@ func _ready():
 	Global.player = self
 
 func _process(delta): # hides and unhides the button to interact if there is an interactable object in front of the player
-	Global.touch_controls.hide_interact_button() # by default
+	Global.touch_controls.hide_interaction_button() # by default
 	var target = ray_cast_2d.get_collider()
 	if target != null: # if there is a target 
 		if Global.touch_controls != null:
@@ -27,8 +27,7 @@ func _process(delta): # hides and unhides the button to interact if there is an 
 			elif target.is_in_group("room"):
 				Global.touch_controls.show_enter_button()
 	else: # if there is none
-		Global.touch_controls.hide_interact_button()
-		Global.touch_controls.hide_enter_button()
+		Global.touch_controls.hide_interaction_button()
 
 func _physics_process(delta):
 	# if player is not in a cutscene, let the player move.

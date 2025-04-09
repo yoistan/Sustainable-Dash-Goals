@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://brcmcxe2124uv"]
+[gd_scene load_steps=24 format=3 uid="uid://brcmcxe2124uv"]
 
 [ext_resource type="Script" uid="uid://bc2cka0xrngdb" path="res://SCRIPTS/title_screen.gd" id="1_7luok"]
 [ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="1_8ukxt"]
@@ -46,6 +46,9 @@ Button/styles/focus = SubResource("StyleBoxEmpty_yi148")
 Button/styles/hover = ExtResource("6_uhs5y")
 Button/styles/normal = SubResource("StyleBoxEmpty_h4ype")
 Button/styles/pressed = SubResource("StyleBoxEmpty_0j6pm")
+
+[sub_resource type="Theme" id="Theme_608iu"]
+default_font = ExtResource("1_8ukxt")
 
 [node name="TitleScreen" type="Node"]
 script = ExtResource("1_7luok")
@@ -107,11 +110,27 @@ offset_top = 80.0
 offset_right = 162.0
 offset_bottom = 92.0
 theme = ExtResource("9_cn0fw")
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 5
 text = "Meet the developers"
 
 [node name="MeetTheDevelopers" parent="." instance=ExtResource("10_608iu")]
 visible = false
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -7.0
+offset_right = 47.0
+grow_vertical = 0
+theme = SubResource("Theme_608iu")
+theme_override_font_sizes/font_size = 5
+text = " This is a demo version!"
 
 [connection signal="pressed" from="playButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="settingsButton" to="." method="_on_settings_button_pressed"]

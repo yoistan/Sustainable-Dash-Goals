@@ -33,5 +33,5 @@ func _on_main_menu_pressed():
 	Audio.stop_music2()
 	Audio.stop_area_2_music()
 	Audio.stop_minigame_2_music()
-	get_tree().change_scene_to_file("res://SCENES/main.tscn")
+	get_tree().change_scene_to_file("res://SCENES/title_screen.tscn")
 	

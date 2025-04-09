@@ -1,12 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://ctl8haktp7g4b"]
+[gd_scene load_steps=5 format=3 uid="uid://ctl8haktp7g4b"]
 
+[ext_resource type="Script" uid="uid://cdeun00735de4" path="res://SCRIPTS/AREAS/area_2_1_room_2.gd" id="1_3u8ha"]
 [ext_resource type="PackedScene" uid="uid://cvtctfogo2r27" path="res://SCENES/BACKGROUNDS/area_2-1_bg_room.tscn" id="1_vb5p7"]
-[ext_resource type="PackedScene" uid="uid://bu8u2qyf2m1td" path="res://SCENES/MINIGAMES/MINIGAME 2/mg-2_television.tscn" id="2_gwsl3"]
+[ext_resource type="PackedScene" uid="uid://cugmtjane1sv6" path="res://SCENES/CHARACTERS/justin.tscn" id="3_5lddq"]
+[ext_resource type="PackedScene" uid="uid://cmklnemra7p7j" path="res://SCENES/CUTSCENES/scene_transition.tscn" id="4_5j82w"]
 
 [node name="Area2-1Room2" type="Node2D"]
+script = ExtResource("1_3u8ha")
 
 [node name="Area2-1BgRoom" parent="." instance=ExtResource("1_vb5p7")]
 
-[node name="Mg-2Television" parent="." instance=ExtResource("2_gwsl3")]
-position = Vector2(78, 28)
-script = null
+[node name="Justin" parent="." instance=ExtResource("3_5lddq")]
+position = Vector2(202, 50)
+
+[node name="SceneTransition" parent="." instance=ExtResource("4_5j82w")]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://c5cenoneijgnn"]
 
 [ext_resource type="StyleBox" uid="uid://c1lcub6nv2wb2" path="res://THEMES/SDG_13_quest.tres" id="1_sug83"]
-[ext_resource type="Script" uid="uid://dqfiobv7jl1af" path="res://SCRIPTS/DIALOGUE/sdg_quest_marker.gd" id="2_vmajh"]
+[ext_resource type="Script" path="res://SCRIPTS/DIALOGUE/sdg_quest_marker.gd" id="2_vmajh"]
 [ext_resource type="FontFile" uid="uid://drxuh27k2jxk4" path="res://ASSETS/FONTS/Schoolbell-Regular.ttf" id="3_uwigf"]
 
 [sub_resource type="Theme" id="Theme_vmajh"]

@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://gtu3ewkewaj3"]
+[gd_scene load_steps=10 format=3 uid="uid://gtu3ewkewaj3"]
 
-[ext_resource type="Texture2D" uid="uid://dah2wwc05yc5l" path="res://ASSETS/TOUCH CONTROLS BUTTONS/left.png" id="1_agtmr"]
 [ext_resource type="Script" uid="uid://d4d8xmm2pqbqf" path="res://SCRIPTS/toggle_touch_controls.gd" id="1_r7ftb"]
-[ext_resource type="Texture2D" uid="uid://ck7i7get7an0q" path="res://ASSETS/TOUCH CONTROLS BUTTONS/pause.png" id="2_evpys"]
-[ext_resource type="Texture2D" uid="uid://cl4cmmo8cga3d" path="res://ASSETS/TOUCH CONTROLS BUTTONS/right.png" id="2_r7ftb"]
-[ext_resource type="Texture2D" uid="uid://ch4cqy0wbitc2" path="res://ASSETS/TOUCH CONTROLS BUTTONS/interact.png" id="3_evpys"]
+[ext_resource type="Texture2D" uid="uid://bm0yl3hohdm4y" path="res://ASSETS/TOUCH CONTROLS BUTTONS/pause-normal.png" id="2_alrnw"]
+[ext_resource type="Texture2D" uid="uid://cepou4usq1p33" path="res://ASSETS/TOUCH CONTROLS BUTTONS/pause-pressed.png" id="3_wpvut"]
+[ext_resource type="Texture2D" uid="uid://coy0krwax4f5h" path="res://ASSETS/TOUCH CONTROLS BUTTONS/left-normal.png" id="4_35uy7"]
+[ext_resource type="Texture2D" uid="uid://cpct750ib2qmm" path="res://ASSETS/TOUCH CONTROLS BUTTONS/left-pressed.png" id="5_58egb"]
+[ext_resource type="Texture2D" uid="uid://dpvb7ne6gk5dj" path="res://ASSETS/TOUCH CONTROLS BUTTONS/right-normal.png" id="6_qljgr"]
+[ext_resource type="Texture2D" uid="uid://jeghfn61s203" path="res://ASSETS/TOUCH CONTROLS BUTTONS/right-pressed.png" id="7_m5hk2"]
+[ext_resource type="Texture2D" uid="uid://cl4r4ubtyys6g" path="res://ASSETS/TOUCH CONTROLS BUTTONS/talk-normal.png" id="8_crjsr"]
+[ext_resource type="Texture2D" uid="uid://nhhiers5oa1i" path="res://ASSETS/TOUCH CONTROLS BUTTONS/talk-pressed.png" id="9_n7q4e"]
 
 [node name="TouchControls" type="CanvasLayer"]
 layer = 0
@@ -12,24 +16,28 @@ script = ExtResource("1_r7ftb")
 
 [node name="pause" type="TouchScreenButton" parent="."]
 position = Vector2(3, 2)
-scale = Vector2(0.0195313, 0.0195313)
-texture_normal = ExtResource("2_evpys")
+scale = Vector2(0.03, 0.03)
+texture_normal = ExtResource("2_alrnw")
+texture_pressed = ExtResource("3_wpvut")
 action = "pause"
 
 [node name="left" type="TouchScreenButton" parent="."]
 position = Vector2(9, 66)
-scale = Vector2(0.2, 0.2)
-texture_normal = ExtResource("1_agtmr")
+scale = Vector2(0.03, 0.03)
+texture_normal = ExtResource("4_35uy7")
+texture_pressed = ExtResource("5_58egb")
 action = "move_left"
 
 [node name="right" type="TouchScreenButton" parent="."]
 position = Vector2(33, 66)
-scale = Vector2(0.2, 0.2)
-texture_normal = ExtResource("2_r7ftb")
+scale = Vector2(0.03, 0.03)
+texture_normal = ExtResource("6_qljgr")
+texture_pressed = ExtResource("7_m5hk2")
 action = "move_right"
 
 [node name="interact" type="TouchScreenButton" parent="."]
 position = Vector2(136, 66)
-scale = Vector2(0.2, 0.2)
-texture_normal = ExtResource("3_evpys")
+scale = Vector2(0.03, 0.03)
+texture_normal = ExtResource("8_crjsr")
+texture_pressed = ExtResource("9_n7q4e")
 action = "interact"

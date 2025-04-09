@@ -13,7 +13,7 @@ var current_state = "start"
 var current_branch_index = 0
 
 func _ready():
-	if Global.minigame_2_room_1_done:
+	if Global.minigame_2_room_3_done:
 		current_branch_index += 1
 	# load dialogue data
 	dialogue_resource.load_from_json("res://RESOURCES/DIALOGUE/dialogue_data.json")

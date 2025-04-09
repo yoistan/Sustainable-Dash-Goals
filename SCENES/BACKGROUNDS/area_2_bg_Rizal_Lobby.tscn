@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dl5ixbxv0owni"]
+[gd_scene load_steps=6 format=3 uid="uid://dl5ixbxv0owni"]
 
 [ext_resource type="Script" uid="uid://fghbycuskjye" path="res://SCRIPTS/AREAS/Rizal_Lobby_exits.gd" id="1_vshfx"]
+[ext_resource type="PackedScene" uid="uid://cmklnemra7p7j" path="res://SCENES/CUTSCENES/scene_transition.tscn" id="2_uwod1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6syrp"]
 size = Vector2(363, 35)
@@ -60,6 +61,8 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="previous_scene"]
 position = Vector2(21, 37)
 shape = SubResource("RectangleShape2D_uwod1")
+
+[node name="SceneTransition" parent="." instance=ExtResource("2_uwod1")]
 
 [connection signal="body_entered" from="next_scene" to="." method="_on_next_scene_body_entered"]
 [connection signal="body_entered" from="previous_scene" to="." method="_on_previous_scene_body_entered"]

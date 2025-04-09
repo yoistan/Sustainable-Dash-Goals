@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://ba7w77h0uutar"]
+[gd_scene load_steps=9 format=3 uid="uid://ba7w77h0uutar"]
 
 [ext_resource type="PackedScene" uid="uid://dl5ixbxv0owni" path="res://SCENES/BACKGROUNDS/area_2_bg_Rizal_Lobby.tscn" id="1_5mtxj"]
 [ext_resource type="Script" uid="uid://cbcp5n1jaf2dh" path="res://SCRIPTS/AREAS/area_2_rizal_lobby.gd" id="1_jsm53"]
+[ext_resource type="PackedScene" uid="uid://cmklnemra7p7j" path="res://SCENES/CUTSCENES/scene_transition.tscn" id="2_emtk6"]
 [ext_resource type="PackedScene" uid="uid://drmpfqi10hj1l" path="res://SCENES/CHARACTERS/dash.tscn" id="2_jsm53"]
 [ext_resource type="PackedScene" uid="uid://rfo21mxn8hqw" path="res://SCENES/CHARACTERS/gab.tscn" id="3_7qyrv"]
 [ext_resource type="PackedScene" uid="uid://dphxa4y4rd1rv" path="res://SCENES/menu.tscn" id="4_mvksh"]
@@ -10,6 +11,8 @@
 
 [node name="Area2RizalLobby" type="Node2D"]
 script = ExtResource("1_jsm53")
+
+[node name="SceneTransition" parent="." instance=ExtResource("2_emtk6")]
 
 [node name="InGame" type="Node2D" parent="."]
 

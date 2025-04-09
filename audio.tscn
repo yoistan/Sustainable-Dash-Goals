@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c4jjha4yuxw6c"]
+[gd_scene load_steps=15 format=3 uid="uid://c4jjha4yuxw6c"]
 
 [ext_resource type="Script" uid="uid://dxne4bvmvjofw" path="res://audio.gd" id="1_qc0l7"]
 [ext_resource type="AudioStream" uid="uid://bya1mofvds4qv" path="res://ASSETS/SFX/click sfx 2.mp3" id="2_0svpk"]
@@ -10,6 +10,43 @@
 [ext_resource type="AudioStream" uid="uid://b7rivlp48c61" path="res://ASSETS/MUSIC/gewonnen2-7000.mp3" id="7_x5nyw"]
 [ext_resource type="AudioStream" uid="uid://cpwlljgfd8ccy" path="res://ASSETS/SFX/page_flip.mp3" id="9_5olcg"]
 [ext_resource type="AudioStream" uid="uid://bc8f0y85x8y1s" path="res://ASSETS/SFX/click sfx 3.mp3" id="10_pgqns"]
+[ext_resource type="AudioStream" uid="uid://bkjwp5is72vsc" path="res://ASSETS/SFX/walking_on_stairs.mp3" id="11_cqcg1"]
+
+[sub_resource type="Animation" id="Animation_cqcg1"]
+resource_name = "area_1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bg2:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -80.0]
+}
+
+[sub_resource type="Animation" id="Animation_564a7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bg2:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qf6oy"]
+_data = {
+&"RESET": SubResource("Animation_564a7"),
+&"area_1": SubResource("Animation_cqcg1")
+}
 
 [node name="Audio" type="Node"]
 script = ExtResource("1_qc0l7")
@@ -44,3 +81,14 @@ volume_db = 10.0
 [node name="ClickSfx3" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_pgqns")
 volume_db = 20.0
+
+[node name="TRANSITION_SFX" type="Node" parent="."]
+
+[node name="WalkingOnStairs" type="AudioStreamPlayer" parent="TRANSITION_SFX"]
+stream = ExtResource("11_cqcg1")
+volume_db = 20.0
+
+[node name="audio_fade_out" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_qf6oy")
+}

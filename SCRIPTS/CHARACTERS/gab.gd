@@ -28,7 +28,7 @@ func _process(float) -> void:
 	# checks the states of the branches
 	if Global.minigame_2_started:
 		current_branch_index = ongoing_quest_branch
-	if Global.minigame_2_room_1_done:
+	if Global.minigame_2_room_1_done and Global.minigame_2_room_2_done and Global.minigame_2_room_3_done and Global.minigame_2_room_4_done:
 		current_branch_index = finishing_quest_branch
 	if Global.minigame_2_done:
 		current_branch_index = default_branch

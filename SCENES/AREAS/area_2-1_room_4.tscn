@@ -1,3 +1,16 @@
-[gd_scene format=3 uid="uid://bslmxv77xnoad"]
+[gd_scene load_steps=5 format=3 uid="uid://bslmxv77xnoad"]
+
+[ext_resource type="PackedScene" uid="uid://cvtctfogo2r27" path="res://SCENES/BACKGROUNDS/area_2-1_bg_room.tscn" id="1_h7ici"]
+[ext_resource type="Script" uid="uid://buxtwe0bdh7jr" path="res://SCRIPTS/AREAS/area_2_1_room_4.gd" id="1_m47t5"]
+[ext_resource type="PackedScene" uid="uid://bb4p18p70hblf" path="res://SCENES/CHARACTERS/mickael.tscn" id="2_m47t5"]
+[ext_resource type="PackedScene" uid="uid://cmklnemra7p7j" path="res://SCENES/CUTSCENES/scene_transition.tscn" id="3_6vvrp"]
 
 [node name="Area2-1Room4" type="Node2D"]
+script = ExtResource("1_m47t5")
+
+[node name="Area2-1BgRoom" parent="." instance=ExtResource("1_h7ici")]
+
+[node name="Mickael" parent="." instance=ExtResource("2_m47t5")]
+position = Vector2(209, 50)
+
+[node name="SceneTransition" parent="." instance=ExtResource("3_6vvrp")]

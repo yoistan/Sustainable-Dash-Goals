@@ -12,12 +12,16 @@ func _input(event):
 	if event.is_action_pressed("interact"): 
 		match rizal_room:
 			308:
+				Global.area_2_hallway_players_last_location = Global.player.position
 				scene_transition.fade_out_and_switch_to("res://SCENES/AREAS/area_2-1_room_1.tscn")
 			306:
+				Global.area_2_hallway_players_last_location = Global.player.position
 				scene_transition.fade_out_and_switch_to("res://SCENES/AREAS/area_2-1_room_2.tscn")
 			304:
+				Global.area_2_hallway_players_last_location = Global.player.position
 				scene_transition.fade_out_and_switch_to("res://SCENES/AREAS/area_2-1_room_3.tscn")
 			302:
+				Global.area_2_hallway_players_last_location = Global.player.position
 				scene_transition.fade_out_and_switch_to("res://SCENES/AREAS/area_2-1_room_4.tscn")
 
 # ENTERS
@@ -87,7 +91,6 @@ func remove_label():
 
 func _on_back_to_rizal_lobby_body_entered(body):
 	if body.is_in_group("player"):
-		print("going bakc")
 		Global.last_scene = Global.area_2_hallway_name
-		get_tree().call_deferred("change_scene_to_file", "res://SCENES/AREAS/area_2_Rizal_Lobby.tscn")
+		scene_transition.fade_out_and_switch_to("res://SCENES/AREAS/area_2_Rizal_Lobby.tscn")
 		

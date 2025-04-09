@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://cugmtjane1sv6"]
+
+[ext_resource type="Script" uid="uid://bhhulwsiijlmy" path="res://SCRIPTS/CHARACTERS/justin.gd" id="1_v22rq"]
+[ext_resource type="Script" uid="uid://ddjpebo5figom" path="res://RESOURCES/DIALOGUE/Dialogue.gd" id="2_3t1xh"]
+[ext_resource type="Texture2D" uid="uid://cawod1aci7wi5" path="res://ASSETS/CHARACTERS/NPCS/Justin.png" id="3_8dkjt"]
+[ext_resource type="PackedScene" uid="uid://c0k4crxwnd6xv" path="res://SCENES/DIALOGUE/DialogueManager.tscn" id="4_x0kss"]
+
+[sub_resource type="Resource" id="Resource_8dkjt"]
+script = ExtResource("2_3t1xh")
+dialogues = {}
+metadata/_custom_type_script = "uid://ddjpebo5figom"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rosio"]
+radius = 21.0
+height = 78.0
+
+[node name="Justin" type="CharacterBody2D" groups=["npc"]]
+script = ExtResource("1_v22rq")
+dialogue_resource = SubResource("Resource_8dkjt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -3)
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("3_8dkjt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_rosio")
+
+[node name="DialogueManager" parent="." instance=ExtResource("4_x0kss")]

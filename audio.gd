@@ -12,6 +12,9 @@ extends Node
 @onready var page_flip = $PageFlip
 @onready var click_sfx_3 = $ClickSfx3
 
+## TRANSITION SFX
+@onready var walking_on_stairs = $TRANSITION_SFX/WalkingOnStairs
+
 func play_page_flip_sfx():
 	page_flip.play()
 	
@@ -60,3 +63,6 @@ func play_congrats():
 	
 func stop_congrats():
 	congrats.stop()
+
+func play_stairs_sfx():
+	walking_on_stairs.play()

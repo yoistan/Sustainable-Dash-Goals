@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cti7rxrrjhi3o" path="res://SCRIPTS/AREAS/area_2_1_room_1.gd" id="1_84ibi"]
 [ext_resource type="PackedScene" uid="uid://cvtctfogo2r27" path="res://SCENES/BACKGROUNDS/area_2-1_bg_room.tscn" id="1_j8tw8"]
-[ext_resource type="PackedScene" uid="uid://bwp33y18ktawv" path="res://SCENES/CHARACTERS/sophia.tscn" id="3_84ibi"]
+[ext_resource type="PackedScene" uid="uid://bwp33y18ktawv" path="res://SCENES/CHARACTERS/pants.tscn" id="3_84ibi"]
 [ext_resource type="PackedScene" uid="uid://cmklnemra7p7j" path="res://SCENES/CUTSCENES/scene_transition.tscn" id="5_h8ad5"]
 
 [node name="Area2-1Room1" type="Node2D"]
@@ -10,7 +10,7 @@ script = ExtResource("1_84ibi")
 
 [node name="Area2-1BgRoom" parent="." instance=ExtResource("1_j8tw8")]
 
-[node name="Sophia" parent="." instance=ExtResource("3_84ibi")]
+[node name="Pants" parent="." instance=ExtResource("3_84ibi")]
 position = Vector2(184, 41)
 scale = Vector2(0.5, 0.5)
 

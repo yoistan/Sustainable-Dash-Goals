@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c1lbtikfidyi8"]
+[gd_scene load_steps=7 format=3 uid="uid://c1lbtikfidyi8"]
 
 [ext_resource type="Script" uid="uid://dye6r65x24c77" path="res://SCRIPTS/AREAS/Outside_Rizal_exits.gd" id="1_7ikhb"]
 [ext_resource type="Texture2D" uid="uid://btb2wpwshxmg1" path="res://ASSETS/BACKGROUNDS/bg_rizaloutdoors2.png" id="2_d0pp5"]
+[ext_resource type="PackedScene" uid="uid://cmklnemra7p7j" path="res://SCENES/CUTSCENES/scene_transition.tscn" id="3_wfqhn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wijm6"]
 size = Vector2(414, 35)
@@ -10,7 +11,7 @@ size = Vector2(414, 35)
 size = Vector2(20, 89)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d0pp5"]
-size = Vector2(52, 82)
+size = Vector2(17, 82)
 
 [node name="Area1BgOutsideRizal" type="StaticBody2D"]
 script = ExtResource("1_7ikhb")
@@ -25,7 +26,7 @@ position = Vector2(198, 102.5)
 shape = SubResource("RectangleShape2D_wijm6")
 
 [node name="wall" type="CollisionShape2D" parent="."]
-position = Vector2(397, 48)
+position = Vector2(334, 48)
 shape = SubResource("RectangleShape2D_7ikhb")
 
 [node name="wall2" type="CollisionShape2D" parent="."]
@@ -36,7 +37,9 @@ shape = SubResource("RectangleShape2D_7ikhb")
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="next_scene"]
-position = Vector2(363, 47)
+position = Vector2(317.5, 47)
 shape = SubResource("RectangleShape2D_d0pp5")
+
+[node name="SceneTransition" parent="." instance=ExtResource("3_wfqhn")]
 
 [connection signal="body_entered" from="next_scene" to="." method="_on_next_scene_body_entered"]

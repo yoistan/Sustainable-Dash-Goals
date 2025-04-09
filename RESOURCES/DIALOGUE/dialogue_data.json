@@ -310,7 +310,7 @@
 					{
 						"state": "about_donations",
 						"speaking": "Gab",
-						"text": "Speaking of donations, I was going to collect some books at R308, but then no one would be here in case someone wants to donate here directly…",
+						"text": "Speaking of donations, I was going to collect some books on this floor, but then no one would be here in case someone wants to donate here directly…",
 						"options": {
 							"Next": "dash_reply_4"
 						}
@@ -326,7 +326,7 @@
 					{
 						"state": "instructions",
 						"speaking": "Gab", 
-						"text": "Really? You’ll do that? Thank you! You just need to visit R308 and ask Sophia for the books her section donated.",
+						"text": "Really? You’ll do that? Thank you! You just need to visit R308, R306, R304, and R302 for the books they donated.",
 						"options": {
 							"On it!": "START_MINIGAME_2"
 						}
@@ -339,7 +339,7 @@
 					{
 						"state": "start",
 						"speaking": "Gab",
-						"text": "The room is on the right.",
+						"text": "The rooms are on the right.",
 						"options": {
 							"Okay": "exit"
 						}
@@ -360,7 +360,7 @@
 					{
 						"state": "easy_or_hard",
 						"speaking": "Dash",
-						"text": "Yeah! I was suddenly tested on my ICT knowledge. It was...",
+						"text": "Yeah! I was suddenly tested on my ICT, STEM, ABM, and HUMSS knowledge. It was...",
 						"options": {
 							"Easy": "easy",
 							"Hard": "hard"
@@ -369,7 +369,7 @@
 					{
 						"state": "easy",
 						"speaking": "Gab",
-						"text": "Really? That's great! I'm sure you'll do great in an ICT quiz bee.",
+						"text": "Really? That's great! I'm sure you'll do great in quiz bees.",
 						"options": {
 							"Yeah!": "closing"
 						}
@@ -417,6 +417,512 @@
 			},
 		],
 	},
+	"NPC_Pants": {
+		"trees": [
+			{
+				"branch_id": "NPC_Pants_1",
+				"dialogues": [
+					{
+						"state": "start",
+						"speaking": "Pants",
+						"text": "Hi Dash! I’m Pants, the class representative of I120a. Here are all the donated books from my section.",
+						"options": {
+							"Next": "dash_reply_1"
+						}
+					},
+					{
+						"state": "dash_reply_1",
+						"speaking": "Dash",
+						"text": "Thanks! I'll take these to Gab now.",
+						"options": {
+							"Next": "in_progress"
+						}
+					},
+					{
+						"state": "in_progress",
+						"speaking": "Pants",
+						"text": "Not so fast! Before I allow you these books, I need to ask you a question about ICT. Welcome to Flash Recitation!",
+						"options": {
+							"Flash Rectiation!?": "FLASH_RECITATION_START"
+						}
+					},
+					{
+						"state": "FLASH_RECITATION_START",
+						"speaking": "Pants",
+						"text": "Yep! Just answer one question related to ICT correctly and I’ll lend you these books.",
+						"options": {
+							"And if I get it wrong?": "what_if_wrong"
+						}
+					},
+					{
+						"state": "what_if_wrong",
+						"speaking": "Pants",
+						"text": "Don’t worry, they won’t be that hard. I have 3 questions in total, but you only need to get one right. You can do it!",
+						"options": {
+							"I'm ready!": "start_recitation"
+						}
+					},
+					{
+						"state": "start_recitation",
+						"speaking": "Pants",
+						"text": "Question 1: What variable type stores true or false?",
+						"options": {
+							"Boolean": "correct",
+							"String": "Q1_incorrect"
+						}
+					},
+					{
+						"state": "Q1_incorrect",
+						"speaking": "Pants",
+						"text": "Close! It's boolean. A boolean's value can either be true or false. A string, on the other hand, stores text values.",
+						"options": {
+							"Next question": "Q2"
+						}
+					},
+					{
+						"state": "correct",
+						"speaking": "Pants",
+						"text": "Correct! As promised, here are your books! If you'd like, you can come back to answer all my ICT questions to test your knowledge.",
+						"options": {
+							"Nice!": "GO_OUT_ROOM_1"
+						}
+					},
+					{
+						"state": "Q2",
+						"speaking": "Pants",
+						"text": "Question 2: What tool can you use to create geometric shapes in Adobe Animate?",
+						"options": {
+							"Lasso tool": "Q2_incorrect",
+							"Shape tool": "correct"
+						}
+					},
+					{
+						"state": "Q2_incorrect",
+						"speaking": "Pants",
+						"text": "Close! It's Shape tool. The shape tool is for making simple geometric shapes, while the lasso tool is used for selecting elements.",
+						"options": {
+							"Next question": "Q3"
+						}
+					},
+					{
+						"state": "Q3",
+						"speaking": "Pants",
+						"text": "Question 3: What is the process of constructing a series of bones or a skeleton for your 2D or 3D model?",
+						"options": {
+							"Tweening": "Q3_incorrect",
+							"Rigging": "correct"
+						}
+					},
+					{
+						"state": "Q3_incorrect",
+						"speaking": "Pants",
+						"text": "Close! It's rigging. Rigging is the process of constructing a skeleton that you can easily move to animate your character, while tweening is the process of creating intermediate frames between keyframes to smoothly animate objects!",
+						"options": {
+							"Next question": "out_of_questions"
+						}
+					},
+					{
+						"state": "out_of_questions",
+						"speaking": "Pants",
+						"text": "Hmm... I can't think of any more questions. Let me ask you my first question again and let's see if you remembered the terms!",
+						"options": {
+							"I got this!": "start_recitation"
+						}
+					}
+				]
+			},
+			{
+				"branch_id": "NPC_Pants_default",
+				"dialogues": [
+					{
+						"state": "start",
+						"speaking": "Pants",
+						"text": "Welcome back! Here to test your knowledge on ICT again?",
+						"options": {
+							"Yes!": "FLASH_RECITATION_START",
+							"Wrong room!": "GO_OUT_ROOM_1"
+						}
+					},
+					{
+						"state": "FLASH_RECITATION_START",
+						"speaking": "Pants",
+						"text": "Okay! Just like last time, I have 3 ICT-related questions for you.",
+						"options": {
+							"I'm ready!": "start_recitation"
+						}
+					},
+					{
+						"state": "start_recitation",
+						"speaking": "Pants",
+						"text": "Question 1: What variable type stores true or false?",
+						"options": {
+							"Boolean": "1_Q1_correct",
+							"String": "Q1_incorrect"
+						}
+					},
+					{
+						"state": "Q1_incorrect",
+						"speaking": "Pants",
+						"text": "Close! It's boolean. A boolean's value can either be true or false. A string, on the other hand, stores text values.",
+						"options": {
+							"Next question": "Q2"
+						}
+					},
+					{
+						"state": "1_Q1_correct",
+						"speaking": "Pants",
+						"text": "Correct! That's 1 point.",
+						"options": {
+							"Next question": "Q2"
+						}
+					},
+					{
+						"state": "1_Q2_correct",
+						"speaking": "Pants",
+						"text": "Correct! That's 1 point.",
+						"options": {
+							"Next question": "Q3"
+						}
+					},
+					{
+						"state": "1_Q3_correct",
+						"speaking": "Pants",
+						"text": "Correct! That's 1 point.",
+						"options": {
+							"Complete Flash Recitation": "finished"
+						}
+					},
+					{
+						"state": "Q2",
+						"speaking": "Pants",
+						"text": "Question 2: What tool can you use to create geometric shapes in Adobe Animate?",
+						"options": {
+							"Lasso tool": "Q2_incorrect",
+							"Shape tool": "1_Q2_correct"
+						}
+					},
+					{
+						"state": "Q2_incorrect",
+						"speaking": "Pants",
+						"text": "Close! It's Shape tool. The shape tool is for making simple geometric shapes, while the lasso tool is used for selecting elements.",
+						"options": {
+							"Next question": "Q3"
+						}
+					},
+					{
+						"state": "Q3",
+						"speaking": "Pants",
+						"text": "Question 3: What is the process of constructing a series of bones or a skeleton for your 2D or 3D model?",
+						"options": {
+							"Tweening": "Q3_incorrect",
+							"Rigging": "1_Q3_correct"
+						}
+					},
+					{
+						"state": "Q3_incorrect",
+						"speaking": "Pants",
+						"text": "Close! It's rigging. Rigging is the process of constructing a skeleton that you can easily move to animate your character, while tweening is the process of creating intermediate frames between keyframes to smoothly animate objects!",
+						"options": {
+							"Complete Flash Recitation": "finished"
+						}
+					},
+					{
+						"state": "finished",
+						"speaking": "Pants",
+						"text": "You finished all 3 questions! Let's see... you got...",
+						"options": {
+							"I got...": "SCORE_REVEAL"
+						}
+					},
+					{
+						"state": "score_3",
+						"speaking": "Pants",
+						"text": "You got a perfect score of 3/3! Congratulations!",
+						"options": {
+							"Nice!": "GO_OUT_ROOM_1"
+						}
+					},
+					{
+						"state": "score_2",
+						"speaking": "Pants",
+						"text": "You got 2 out of 3 questions correct! Awesome!",
+						"options": {
+							"Nice!": "GO_OUT_ROOM_1"
+						}
+					},
+					{
+						"state": "score_1",
+						"speaking": "Pants",
+						"text": "You got 1 out of 3 questions correct! Better luck next time~",
+						"options": {
+							"Leave room": "GO_OUT_ROOM_1"
+						}
+					},
+					{
+						"state": "score_0",
+						"speaking": "Pants",
+						"text": "You got 0 out of 3 questions correct! Better luck next time~",
+						"options": {
+							"Leave room": "GO_OUT_ROOM_1"
+						}
+					}
+				]
+			},
+		],
+	},
+		"NPC_Justin": {
+		"trees": [
+			{
+				"branch_id": "NPC_Justin_1",
+				"dialogues": [
+					{
+						"state": "start",
+						"speaking": "Justin",
+						"text": "Hi Dash! I’m Justin, the class representative of A120a! Here are all the donated books from my section.",
+						"options": {
+							"Next": "dash_reply_1"
+						}
+					},
+					{
+						"state": "dash_reply_1",
+						"speaking": "Dash",
+						"text": "Thanks! I'll take these to Gab now.",
+						"options": {
+							"Next": "in_progress"
+						}
+					},
+					{
+						"state": "in_progress",
+						"speaking": "Justin",
+						"text": "Not so fast! Before I allow you these books, I need to ask you a question about STEM. Welcome to Flash Recitation!",
+						"options": {
+							"Flash Recitation?!": "FLASH_RECITATION_START"
+						}
+					},
+					{
+						"state": "FLASH_RECITATION_START",
+						"speaking": "Justin",
+						"text": "Yep! Just answer one question related to STEM correctly and I’ll lend you these books.",
+						"options": {
+							"And if I get it wrong?": "what_if_wrong"
+						}
+					},
+					{
+						"state": "what_if_wrong",
+						"speaking": "Justin",
+						"text": "Don’t worry, they won’t be that hard. I have 3 questions in total, but you only need to get one right. You can do it!",
+						"options": {
+							"I'm ready!": "start_recitation"
+						}
+					},
+					{
+						"state": "start_recitation",
+						"speaking": "Justin",
+						"text": "Question 1: What is the powerhouse of the cell?",
+						"options": {
+							"Nucleus": "Q1_incorrect",
+							"Mitochondria": "correct"
+						}
+					},
+					{
+						"state": "Q1_incorrect",
+						"speaking": "Justin",
+							"text": "Close! It's mitochondria. A mitochondria is called the powerhouse of the cell as it produces energy through cellular respiration. The nucleus, on the other hand, is the control center of the cell as it contains genetic material and regulates cell activities like growth and reproduction.",
+						"options": {
+							"Next question": "Q2"
+						}
+					},
+					{
+						"state": "correct",
+						"speaking": "Justin",
+						"text": "Correct! As promised, here are your books! If you'd like, you can come back to answer all my STEM questions to test your knowledge.",
+						"options": {
+							"Nice!": "GO_OUT_ROOM_2"
+						}
+					},
+					{
+						"state": "Q2",
+						"speaking": "Justin",
+						"text": "Question 2: What is the term for the shape of the graph of a quadratic function?",
+						"options": {
+							"Parabula": "Q2_incorrect",
+							"Parabola": "correct"
+						}
+					},
+					{
+						"state": "Q2_incorrect",
+						"speaking": "Justin",
+						"text": "Close! It's parabola. A parabola is the U-shaped curve that is the graph of a quadratic function, while parabula is Filipino for parable, a simple story that tells a moral or lesson.",
+						"options": {
+							"Next question": "Q3"
+						}
+					},
+					{
+						"state": "Q3",
+						"speaking": "Justin",
+						"text": "Question 3: What is the term for the ability of a material to return to its original shape after being stretched or compressed?",
+						"options": {
+							"Elasticity": "correct",
+							"Plasticity": "Q3_incorrect"
+						}
+					},
+					{
+						"state": "Q3_incorrect",
+						"speaking": "Justin",
+						"text": "Close! It's elasticity. Elasticity is the ability of a material to return to its original shape after being stretched or deformed, while plasticity is the tendency of a material to undergo permanent deformation when a force is applied.",
+						"options": {
+							"Next question": "out_of_questions"
+						}
+					},
+					{
+						"state": "out_of_questions",
+						"speaking": "Justin",
+						"text": "Hmm... I can't think of any more questions. Let me ask you my first question again and let's see if you remembered the terms!",
+						"options": {
+							"I got this!": "start_recitation"
+						}
+					}
+				]
+			},
+			{
+				"branch_id": "NPC_Justin_default",
+				"dialogues": [
+					{
+						"state": "start",
+						"speaking": "Justin",
+						"text": "Welcome back! Here to test your knowledge on STEM again?",
+						"options": {
+							"Yes!": "FLASH_RECITATION_START",
+							"Wrong room!": "GO_OUT_ROOM_2"
+						}
+					},
+					{
+						"state": "FLASH_RECITATION_START",
+						"speaking": "Justin",
+						"text": "Okay! Just like last time, I have 3 STEM-related questions for you.",
+						"options": {
+							"I'm ready!": "start_recitation"
+						}
+					},
+					{
+						"state": "start_recitation",
+						"speaking": "Justin",
+						"text": "Question 1: What is the powerhouse of the cell?",
+						"options": {
+							"Nucleus": "Q1_incorrect",
+							"Mitochondria": "2_Q1_correct"
+						}
+					},
+					{
+						"state": "Q1_incorrect",
+						"speaking": "Justin",
+							"text": "Close! It's mitochondria. A mitochondria is called the powerhouse of the cell as it produces energy through cellular respiration. The nucleus, on the other hand, is the control center of the cell as it contains genetic material and regulates cell activities like growth and reproduction.",
+						"options": {
+							"Next question": "Q2"
+						}
+					},
+					{
+						"state": "2_Q1_correct",
+						"speaking": "Justin",
+						"text": "Correct! That's 1 point.",
+						"options": {
+							"Next question": "Q2"
+						}
+					},
+					{
+						"state": "2_Q2_correct",
+						"speaking": "Justin",
+						"text": "Correct! That's 1 point.",
+						"options": {
+							"Next question": "Q3"
+						}
+					},
+					{
+						"state": "2_Q3_correct",
+						"speaking": "Justin",
+						"text": "Correct! That's 1 point.",
+						"options": {
+							"Complete Flash Recitation": "finished"
+						}
+					},
+					{
+						"state": "Q2",
+						"speaking": "Justin",
+						"text": "Question 2: What is the term for the shape of the graph of a quadratic function?",
+						"options": {
+							"Parabula": "Q2_incorrect",
+							"Parabola": "2_Q2_correct"
+						}
+					},
+					{
+						"state": "Q2_incorrect",
+						"speaking": "Justin",
+						"text": "Close! It's parabola. A parabola is the U-shaped curve that is the graph of a quadratic function, while parabula is Filipino for parable, a simple story that tells a moral or lesson.",
+						"options": {
+							"Next question": "Q3"
+						}
+					},
+					{
+						"state": "Q3",
+						"speaking": "Justin",
+						"text": "Question 3: What is the term for the ability of a material to return to its original shape after being stretched or compressed?",
+						"options": {
+							"Elasticity": "2_Q3_correct",
+							"Plasticity": "Q3_incorrect"
+						}
+					},
+					{
+						"state": "Q3_incorrect",
+						"speaking": "Justin",
+						"text": "Close! It's elasticity. Elasticity is the ability of a material to return to its original shape after being stretched or deformed, while plasticity is the tendency of a material to undergo permanent deformation when a force is applied.",
+						"options": {
+							"Complete Flash Recitation": "finished"
+						}
+					},
+					{
+						"state": "finished",
+						"speaking": "Justin",
+						"text": "You finished all 3 questions! Let's see... you got...",
+						"options": {
+							"I got...": "R2_SCORE_REVEAL"
+						}
+					},
+					{
+						"state": "score_3",
+						"speaking": "Justin",
+						"text": "You got a perfect score of 3/3! Congratulations!",
+						"options": {
+							"Nice!": "GO_OUT_ROOM_2"
+						}
+					},
+					{
+						"state": "score_2",
+						"speaking": "Justin",
+						"text": "You got 2 out of 3 questions correct! Awesome!",
+						"options": {
+							"Nice!": "GO_OUT_ROOM_2"
+						}
+					},
+					{
+						"state": "score_1",
+						"speaking": "Justin",
+						"text": "You got 1 out of 3 questions correct! Better luck next time~",
+						"options": {
+							"Leave room": "GO_OUT_ROOM_2"
+						}
+					},
+					{
+						"state": "score_0",
+						"speaking": "Justin",
+						"text": "You got 0 out of 3 questions correct! Better luck next time~",
+						"options": {
+							"Leave room": "GO_OUT_ROOM_2"
+						}
+					}
+				]
+			},
+		],
+	},
 	"NPC_Sophia": {
 		"trees": [
 			{
@@ -425,7 +931,7 @@
 					{
 						"state": "start",
 						"speaking": "Sophia",
-						"text": "Hi Dash! I’m Sophia, the class representative of I120a. Here are all the donated books from my section.",
+						"text": "Hi Dash! I’m Sophia, the class representative of A120a! Here are all the donated books from my section.",
 						"options": {
 							"Next": "dash_reply_1"
 						}
@@ -441,15 +947,15 @@
 					{
 						"state": "in_progress",
 						"speaking": "Sophia",
-						"text": "Not so fast! Before I allow you these books, I need to ask you a question about ICT. Welcome to Flash Recitation!",
+						"text": "Not so fast! Before I allow you these books, I need to ask you a question about ABM. Welcome to Flash Recitation!",
 						"options": {
-							"Flash Rectiation!?": "FLASH_RECITATION_START"
+							"Flash Recitation?!": "FLASH_RECITATION_START"
 						}
 					},
 					{
 						"state": "FLASH_RECITATION_START",
 						"speaking": "Sophia",
-						"text": "Yep! Just answer one question related to ICT correctly and I’ll lend you these books.",
+						"text": "Yep! Just answer one question related to ABM correctly and I’ll lend you these books.",
 						"options": {
 							"And if I get it wrong?": "what_if_wrong"
 						}
@@ -457,7 +963,7 @@
 					{
 						"state": "what_if_wrong",
 						"speaking": "Sophia",
-						"text": "Don’t worry, they won’t be that hard. I have 3 questions in total. You can do it!",
+						"text": "Don’t worry, they won’t be that hard. I have 3 questions in total, but you only need to get one right. You can do it!",
 						"options": {
 							"I'm ready!": "start_recitation"
 						}
@@ -465,16 +971,16 @@
 					{
 						"state": "start_recitation",
 						"speaking": "Sophia",
-						"text": "Question 1: What variable type stores true or false?",
+						"text": "Question 1: The Accounting Equation uses what math operation (Assets = Liabilities ? Equity)?",
 						"options": {
-							"Boolean": "correct",
-							"String": "Q1_incorrect"
+							"Addition": "correct",
+							"Subtraction": "Q1_incorrect"
 						}
 					},
 					{
 						"state": "Q1_incorrect",
 						"speaking": "Sophia",
-						"text": "Close! It's boolean. A boolean's value can either be true or false. A string, on the other hand, stores text values.",
+						"text": "Close! It's Liabilities + Equity. Assets are what a company owns, Liabilities are what a company owes, and Equity represents the owner's stake in a business, calculated as the difference between the company's assets and liabilities, essentially what's left after all debts are paid.",
 						"options": {
 							"Next question": "Q2"
 						}
@@ -482,24 +988,24 @@
 					{
 						"state": "correct",
 						"speaking": "Sophia",
-						"text": "Correct! As promised, here are your books! If you'd like, you can come back to answer all my ICT questions to test your knowledge.",
+						"text": "Correct! As promised, here are your books! If you'd like, you can come back to answer all my ABM questions to test your knowledge.",
 						"options": {
-							"Nice!": "GO_OUT_ROOM_1"
+							"Nice!": "GO_OUT_ROOM_3"
 						}
 					},
 					{
 						"state": "Q2",
 						"speaking": "Sophia",
-						"text": "Question 2: What tool can you use to create geometric shapes in Adobe Animate?",
+						"text": "Question 2: Who is the modern father of accounting?",
 						"options": {
-							"Lasso tool": "Q2_incorrect",
-							"Shape tool": "correct"
+							"Alan Turing": "Q2_incorrect",
+							"Luca Pacioli": "correct"
 						}
 					},
 					{
 						"state": "Q2_incorrect",
 						"speaking": "Sophia",
-						"text": "Close! It's Shape tool. The shape tool is for making simple geometric shapes, while the lasso tool is used for selecting elements.",
+						"text": "Close! It's Luca Pacioli. Luca Pacioli was an Italian mathematician who was the first person to comprehensively write about double-entry accounting, while Alan Turing is the father of modern computer science.",
 						"options": {
 							"Next question": "Q3"
 						}
@@ -507,16 +1013,16 @@
 					{
 						"state": "Q3",
 						"speaking": "Sophia",
-						"text": "Question 3: What is the process of constructing a series of bones or a skeleton for your 2D or 3D model?",
+						"text": "Question 3: What do you call a business that purchases products from other businesses like manufacturers and sells them to customers at a higher retail price?",
 						"options": {
-							"Tweening": "Q3_incorrect",
-							"Rigging": "correct"
+							"Merchandising": "correct",
+							"Manufacturing": "Q3_incorrect"
 						}
 					},
 					{
 						"state": "Q3_incorrect",
 						"speaking": "Sophia",
-						"text": "Close! It's rigging. Rigging is the process of constructing a skeleton that you can easily move to animate your character, while tweening is the process of creating intermediate frames between keyframes to smoothly animate objects!",
+						"text": "Close! It's called a merchandising business. A merchandising business buys finished goods and resells them to customers, while a manufacturing business produces its own products from raw materials to sell.",
 						"options": {
 							"Next question": "out_of_questions"
 						}
@@ -537,16 +1043,16 @@
 					{
 						"state": "start",
 						"speaking": "Sophia",
-						"text": "Welcome back! Here to test your knowledge on ICT again?",
+						"text": "Welcome back! Here to test your knowledge on ABM again?",
 						"options": {
 							"Yes!": "FLASH_RECITATION_START",
-							"Wrong room!": "GO_OUT_ROOM_1"
+							"Wrong room!": "GO_OUT_ROOM_3"
 						}
 					},
 					{
 						"state": "FLASH_RECITATION_START",
 						"speaking": "Sophia",
-						"text": "Okay! Just like last time, I have 3 ICT-related questions for you.",
+						"text": "Okay! Just like last time, I have 3 ABM-related questions for you.",
 						"options": {
 							"I'm ready!": "start_recitation"
 						}
@@ -554,22 +1060,22 @@
 					{
 						"state": "start_recitation",
 						"speaking": "Sophia",
-						"text": "Question 1: What variable type stores true or false?",
+						"text": "Question 1: The Accounting Equation uses what math operation (Assets = Liabilities ? Equity)?",
 						"options": {
-							"Boolean": "1_Q1_correct",
-							"String": "Q1_incorrect"
+							"Addition": "3_Q1_correct",
+							"Subtraction": "Q1_incorrect"
 						}
 					},
 					{
 						"state": "Q1_incorrect",
 						"speaking": "Sophia",
-						"text": "Close! It's boolean. A boolean's value can either be true or false. A string, on the other hand, stores text values.",
+						"text": "Close! It's Liabilities + Equity. Assets are what a company owns, Liabilities are what a company owes, and Equity represents the owner's stake in a business, calculated as the difference between the company's assets and liabilities, essentially what's left after all debts are paid.",
 						"options": {
 							"Next question": "Q2"
 						}
 					},
 					{
-						"state": "1_Q1_correct",
+						"state": "3_Q1_correct",
 						"speaking": "Sophia",
 						"text": "Correct! That's 1 point.",
 						"options": {
@@ -577,7 +1083,7 @@
 						}
 					},
 					{
-						"state": "1_Q2_correct",
+						"state": "3_Q2_correct",
 						"speaking": "Sophia",
 						"text": "Correct! That's 1 point.",
 						"options": {
@@ -585,7 +1091,7 @@
 						}
 					},
 					{
-						"state": "1_Q3_correct",
+						"state": "3_Q3_correct",
 						"speaking": "Sophia",
 						"text": "Correct! That's 1 point.",
 						"options": {
@@ -595,16 +1101,16 @@
 					{
 						"state": "Q2",
 						"speaking": "Sophia",
-						"text": "Question 2: What tool can you use to create geometric shapes in Adobe Animate?",
+						"text": "Question 2: Who is the modern father of accounting?",
 						"options": {
-							"Lasso tool": "Q2_incorrect",
-							"Shape tool": "1_Q2_correct"
+							"Alan Turing": "Q2_incorrect",
+							"Luca Pacioli": "3_Q2_correct"
 						}
 					},
 					{
 						"state": "Q2_incorrect",
 						"speaking": "Sophia",
-						"text": "Close! It's Shape tool. The shape tool is for making simple geometric shapes, while the lasso tool is used for selecting elements.",
+						"text": "Close! It's Luca Pacioli. Luca Pacioli was an Italian mathematician who was the first person to comprehensively write about double-entry accounting, while Alan Turing is the father of modern computer science.",
 						"options": {
 							"Next question": "Q3"
 						}
@@ -612,16 +1118,16 @@
 					{
 						"state": "Q3",
 						"speaking": "Sophia",
-						"text": "Question 3: What is the process of constructing a series of bones or a skeleton for your 2D or 3D model?",
+						"text": "Question 3: What do you call a business that purchases products from other businesses like manufacturers and sells them to customers at a higher retail price?",
 						"options": {
-							"Tweening": "Q3_incorrect",
-							"Rigging": "1_Q3_correct"
+							"Merchandising": "3_Q3_correct",
+							"Manufacturing": "Q3_incorrect"
 						}
 					},
 					{
 						"state": "Q3_incorrect",
 						"speaking": "Sophia",
-						"text": "Close! It's rigging. Rigging is the process of constructing a skeleton that you can easily move to animate your character, while tweening is the process of creating intermediate frames between keyframes to smoothly animate objects!",
+						"text": "Close! It's called a merchandising business. A merchandising business buys finished goods and resells them to customers, while a manufacturing business produces its own products from raw materials to sell.",
 						"options": {
 							"Complete Flash Recitation": "finished"
 						}
@@ -631,7 +1137,7 @@
 						"speaking": "Sophia",
 						"text": "You finished all 3 questions! Let's see... you got...",
 						"options": {
-							"I got...": "SCORE_REVEAL"
+							"I got...": "R3_SCORE_REVEAL"
 						}
 					},
 					{
@@ -639,7 +1145,7 @@
 						"speaking": "Sophia",
 						"text": "You got a perfect score of 3/3! Congratulations!",
 						"options": {
-							"Nice!": "GO_OUT_ROOM_1"
+							"Nice!": "GO_OUT_ROOM_3"
 						}
 					},
 					{
@@ -647,7 +1153,7 @@
 						"speaking": "Sophia",
 						"text": "You got 2 out of 3 questions correct! Awesome!",
 						"options": {
-							"Nice!": "GO_OUT_ROOM_1"
+							"Nice!": "GO_OUT_ROOM_3"
 						}
 					},
 					{
@@ -655,7 +1161,7 @@
 						"speaking": "Sophia",
 						"text": "You got 1 out of 3 questions correct! Better luck next time~",
 						"options": {
-							"Leave room": "GO_OUT_ROOM_1"
+							"Leave room": "GO_OUT_ROOM_3"
 						}
 					},
 					{
@@ -663,7 +1169,260 @@
 						"speaking": "Sophia",
 						"text": "You got 0 out of 3 questions correct! Better luck next time~",
 						"options": {
-							"Leave room": "GO_OUT_ROOM_1"
+							"Leave room": "GO_OUT_ROOM_3"
+						}
+					}
+				]
+			},
+		],
+	},
+	"NPC_Mickael": {
+		"trees": [
+			{
+				"branch_id": "NPC_Mickael_1",
+				"dialogues": [
+					{
+						"state": "start",
+						"speaking": "Mickael",
+						"text": "Hi Dash! I’m Mickael, the class representative of H120a. Here are all the donated books from my section.",
+						"options": {
+							"Next": "dash_reply_1"
+						}
+					},
+					{
+						"state": "dash_reply_1",
+						"speaking": "Dash",
+						"text": "Thanks! I'll take these to Gab now.",
+						"options": {
+							"Next": "in_progress"
+						}
+					},
+					{
+						"state": "in_progress",
+						"speaking": "Mickael",
+						"text": "Not so fast! Before I allow you these books, I need to ask you a question about HUMSS. Welcome to Flash Recitation!",
+						"options": {
+							"Flash Rectiation!?": "FLASH_RECITATION_START"
+						}
+					},
+					{
+						"state": "FLASH_RECITATION_START",
+						"speaking": "Mickael",
+						"text": "Yep! Just answer one question related to HUMSS correctly and I’ll lend you these books.",
+						"options": {
+							"And if I get it wrong?": "what_if_wrong"
+						}
+					},
+					{
+						"state": "what_if_wrong",
+						"speaking": "Mickael",
+						"text": "Don’t worry, they won’t be that hard. I have 3 questions in total, but you only need to get one right. You can do it!",
+						"options": {
+							"I'm ready!": "start_recitation"
+						}
+					},
+					{
+						"state": "start_recitation",
+						"speaking": "Mickael",
+						"text": "Question 1: What do you call the study of human society, behavior, and social relationships?",
+						"options": {
+							"Sociology": "correct",
+							"Psychology": "Q1_incorrect"
+						}
+					},
+					{
+						"state": "Q1_incorrect",
+						"speaking": "Mickael",
+						"text": "Close! It's sociology. Sociology studies human society and group behavior, while psychology focuses on individual mental processes and behavior.",
+						"options": {
+							"Next question": "Q2"
+						}
+					},
+					{
+						"state": "correct",
+						"speaking": "Mickael",
+						"text": "Correct! As promised, here are your books! If you'd like, you can come back to answer all my HUMSS questions to test your knowledge.",
+						"options": {
+							"Nice!": "GO_OUT_ROOM_4"
+						}
+					},
+					{
+						"state": "Q2",
+						"speaking": "Mickael",
+						"text": "Question 2: What is the branch of philosophy that deals with moral principles?",
+						"options": {
+							"Law": "Q2_incorrect",
+							"Ethics": "correct"
+						}
+					},
+					{
+						"state": "Q2_incorrect",
+						"speaking": "Mickael",
+						"text": "Close! It's ethics. Ethics involves the moral principles that guide individual behavior, distinguishing right from wrong based on societal or personal values, while law refers to a system of rules established by a governing authority to regulate behavior and maintain order.",
+						"options": {
+							"Next question": "Q3"
+						}
+					},
+					{
+						"state": "Q3",
+						"speaking": "Mickael",
+						"text": "Question 3: What is the process by which individuals or groups adopt the cultural norms and values of another society?",
+						"options": {
+							"Subculture": "Q3_incorrect",
+							"Acculturation": "correct"
+						}
+					},
+					{
+						"state": "Q3_incorrect",
+						"speaking": "Mickael",
+						"text": "Close! It's acculturation. Acculturation is the process by which individuals or groups adopt the cultural traits or social patterns of another group, while subculture refers to a smaller cultural group within a larger society that has distinct values, norms, and lifestyles.",
+						"options": {
+							"Next question": "out_of_questions"
+						}
+					},
+					{
+						"state": "out_of_questions",
+						"speaking": "Mickael",
+						"text": "Hmm... I can't think of any more questions. Let me ask you my first question again and let's see if you remembered the terms!",
+						"options": {
+							"I got this!": "start_recitation"
+						}
+					}
+				]
+			},
+			{
+				"branch_id": "NPC_Mickael_default",
+				"dialogues": [
+					{
+						"state": "start",
+						"speaking": "Mickael",
+						"text": "Welcome back! Here to test your knowledge on HUMSS again?",
+						"options": {
+							"Yes!": "FLASH_RECITATION_START",
+							"Wrong room!": "GO_OUT_ROOM_4"
+						}
+					},
+					{
+						"state": "FLASH_RECITATION_START",
+						"speaking": "Mickael",
+						"text": "Okay! Just like last time, I have 3 HUMSS-related questions for you.",
+						"options": {
+							"I'm ready!": "start_recitation"
+						}
+					},
+					{
+						"state": "start_recitation",
+						"speaking": "Mickael",
+						"text": "Question 1: What do you call the study of human society, behavior, and social relationships?",
+						"options": {
+							"Sociology": "4_Q1_correct",
+							"Psychology": "Q1_incorrect"
+						}
+					},
+					{
+						"state": "Q1_incorrect",
+						"speaking": "Mickael",
+						"text": "Close! It's sociology. Sociology studies human society and group behavior, while psychology focuses on individual mental processes and behavior.",
+						"options": {
+							"Next question": "Q2"
+						}
+					},
+					{
+						"state": "4_Q1_correct",
+						"speaking": "Mickael",
+						"text": "Correct! That's 1 point.",
+						"options": {
+							"Next question": "Q2"
+						}
+					},
+					{
+						"state": "4_Q2_correct",
+						"speaking": "Mickael",
+						"text": "Correct! That's 1 point.",
+						"options": {
+							"Next question": "Q3"
+						}
+					},
+					{
+						"state": "4_Q3_correct",
+						"speaking": "Mickael",
+						"text": "Correct! That's 1 point.",
+						"options": {
+							"Complete Flash Recitation": "finished"
+						}
+					},
+					{
+						"state": "Q2",
+						"speaking": "Mickael",
+						"text": "Question 2: What is the branch of philosophy that deals with moral principles?",
+						"options": {
+							"Law": "Q2_incorrect",
+							"Ethics": "4_Q2_correct"
+						}
+					},
+					{
+						"state": "Q2_incorrect",
+						"speaking": "Mickael",
+						"text": "Close! It's ethics. Ethics involves the moral principles that guide individual behavior, distinguishing right from wrong based on societal or personal values, while law refers to a system of rules established by a governing authority to regulate behavior and maintain order.",
+						"options": {
+							"Next question": "Q3"
+						}
+					},
+					{
+						"state": "Q3",
+						"speaking": "Mickael",
+						"text": "Question 3: What is the process by which individuals or groups adopt the cultural norms and values of another society?",
+						"options": {
+							"Subculture": "Q3_incorrect",
+							"Acculturation": "4_Q3_correct"
+						}
+					},
+					{
+						"state": "Q3_incorrect",
+						"speaking": "Mickael",
+						"text": "Close! It's acculturation. Acculturation is the process by which individuals or groups adopt the cultural traits or social patterns of another group, while subculture refers to a smaller cultural group within a larger society that has distinct values, norms, and lifestyles.",
+						"options": {
+							"Complete Flash Recitation": "finished"
+						}
+					},
+					{
+						"state": "finished",
+						"speaking": "Mickael",
+						"text": "You finished all 3 questions! Let's see... you got...",
+						"options": {
+							"I got...": "R4_SCORE_REVEAL"
+						}
+					},
+					{
+						"state": "score_3",
+						"speaking": "Mickael",
+						"text": "You got a perfect score of 3/3! Congratulations!",
+						"options": {
+							"Nice!": "GO_OUT_ROOM_4"
+						}
+					},
+					{
+						"state": "score_2",
+						"speaking": "Mickael",
+						"text": "You got 2 out of 3 questions correct! Awesome!",
+						"options": {
+							"Nice!": "GO_OUT_ROOM_4"
+						}
+					},
+					{
+						"state": "score_1",
+						"speaking": "Mickael",
+						"text": "You got 1 out of 3 questions correct! Better luck next time~",
+						"options": {
+							"Leave room": "GO_OUT_ROOM_4"
+						}
+					},
+					{
+						"state": "score_0",
+						"speaking": "Mickael",
+						"text": "You got 0 out of 3 questions correct! Better luck next time~",
+						"options": {
+							"Leave room": "GO_OUT_ROOM_4"
 						}
 					}
 				]

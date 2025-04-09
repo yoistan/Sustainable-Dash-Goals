@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://bwp33y18ktawv"]
+
+[ext_resource type="Script" uid="uid://l5mvdkpkiuwq" path="res://SCRIPTS/CHARACTERS/pants.gd" id="1_csihh"]
+[ext_resource type="Script" uid="uid://ddjpebo5figom" path="res://RESOURCES/DIALOGUE/Dialogue.gd" id="2_jrwtn"]
+[ext_resource type="Texture2D" uid="uid://bv6sesyyr166d" path="res://ASSETS/CHARACTERS/NPCS/Pants.png" id="3_4myrd"]
+[ext_resource type="PackedScene" uid="uid://c0k4crxwnd6xv" path="res://SCENES/DIALOGUE/DialogueManager.tscn" id="4_kkbwo"]
+
+[sub_resource type="Resource" id="Resource_rosio"]
+script = ExtResource("2_jrwtn")
+dialogues = {}
+metadata/_custom_type_script = "uid://ddjpebo5figom"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rosio"]
+radius = 21.0
+height = 78.0
+
+[node name="Pants" type="CharacterBody2D" groups=["npc"]]
+script = ExtResource("1_csihh")
+dialogue_resource = SubResource("Resource_rosio")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -3)
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("3_4myrd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_rosio")
+
+[node name="DialogueManager" parent="." instance=ExtResource("4_kkbwo")]
